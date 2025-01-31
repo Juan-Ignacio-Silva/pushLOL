@@ -15,13 +15,23 @@ barraBusq.addEventListener('input', function(e) {
     });
 });
 
-// Mantener la funcionalidad original del Enter
-barraBusq.addEventListener('keyup', function(e){
-    if (e.key == 'Enter') {
-        verificador();
+document.querySelector('.contenido-pjs').addEventListener('click', function(e) {
+    if (e.target.tagName === 'IMG') {
+        const championName = e.target.id.toLowerCase();
+        sessionStorage.setItem("championSelected", championName);
+        window.location.href = 'search'
+    } else {
+        alert("Intente de nuevo")
     }
 });
 
-function verificador() {
-    window.location.href = 'search';
-}
+window.onload = function() {
+    const champion = sessionStorage.getItem("championSelected");
+
+    if (champion === "lux") {
+        console.log("¡Redirección exitosa! Estás en la página correcta.");
+        sessionStorage.removeItem("championSelected");
+    } else {
+        console.log("PJ NO")
+    }
+};
