@@ -1,16 +1,20 @@
 ---
-import personajesData from '../data/champions.json'
+import personajesData from '../data/champions.json';
 ---
 
 <div class="contenido-pjs">
-    {
-        personajesData.map(champion => (
-            <div class="card-chmpion">
-                <img id={champion.name} src={champion.image_url} alt={champion.name}/>
-            </div>
-        ))
-    }
+  {personajesData.map(champion => (
+    <div class="card-champion">
+      <img 
+        id={champion.name} 
+        src={champion.image_url} 
+        alt={champion.name}
+        onclick="vistaChampion(value)"
+      />
+    </div>
+  ))}
 </div>
+
 
 <style>
     .contenido-pjs{
@@ -19,9 +23,10 @@ import personajesData from '../data/champions.json'
         display: grid;
         grid-template-columns: auto auto auto auto auto;
         justify-content: space-between;
+        height: 100%;
     }
 
-    .card-chmpion{
+    .card-champion{
         background-color: #1A1D21;
         width: 80px;
         height: 80px;
@@ -32,12 +37,12 @@ import personajesData from '../data/champions.json'
         margin-bottom: 10px;
     }
 
-    .card-chmpion img{
+    .card-champion img{
         width: 75px;
         border-radius: 10px;
     }
 
-    .card-chmpion:hover{
+    .card-champion:hover{
         background-color: #f54245;
     }
 </style>
