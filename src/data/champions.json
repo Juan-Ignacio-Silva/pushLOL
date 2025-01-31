@@ -1,0 +1,52 @@
+[
+  {
+    "name": "lux",
+    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/Lux/square",
+    "tier": "A+"
+  },
+  {
+    "name": "Ahri",
+    "image_url": "https://example.com/ahri.jpg",
+    "tier": "S"
+  },
+  {
+    "name": "Akali",
+    "image_url": "https://example.com/akali.jpg",
+    "tier": "A"
+  },
+  {
+    "name": "Akshan",
+    "image_url": "https://example.com/akshan.jpg",
+    "tier": "B+"
+  },
+  {
+    "name": "Alistar",
+    "image_url": "https://example.com/alistar.jpg",
+    "tier": "B"
+  },
+  {
+    "name": "Amumu",
+    "image_url": "https://example.com/amumu.jpg",
+    "tier": "A"
+  },
+  {
+    "name": "Anivia",
+    "image_url": "https://example.com/anivia.jpg",
+    "tier": "A+"
+  },
+  {
+    "name": "Annie",
+    "image_url": "https://example.com/annie.jpg",
+    "tier": "B+"
+  },
+  {
+    "name": "Aphelios",
+    "image_url": "https://example.com/aphelios.jpg",
+    "tier": "S"
+  },
+  {
+    "name": "Ashe",
+    "image_url": "https://example.com/ashe.jpg",
+    "tier": "A"
+  }
+]

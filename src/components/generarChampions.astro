@@ -1,0 +1,43 @@
+---
+import personajesData from '../data/champions.json'
+---
+
+<div class="contenido-pjs">
+    {
+        personajesData.map(champion => (
+            <div class="card-chmpion">
+                <img id={champion.name} src={champion.image_url} alt={champion.name}/>
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .contenido-pjs{
+        width: 100%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content: space-between;
+    }
+
+    .card-chmpion{
+        background-color: #1A1D21;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;  
+        margin-bottom: 10px;
+    }
+
+    .card-chmpion img{
+        width: 75px;
+        border-radius: 10px;
+    }
+
+    .card-chmpion:hover{
+        background-color: #f54245;
+    }
+</style>

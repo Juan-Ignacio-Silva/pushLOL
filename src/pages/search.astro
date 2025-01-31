@@ -1,0 +1,28 @@
+---
+import Barra from '../components/SearchBar.astro'
+import Layout from '../layouts/Layout.astro'
+import GenerarChampions from '../components/generarChampions.astro'
+---
+
+<Layout title="Personajes">
+    <main>
+        <div class="contenedor-principal">
+            <Barra />
+            <GenerarChampions />
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main{
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+	}
+
+	.contenedor-principal{
+		width: 450px;
+        padding-top: 20px;
+	}
+</style>
