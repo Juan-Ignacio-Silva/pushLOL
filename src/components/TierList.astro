@@ -1,0 +1,684 @@
+---
+import personajesData from '../data/champions.json';
+import TierListLogo from '../assets/tierlist_logo.svg?raw';
+
+const positions = ['all', 'top', 'jungle', 'mid', 'adc', 'support'];
+
+const DEFAULT_RATES = {
+    winRate: 50.0,
+    pickRate: 5.0,
+    banRate: 3.0
+};
+
+// Función para convertir tier a número para ordenamiento
+function getTierValue(tier) {
+    const tiers = {
+        'S': 6,
+        'S-': 5.5,
+        'A+': 5,
+        'A': 4.5,
+        'A-': 4,
+        'B+': 3.5,
+        'B': 3,
+        'B-': 2.5,
+        'C+': 2,
+        'C': 1.5,
+        'C-': 1,
+        'D': 0.5
+    };
+    return tiers[tier] || 0;
+}
+
+// Ordenar campeones por tier
+const championsWithStatsSorted = [...personajesData]
+    .sort((a, b) => {
+        const tierDiff = getTierValue(b.tier) - getTierValue(a.tier);
+        if (tierDiff !== 0) return tierDiff;
+        return a.name.localeCompare(b.name);
+    });
+
+// Agrupar campeones por tier
+const tierGroups = championsWithStatsSorted.reduce((groups, champion) => {
+    const tier = champion.tier;
+    if (!groups[tier]) {
+        groups[tier] = [];
+    }
+    groups[tier].push(champion);
+    return groups;
+}, {});
+
+// Agregar rango a los campeones
+let currentRank = 1;
+const tiersInOrder = ['S', 'A+', 'A', 'B+', 'B', 'C+', 'C', 'D'];
+const tierGroupsOrdered = {};
+
+tiersInOrder.forEach(tier => {
+    if (tierGroups[tier]) {
+        tierGroups[tier].forEach(champion => {
+            champion.rank = currentRank++;
+        });
+        tierGroupsOrdered[tier] = tierGroups[tier];
+    }
+});
+---
+
+<div class="tierlist-container">
+    <div class="logo-container">
+        <Fragment set:html={TierListLogo} />
+    </div>
+    <div class="glass-panel">
+        <div class="header-section">
+            <div class="position-tabs">
+                {positions.map(position => (
+                    <button 
+                        class:list={['tab-btn', { active: position === 'all' }]} 
+                        data-position={position}
+                        title={position.toUpperCase()}
+                    >
+                        {position === 'all' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <g fill="currentcolor" fill-rule="nonzero">
+                                        <g>
+                                            <path d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z" transform="translate(-2388.000000, -699.000000) translate(2388.000000, 699.000000)"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        ) : position === 'top' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                    <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                </g>
+                            </svg>
+                        ) : position === 'jungle' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                            </svg>
+                        ) : position === 'mid' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                    <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                </g>
+                            </svg>
+                        ) : position === 'adc' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="currentColor" fill-rule="nonzero">
+                                    <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                    <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                </g>
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                            </svg>
+                        )}
+                    </button>
+                ))}
+            </div>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="champion-search" 
+                    placeholder="Buscar campeón..."
+                    autocomplete="off"
+                >
+                <a href="/" class="home-button" title="Volver al inicio">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Agregamos el header de la tabla -->
+        <div class="table-header">
+            <div class="col">RANGO</div>
+            <div class="col">CAMPEÓN</div>
+            <div class="col positions">POSICIÓN</div>
+            <div class="col">WIN RATE %</div>
+            <div class="col">PICK RATE %</div>
+            <div class="col">BAN RATE %</div>
+        </div>
+
+        {Object.entries(tierGroupsOrdered).map(([tier, champions]) => (
+            <div class="tier-section" data-tier={tier}>
+                <div class="tier-header">
+                    <span class="tier-label">{tier}</span>
+                    <div class="tier-line"></div>
+                </div>
+                <div class="tier-champions">
+                    {champions.map(champion => (
+                        <div class="table-row" 
+                            data-positions={JSON.stringify(champion.positions)}
+                            style={`--tier-color: ${
+                                tier.startsWith('S') ? '#ffdd75' :
+                                tier.startsWith('A') ? '#beecfa' :
+                                tier.startsWith('B') ? '#9ad47f' :
+                                tier.startsWith('C') ? '#f59551' :
+                                '#686b6e'
+                            }`}
+                        >
+                            <div class="col rank">{champion.rank}</div>
+                            <div class="col champion">
+                                <img src={champion.image_url} alt={champion.name} />
+                                <span class="champion-name">{champion.name.toUpperCase()}</span>
+                            </div>
+                            <div class="col positions">
+                                {champion.positions.map(pos => (
+                                    <span class={`position-icon ${pos}`}>
+                                        {pos === 'top' && (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                <g fill="currentColor" fill-rule="nonzero">
+                                                    <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                                    <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                </g>
+                                            </svg>
+                                        )}
+                                        {pos === 'jungle' && (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                                            </svg>
+                                        )}
+                                        {pos === 'mid' && (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                <g fill="currentColor" fill-rule="nonzero">
+                                                    <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                                    <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                                </g>
+                                            </svg>
+                                        )}
+                                        {pos === 'adc' && (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                <g fill="currentColor" fill-rule="nonzero">
+                                                    <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                                    <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                </g>
+                                            </svg>
+                                        )}
+                                        {pos === 'support' && (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                                            </svg>
+                                        )}
+                                    </span>
+                                ))}
+                            </div>
+                            <div class="col winrate">{DEFAULT_RATES.winRate}%</div>
+                            <div class="col pickrate">{DEFAULT_RATES.pickRate}%</div>
+                            <div class="col banrate">{DEFAULT_RATES.banRate}%</div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .logo-container :global(svg) {
+        width: 600px;
+        height: auto;
+        filter: drop-shadow(0 4px 12px rgba(245, 66, 69, 0.2));
+    }
+
+    .tierlist-container {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        padding: 20px;
+        padding-top: 40px;
+    }
+
+    .glass-panel {
+        margin-top: 20px;
+        background: rgba(26, 29, 33, 0.7);
+        backdrop-filter: blur(20px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 5px;
+    }
+
+    .position-tabs {
+        display: flex;
+        gap: 12px;
+    }
+
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #champion-search {
+        width: 250px;
+        height: 40px;
+        background: rgba(26, 29, 33, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 0 15px;
+        color: white;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    #champion-search:focus {
+        outline: none;
+        border-color: rgba(245, 66, 69, 0.5);
+        background: rgba(26, 29, 33, 0.8);
+    }
+
+    #champion-search::placeholder {
+        color: #9aa4af;
+    }
+
+    .table-header {
+        display: grid;
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+        padding: 15px 20px;
+        background: rgba(26, 29, 33, 0.8);
+        border-radius: 12px;
+        margin-bottom: 15px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: #9aa4af;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 30px;
+    }
+
+    .table-header .col {
+        text-align: center;
+    }
+
+    .table-row {
+        display: grid;
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+        padding: 15px 20px;
+        border-radius: 12px;
+        align-items: center;
+        background: rgba(26, 29, 33, 0.4);
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        gap: 30px;
+        cursor: pointer;
+    }
+
+    /* Alineación de columnas */
+    .rank, 
+    .winrate, 
+    .pickrate, 
+    .banrate {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .champion {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-left: 15px;
+    }
+
+    .champion img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .champion-name {
+        font-weight: 500;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .positions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .position-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(26, 29, 33, 0.6);
+        border-radius: 4px;
+        padding: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .position-icon:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .position-icon svg {
+        width: 100%;
+        height: 100%;
+        color: #e1e5ea;
+    }
+
+    .col {
+        color: #e1e5ea;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .tier {
+        color: #f54245;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    /* Personalización del scrollbar */
+    .table-body::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .table-body::-webkit-scrollbar-track {
+        background: rgba(26, 29, 33, 0.4);
+        border-radius: 4px;
+    }
+
+    .table-body::-webkit-scrollbar-thumb {
+        background: rgba(245, 66, 69, 0.5);
+        border-radius: 4px;
+    }
+
+    .table-body::-webkit-scrollbar-thumb:hover {
+        background: #f54245;
+    }
+
+    .tier-section {
+        margin-bottom: 30px;
+    }
+
+    .tier-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 15px;
+    }
+
+    .tier-label {
+        font-size: 24px;
+        font-weight: 700;
+        min-width: 40px;
+    }
+
+    .tier-line {
+        height: 2px;
+        flex-grow: 1;
+        background: linear-gradient(to right, #f54245 0%, rgba(245, 66, 69, 0) 100%);
+    }
+
+    .tier-champions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .rank {
+        color: #9aa4af;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Colores específicos por tier */
+    .tier-section[data-tier="S"] {
+        .tier-label {
+            color: #ffdd75;
+            text-shadow: 0 0 15px rgba(255, 221, 117, 0.4);
+        }
+        .tier-line {
+            background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
+        }
+    }
+
+    .tier-section[data-tier="A"],
+    .tier-section[data-tier="A+"] {
+        .tier-label {
+            color: #beecfa;
+            text-shadow: 0 0 15px rgba(190, 236, 250, 0.4);
+        }
+        .tier-line {
+            background: linear-gradient(to right, #beecfa 0%, rgba(190, 236, 250, 0) 100%);
+        }
+    }
+
+    .tier-section[data-tier="B"],
+    .tier-section[data-tier="B+"] {
+        .tier-label {
+            color: #9ad47f;
+            text-shadow: 0 0 15px rgba(154, 212, 127, 0.4);
+        }
+        .tier-line {
+            background: linear-gradient(to right, #9ad47f 0%, rgba(154, 212, 127, 0) 100%);
+        }
+    }
+
+    .tier-section[data-tier="C"],
+    .tier-section[data-tier="C+"] {
+        .tier-label {
+            color: #f59551;
+            text-shadow: 0 0 15px rgba(245, 149, 81, 0.4);
+        }
+        .tier-line {
+            background: linear-gradient(to right, #f59551 0%, rgba(245, 149, 81, 0) 100%);
+        }
+    }
+
+    .tier-section[data-tier="D"] {
+        .tier-label {
+            color: #686b6e;
+            text-shadow: 0 0 15px rgba(104, 107, 110, 0.4);
+        }
+        .tier-line {
+            background: linear-gradient(to right, #686b6e 0%, rgba(104, 107, 110, 0) 100%);
+        }
+    }
+
+    /* Ajustes específicos para cada columna */
+    .col:nth-child(1) { /* RANGO */
+        justify-content: center;
+    }
+
+    .col:nth-child(2) { /* CAMPEÓN */
+        justify-content: flex-start;
+    }
+
+    .col:nth-child(3) { /* POSICIÓN */
+        justify-content: center;
+    }
+
+    .col:nth-child(4), /* WIN RATE */
+    .col:nth-child(5), /* PICK RATE */
+    .col:nth-child(6) { /* BAN RATE */
+        justify-content: center;
+    }
+
+    /* Ajuste para los valores numéricos */
+    .winrate, 
+    .pickrate, 
+    .banrate {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 14px;
+    }
+
+    .tab-btn {
+        padding: 10px;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(26, 29, 33, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #9aa4af;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .tab-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tab-btn:hover {
+        background: rgba(245, 66, 69, 0.1);
+        color: white;
+    }
+
+    .tab-btn.active {
+        background: #f54245;
+        color: white;
+        border-color: #f54245;
+        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+    }
+
+    /* Hover effects para cada tier */
+    .tier-section[data-tier="S"] .table-row:hover {
+        border-color: #ffdd75;
+        box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .tier-section[data-tier="A"],
+    .tier-section[data-tier="A+"] .table-row:hover {
+        border-color: #beecfa;
+        box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .tier-section[data-tier="B"],
+    .tier-section[data-tier="B+"] .table-row:hover {
+        border-color: #9ad47f;
+        box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .tier-section[data-tier="C"],
+    .tier-section[data-tier="C+"] .table-row:hover {
+        border-color: #f59551;
+        box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .tier-section[data-tier="D"] .table-row:hover {
+        border-color: #686b6e;
+        box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .home-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(26, 29, 33, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #9aa4af;
+        transition: all 0.3s ease;
+    }
+
+    .home-button:hover {
+        background: #f54245;
+        color: white;
+        border-color: #f54245;
+        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+    }
+
+    .home-button svg {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+
+<script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const rows = document.querySelectorAll('.table-row');
+    const searchInput = document.getElementById('champion-search');
+    const tierSections = document.querySelectorAll('.tier-section');
+
+    function filterChampions() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const activePosition = document.querySelector('.tab-btn.active').dataset.position;
+
+        // Recorremos cada sección de tier
+        tierSections.forEach(section => {
+            const championsInTier = section.querySelectorAll('.table-row');
+            let hasVisibleChampions = false;
+
+            // Filtramos los campeones dentro de cada tier
+            championsInTier.forEach(row => {
+                const championName = row.querySelector('.champion-name').textContent.toLowerCase();
+                const positions = JSON.parse(row.dataset.positions);
+                const matchesSearch = championName.includes(searchTerm);
+                const matchesPosition = activePosition === 'all' || positions.includes(activePosition);
+
+                if (matchesSearch && matchesPosition) {
+                    row.style.display = 'grid';
+                    hasVisibleChampions = true;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            // Mostramos u ocultamos la sección completa del tier
+            section.style.display = hasVisibleChampions ? 'block' : 'none';
+        });
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', filterChampions);
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            filterChampions();
+        });
+    });
+</script> 
