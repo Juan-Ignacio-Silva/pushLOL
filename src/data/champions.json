@@ -499,7 +499,7 @@
   },
   {
     "name": "nunu & willump",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nunu&willump/square",
+    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nunu/square",
     "tier": "A+",
     "positions": ["jungle"]
   },
@@ -834,7 +834,7 @@
   },
   {
     "name": "wukong",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/wukong/square",
+    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/monkeyking/square",
     "tier": "A+",
     "positions": ["top", "jungle"]
   },
