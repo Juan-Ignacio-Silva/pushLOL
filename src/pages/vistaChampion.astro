@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro" 
+---
+<Layout title="Champion">
+    <main>
+        <div class="champion-info">
+          <div class="champion-avatar"></div>
+          <div class="champion-details">
+            <h1><span class="champion-name">NOMBRE_CAMPEON</span> <span class="champion-subtitle">Counters y Picks, <span class="champion-score">15.2</span></span></h1>
+            <div class="champion-bar"></div>
+          </div>
+        </div>
+        <section class="counters">
+          <h2>BUENO CONTRA</h2>
+          <div class="cards-grid">
+            {Array(5).fill(null).map(() => (
+              <div class="counter-card good"></div>
+            ))}
+          </div>
+        </section>
+        <section class="counters">
+          <h2>MALO CONTRA</h2>
+          <div class="cards-grid">
+            {Array(5).fill(null).map(() => (
+              <div class="counter-card bad"></div>
+            ))}
+          </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+  :root {
+    --color-background: #0a0a0a;
+    --color-card: #1a1a1a;
+    --color-text: #ffffff;
+    --color-accent-red: #ff4655;
+    --color-accent-blue: #7289da;
+    --color-bar: #ffd700;
+  }
+
+  body {
+    margin: 0;
+    padding: 1rem;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: calc(100vh - 2rem);
+  }
+
+  .search-placeholder {
+    height: 48px;
+    background: var(--color-card);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .champion-info {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .champion-avatar {
+    width: 100px;
+    height: 100px;
+    background: var(--color-card);
+    border-radius: 8px;
+  }
+
+  .champion-details {
+    flex: 1;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .champion-name {
+    color: var(--color-accent-red);
+  }
+
+  .champion-score {
+    color: var(--color-accent-red);
+  }
+
+  .champion-bar {
+    height: 8px;
+    background: var(--color-bar);
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
+  .counters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-accent-blue);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  .counter-card {
+    aspect-ratio: 3/4;
+    background: var(--color-card);
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+
+  .counter-card:hover {
+    transform: translateY(-4px);
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .champion-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
