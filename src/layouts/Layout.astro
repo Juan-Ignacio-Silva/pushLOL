@@ -1,6 +1,5 @@
 ---
 import DotBackground from '../components/DotBackground.astro';
-import ScrollProgress from '../components/ScrollProgress.astro';
 import AvatarCircles from '../components/AvatarCircles.astro';
 
 interface Props {
@@ -20,7 +19,6 @@ const { title } = Astro.props;
 		<title>{ title }</title>
 	</head>
 	<body>
-		<ScrollProgress className="top-0" />
 		<AvatarCircles />
 		<DotBackground>
 			<slot />

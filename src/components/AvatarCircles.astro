@@ -15,7 +15,7 @@ const avatars = [
 ---
 
 <div class="avatar-circles">
-    {avatars.map((avatar) => ( 
+    {avatars.map((avatar) => (
         <a href={avatar.profileUrl} target="_blank" rel="noopener noreferrer">
             <img 
                 class="avatar-img"
@@ -39,12 +39,17 @@ const avatars = [
 
     .avatar-circles a {
         margin-left: -8px;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .avatar-circles a:hover {
         transform: translateY(-2px);
         z-index: 2;
+    }
+
+    .avatar-circles a:hover .avatar-img {
+        border-color: #f54245;
+        box-shadow: 0 0 10px rgba(245, 66, 69, 0.3);
     }
 
     .avatar-img {
@@ -54,5 +59,6 @@ const avatars = [
         border: 2px solid rgba(255, 255, 255, 0.1);
         background: #1A1D21;
         object-fit: cover;
+        transition: all 0.3s ease;
     }
 </style> 
