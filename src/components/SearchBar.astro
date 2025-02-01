@@ -1,18 +1,92 @@
-<input id="buscador" type="text" placeholder="Buscar campeon">
+---
+// Importamos los iconos que necesitemos (puedes cambiarlos por los que prefieras)
+---
+
+<div class="search-container">
+    <input id="buscador" type="text" placeholder="Buscar campeon">
+    <div class="filter-buttons">
+        <button class="filter-btn" title="Todos" data-position="all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h18v18H3zM8 12h8"/>
+                <path d="M12 8v8"/>
+            </svg>
+        </button>
+        <button class="filter-btn" title="Top" data-position="top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 3L3 21M21 3h-7M21 3v7"/>
+            </svg>
+        </button>
+        <button class="filter-btn" title="Jungla" data-position="jungle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L3 9l9 7-9 7M21 9l-9 7"/>
+            </svg>
+        </button>
+        <button class="filter-btn" title="Mid" data-position="mid">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3l18 18M3 21L21 3"/>
+            </svg>
+        </button>
+        <button class="filter-btn" title="ADC" data-position="adc">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 21l-6-6m-2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+        </button>
+        <button class="filter-btn" title="Support" data-position="support">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L4 7l8 5 8-5-8-5zM4 12l8 5 8-5"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
 <style>
-    #buscador{
-		border-radius: 8px;
-		width: 435px;
-		height: 40px;
-		background-color: #1A1D21;
-		border: none;
-		padding-left: 15px;
-		color: white;
-		font-family: 'Roboto Mono', monospace;
-	}
+    .search-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-	#buscador:active{
-		border: none;
-	}
+    #buscador {
+        border-radius: 8px;
+        width: 435px;
+        height: 40px;
+        background-color: #1A1D21;
+        border: none;
+        padding-left: 15px;
+        color: white;
+        font-family: 'Roboto Mono', monospace;
+    }
 
+    #buscador:active {
+        border: none;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: #1A1D21;
+        border: none;
+        color: #666;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+        background-color: #2e3238;
+        color: white;
+    }
+
+    .filter-btn.active {
+        background-color: #f54245;
+        color: white;
+    }
 </style>
