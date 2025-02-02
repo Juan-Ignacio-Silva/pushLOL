@@ -1,0 +1,64 @@
+---
+import agusPhoto from '../assets/agus_foto.jpg';
+import uruPhoto from '../assets/uru_foto.png';
+
+const avatars = [
+    {
+        imageUrl: agusPhoto.src,
+        profileUrl: "https://github.com/JTA100"
+    },
+    {
+        imageUrl: uruPhoto.src,
+        profileUrl: "https://github.com/Juan-Ignacio-Silva"
+    }
+];
+---
+
+<div class="avatar-circles">
+    {avatars.map((avatar) => ( 
+        <a href={avatar.profileUrl} target="_blank" rel="noopener noreferrer">
+            <img 
+                class="avatar-img"
+                src={avatar.imageUrl}
+                width={40}
+                height={40}
+                alt="Contributor avatar"
+            />
+        </a>
+    ))}
+</div>
+
+<style>
+    .avatar-circles {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        z-index: 1000;
+    }
+
+    .avatar-circles a {
+        margin-left: -8px;
+        transition: all 0.3s ease;
+    }
+
+    .avatar-circles a:hover {
+        transform: translateY(-2px);
+        z-index: 2;
+    }
+
+    .avatar-circles a:hover .avatar-img {
+        border-color: #f54245;
+        box-shadow: 0 0 10px rgba(245, 66, 69, 0.3);
+    }
+
+    .avatar-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        background: #1A1D21;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
+</style> 

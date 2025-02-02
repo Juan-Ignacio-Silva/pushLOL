@@ -441,6 +441,7 @@ tiersInOrder.forEach(tier => {
         height: 2px;
         flex-grow: 1;
         background: linear-gradient(to right, #f54245 0%, rgba(245, 66, 69, 0) 100%);
+        box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
     }
 
     .tier-champions {
@@ -463,58 +464,61 @@ tiersInOrder.forEach(tier => {
             text-shadow: 0 0 15px rgba(255, 221, 117, 0.4);
         }
         .tier-line {
-            background: linear-gradient(to right, #ffdd75, 0%, rgba(255, 221, 117, 0.479) 100%);
-            box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
-        }
-        .table-row:hover {
-            border-color: #ffdd75;
-            box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
+            background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
         }
     }
 
-    /* Colores específicos por tier */
-    .tier-section[data-tier="S"] {
-        .tier-label {
-            color: #bc99f7;
-            text-shadow: 0 0 15px rgba(255, 221, 117, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #bc99f7 0%, rgba(255, 221, 117, 0) 100%);
-        }
-    }
-
-    .tier-section[data-tier="A"],
-    .tier-section[data-tier="A+"] {
+    .tier-section[data-tier="A+"],
+    .tier-section[data-tier="A"] {
         .tier-label {
             color: #beecfa;
             text-shadow: 0 0 15px rgba(190, 236, 250, 0.4);
         }
         .tier-line {
             background: linear-gradient(to right, #beecfa 0%, rgba(190, 236, 250, 0) 100%);
+            box-shadow: 0 0 10px rgba(190, 236, 250, 0.2);
+        }
+        .table-row:hover {
+            border-color: #beecfa;
+            box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
         }
     }
 
-    .tier-section[data-tier="B"],
-    .tier-section[data-tier="B+"] {
+    .tier-section[data-tier="B+"],
+    .tier-section[data-tier="B"] {
         .tier-label {
             color: #9ad47f;
             text-shadow: 0 0 15px rgba(154, 212, 127, 0.4);
         }
         .tier-line {
             background: linear-gradient(to right, #9ad47f 0%, rgba(154, 212, 127, 0) 100%);
+            box-shadow: 0 0 10px rgba(154, 212, 127, 0.2);
+        }
+        .table-row:hover {
+            border-color: #9ad47f;
+            box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
         }
     }
 
-    .tier-section[data-tier="C"],
-    .tier-section[data-tier="C+"] {
+    .tier-section[data-tier="C+"],
+    .tier-section[data-tier="C"] {
         .tier-label {
             color: #f59551;
             text-shadow: 0 0 15px rgba(245, 149, 81, 0.4);
         }
         .tier-line {
             background: linear-gradient(to right, #f59551 0%, rgba(245, 149, 81, 0) 100%);
+            box-shadow: 0 0 10px rgba(245, 149, 81, 0.2);
+        }
+        .table-row:hover {
+            border-color: #f59551;
+            box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
         }
     }
 
@@ -525,6 +529,13 @@ tiersInOrder.forEach(tier => {
         }
         .tier-line {
             background: linear-gradient(to right, #686b6e 0%, rgba(104, 107, 110, 0) 100%);
+            box-shadow: 0 0 10px rgba(104, 107, 110, 0.2);
+        }
+        .table-row:hover {
+            border-color: #686b6e;
+            box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
         }
     }
 
@@ -587,45 +598,6 @@ tiersInOrder.forEach(tier => {
         color: white;
         border-color: #f54245;
         box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
-    }
-
-    /* Hover effects para cada tier */
-    .tier-section[data-tier="S"] .table-row:hover {
-        border-color: #ffdd75;
-        box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    .tier-section[data-tier="A"],
-    .tier-section[data-tier="A+"] .table-row:hover {
-        border-color: #beecfa;
-        box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    .tier-section[data-tier="B"],
-    .tier-section[data-tier="B+"] .table-row:hover {
-        border-color: #9ad47f;
-        box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    .tier-section[data-tier="C"],
-    .tier-section[data-tier="C+"] .table-row:hover {
-        border-color: #f59551;
-        box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    .tier-section[data-tier="D"] .table-row:hover {
-        border-color: #686b6e;
-        box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
     }
 
     .home-button {
