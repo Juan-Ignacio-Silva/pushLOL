@@ -49,7 +49,7 @@ const tierGroups = championsWithStatsSorted.reduce((groups, champion) => {
 
 // Agregar rango a los campeones
 let currentRank = 1;
-const tiersInOrder = ['S', 'A+', 'A', 'B+', 'B', 'C+', 'C', 'D'];
+const tiersInOrder = ['S+','S', 'A+', 'A', 'B+', 'B', 'C+', 'C', 'D'];
 const tierGroupsOrdered = {};
 
 tiersInOrder.forEach(tier => {
@@ -210,9 +210,9 @@ tiersInOrder.forEach(tier => {
                                     </span>
                                 ))}
                             </div>
-                            <div class="col winrate">{DEFAULT_RATES.winRate}%</div>
-                            <div class="col pickrate">{DEFAULT_RATES.pickRate}%</div>
-                            <div class="col banrate">{DEFAULT_RATES.banRate}%</div>
+                            <div class="col winrate"></div>
+                            <div class="col pickrate"></div>
+                            <div class="col banrate"></div>
                         </div>
                     ))}
                 </div>
@@ -457,13 +457,31 @@ tiersInOrder.forEach(tier => {
     }
 
     /* Colores específicos por tier */
-    .tier-section[data-tier="S"] {
+    .tier-section[data-tier="S+"] {
         .tier-label {
             color: #ffdd75;
             text-shadow: 0 0 15px rgba(255, 221, 117, 0.4);
         }
         .tier-line {
-            background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
+            background: linear-gradient(to right, #ffdd75, 0%, rgba(255, 221, 117, 0.479) 100%);
+            box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
+        }
+        .table-row:hover {
+            border-color: #ffdd75;
+            box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
+        }
+    }
+
+    /* Colores específicos por tier */
+    .tier-section[data-tier="S"] {
+        .tier-label {
+            color: #bc99f7;
+            text-shadow: 0 0 15px rgba(255, 221, 117, 0.4);
+        }
+        .tier-line {
+            background: linear-gradient(to right, #bc99f7 0%, rgba(255, 221, 117, 0) 100%);
         }
     }
 

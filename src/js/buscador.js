@@ -1,6 +1,6 @@
 let barraBusq = document.getElementById("buscador");
 let cardsChampions = document.querySelectorAll('.card-chmpion');
-let activeFilter = null; // Cambiado de Set a una única variable
+let activeFilter = null;
 
 // Función para actualizar la visualización de campeones
 function updateChampionsDisplay() {
@@ -50,8 +50,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
-
-//// redireccionamiento de página
 document.querySelector('.contenido-pjs').addEventListener('click', function(e) {
     if (e.target.tagName === 'IMG') {
         const championName = e.target.id.toLowerCase();
@@ -61,14 +59,3 @@ document.querySelector('.contenido-pjs').addEventListener('click', function(e) {
         alert("Intente de nuevo")
     }
 });
-
-window.onload = function() {
-    const champion = sessionStorage.getItem("championSelected");
-
-    if (champion === "lux") {
-        console.log("¡Redirección exitosa! Estás en la página correcta.");
-        sessionStorage.removeItem("championSelected");
-    } else {
-        console.log("PJ NO")
-    }
-};
