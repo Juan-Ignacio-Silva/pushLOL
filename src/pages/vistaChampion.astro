@@ -1,13 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro" 
+import Barra from "../components/SearchBar.astro"
 ---
 <Layout title="Champion">
     <main>
+        <div class="search-nav">
+          <Barra />
+          <a href="/" class="button-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/>
+            </svg>
+          </a>
+        </div>
         <div class="champion-info">
           <div class="champion-avatar"></div>
           <div class="champion-details">
-            <h1><span class="champion-name"><!--JS--></span> <span class="champion-subtitle">Counters y Picks, <span class="champion-score">15.2</span></span></h1>
-            <div class="champion-bar"></div>
+            <div class="chmpion-textos">
+              <h1><span class="champion-name"></span> <span class="champion-subtitle">Counters y Picks, <span class="champion-score">15.2</span></span></h1>
+            </div>
+              <div class="champion-bar"></div>
           </div>
         </div>
         <section class="counters">
@@ -33,6 +44,7 @@ import Layout from "../layouts/Layout.astro"
 
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
   :root {
     --color-background: #0a0a0a;
     --color-card: #1a1a1a;
@@ -42,51 +54,86 @@ import Layout from "../layouts/Layout.astro"
     --color-bar: #ffd700;
   }
 
-  body {
-    margin: 0;
-    padding: 1rem;
-    min-height: 100vh;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: system-ui, -apple-system, sans-serif;
-  }
-
   main {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 2rem;
-    height: calc(100vh - 2rem);
+
   }
 
-  .search-placeholder {
-    height: 48px;
-    background: var(--color-card);
+  .search-nav{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .button-back{
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    background-color: #1A1D21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    color: #45464B;
+  }
+
+  .button-back:hover{
+    background-color: #F54245;
+    color: white;
   }
 
   .champion-info {
+    width: 60%;
+    height: 110px;
+    margin-top: 40px;
     display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
+    margin-bottom: 40px;
   }
 
   .champion-avatar {
-    width: 100px;
-    height: 100px;
-    background: var(--color-card);
+    width: 130px;
+    height: 110px;
+    background-color: #3E4147;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  
+  .champion-details {
+    width: 100%;
+    height: 110px;
+  }
+  
+  .chmpion-textos{
+    width: 100%;
+    height: 20px;
+  }
+  
+  .champion-bar {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #191d23;
+    border-bottom: 3px solid #D4AF37;
   }
 
-  .champion-details {
-    flex: 1;
+  .champion-subtitle {
+    color: #5a5b5d;
+    font-size: 0.7rem;
   }
 
   h1 {
+    font-family: "Roboto mono", monospace;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     display: flex;
     gap: 0.5rem;
     align-items: baseline;
@@ -96,27 +143,19 @@ import Layout from "../layouts/Layout.astro"
     color: var(--color-accent-red);
   }
 
-  .champion-score {
-    color: var(--color-accent-red);
-  }
-
-  .champion-bar {
-    height: 8px;
-    background: var(--color-bar);
-    border-radius: 4px;
-    margin-top: 1rem;
-  }
-
   .counters {
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 20px;
   }
 
   h2 {
     margin: 0;
     font-size: 1rem;
     color: var(--color-accent-blue);
+    font-family: "Roboto mono", monospace;
   }
 
   .cards-grid {
@@ -134,22 +173,5 @@ import Layout from "../layouts/Layout.astro"
 
   .counter-card:hover {
     transform: translateY(-4px);
-  }
-
-  @media (max-width: 768px) {
-    .cards-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .champion-info {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    h1 {
-      flex-direction: column;
-      align-items: center;
-    }
   }
 </style>

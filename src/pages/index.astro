@@ -4,6 +4,7 @@ import Logo from '../assets/logo.svg'
 import TextoPush from '../assets/textoPush.svg'
 import Barra from '../components/SearchBar.astro'
 import GenerarChampions from '../components/generarChampions.astro';
+import BotonesPosiciones from '../components/botonesPosiciones.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -16,7 +17,10 @@ import GenerarChampions from '../components/generarChampions.astro';
 				<img  id="LogoPush" src={ Logo.src }  alt="logo">
 				<img id="TextoPush" src={ TextoPush.src } alt="Push">
 			</div>
-			<Barra />
+			<div class="search-container">
+				<Barra />
+				<BotonesPosiciones />
+			</div>
 			<GenerarChampions />
 			<div class="contenedor-button">
 				<a href="tierlist" class="tierlist-button">TIERLIST 15.2</a>
@@ -28,7 +32,7 @@ import GenerarChampions from '../components/generarChampions.astro';
 <script src="../js/buscador.js"></script>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 	main {
 		width: 100%;
@@ -59,6 +63,12 @@ import GenerarChampions from '../components/generarChampions.astro';
 		flex-shrink: 0;
 	}
 
+	.search-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
 	#LogoPush {
 		width: 4rem;
 	}
@@ -85,7 +95,7 @@ import GenerarChampions from '../components/generarChampions.astro';
         font-weight: bold;
         cursor: pointer;
         transition: all 0.3s ease;
-		font-family: "Roboto", monospace;
+		font-family: "Roboto mono", monospace;
 		text-align: center;
 		text-decoration: none;
     }

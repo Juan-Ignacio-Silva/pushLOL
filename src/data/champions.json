@@ -4,1182 +4,1529 @@
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aatrox/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ahri",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ahri/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "akali",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/akali/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Akali/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "akshan",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/akshan/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ambessa",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ambessa/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "alistar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/alistar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "amumu",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/amumu/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle", "support"]
+    "positions": ["jungle", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "anivia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/anivia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "annie",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/annie/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Annie/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "aphelios",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aphelios/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ashe",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ashe/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["adc", "support"]
+    "positions": ["adc", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "aurelion sol",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aurelionsol/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "aurora",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aurora/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "azir",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/azir/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Azir/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "bard",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/bard/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Bard/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "bel'veth",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/belveth/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "blitzcrank",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/blitzcrank/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "brand",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/brand/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Brand/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "braum",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/braum/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Braum/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "briar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/briar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Briar/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "caitlyn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/caitlyn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "camille",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/camille/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Camille/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "cassiopeia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/cassiopeia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "cho'gath",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/chogath/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Chogath/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top", "mid"]
+    "positions": ["top", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "corki",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/corki/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Corki/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "darius",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/darius/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Darius/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "diana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/diana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Diana/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["jungle", "mid"]
+    "positions": ["jungle", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "dr mundo",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/drmundo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "draven",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/draven/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Draven/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ekko",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ekko/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "mid"]
+    "positions": ["jungle", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "elise",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/elise/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Elise/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "evelynn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/evelynn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ezreal",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ezreal/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "fiddlesticks",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/fiddlesticks/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "fiora",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/fiora/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "fizz",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/fizz/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "galio",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/galio/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Galio/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "gangplank",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gangplank/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "garen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/garen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Garen/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "gnar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gnar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "gragas",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gragas/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle", "top"]
+    "positions": ["jungle", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "graves",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/graves/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Graves/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "gwen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gwen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top", "jungle"]
+    "positions": ["top", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "hecarim",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/hecarim/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "heimerdinger",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/heimerdinger/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "hwei",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/hwei/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "illaoi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/illaoi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "irelia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/irelia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "mid"]
+    "positions": ["top", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ivern",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ivern/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "janna",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/janna/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Janna/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "jarvan iv",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jarvaniv/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIV/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "jax",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jax/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jax/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top", "jungle"]
+    "positions": ["top", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "jayce",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jayce/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "mid"]
+    "positions": ["top", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "jhin",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jhin/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "jinx",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jinx/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kai'sa",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kaisa/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kaisa/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kalista",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kalista/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "karma",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/karma/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Karma/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support", "mid"]
+    "positions": ["support", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "karthus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/karthus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle", "mid"]
+    "positions": ["jungle", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kassadin",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kassadin/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "katarina",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/katarina/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kayle",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kayle/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top", "mid"]
+    "positions": ["top", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kayn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kayn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kennen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kennen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "mid"]
+    "positions": ["top", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kha'zix",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/khazix/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Khazix/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kindred",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kindred/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kled",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kled/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kled/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "kog'maw",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kogmaw/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kogmaw/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ksante",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ksante/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "leblanc",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leblanc/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "lee sin",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leesin/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Leesin/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "leona",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leona/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Leona/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "lillia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lillia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "lissandra",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lissandra/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "lucian",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lucian/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "lulu",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lulu/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "lux",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lux/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lux/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "malphite",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malphite/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "support", "mid"]
+    "positions": ["top", "support", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "malzahar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malzahar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "maokai",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/maokai/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["top", "support", "jungle"]
+    "positions": ["top", "support", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "master yi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/masteryi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Masteryi/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "mel",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/mel/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Mel/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "milio",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/milio/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Milio/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "miss fortune",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/missfortune/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Missfortune/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "mordekaiser",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/mordekaiser/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "morgana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/morgana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support", "jungle"]
+    "positions": ["support", "jungle"],
+    "counters": [],
+    "buenoContra": []
+  },
+  {
+    "name": "naafiri",
+    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/naafiri/square",
+    "splash": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/splash-art/centered/skin/0",
+    "tier": "A",
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nami",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nami/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nami/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nasus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nasus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nautilus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nautilus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "neeko",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/neeko/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nidalee",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nidalee/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nilah",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nilah/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nocturne",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nocturne/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "nunu & willump",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nunu/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nunu/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "olaf",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/olaf/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle", "top"]
+    "positions": ["jungle", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "orianna",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/orianna/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ornn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ornn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "pantheon",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/pantheon/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top", "support"]
+    "positions": ["mid", "top", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "poppy",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/poppy/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top", "support"]
+    "positions": ["top", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "pyke",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/pyke/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "qiyana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/qiyana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "quinn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/quinn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "rakan",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rakan/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "rammus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rammus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "rek'sai",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/reksai/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Reksai/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "rell",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rell/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rell/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "renata glasc",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/renata/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Renata/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "renekton",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/renekton/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "rengar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rengar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "riven",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/riven/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Riven/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "rumble",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rumble/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ryze",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ryze/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "samira",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/samira/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Samira/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "sejuani",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sejuani/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "senna",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/senna/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Senna/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "adc"]
+    "positions": ["support", "adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "seraphine",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/seraphine/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "mid"]
+    "positions": ["support", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "sett",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sett/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sett/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "shaco",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shaco/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "support"]
+    "positions": ["jungle", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "shen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Shen/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "shyvana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shyvana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "singed",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/singed/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Singed/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "sion",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sion/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sion/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "sivir",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sivir/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "skarner",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/skarner/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "smolder",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/smolder/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "sona",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sona/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sona/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "soraka",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/soraka/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "swain",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/swain/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Swain/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "sylas",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sylas/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "top", "jungle"]
+    "positions": ["mid", "top", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "syndra",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/syndra/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "tahm kench",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/tahmkench/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Tahmkench/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "top"]
+    "positions": ["support", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "taliyah",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/taliyah/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "mid"]
+    "positions": ["jungle", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "talon",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/talon/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Talon/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "jungle"]
+    "positions": ["mid", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "taric",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/taric/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Taric/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "teemo",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/teemo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "thresh",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/thresh/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "tristana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/tristana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc", "mid"]
+    "positions": ["adc", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "trundle",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/trundle/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top", "jungle"]
+    "positions": ["top", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "tryndamere",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/tryndamere/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "twisted fate",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/twistedfate/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Twistedfate/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "twitch",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/twitch/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "udyr",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/udyr/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "top"]
+    "positions": ["jungle", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "urgot",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/urgot/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "varus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/varus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Varus/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "vayne",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vayne/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc", "top"]
+    "positions": ["adc", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "veigar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/veigar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "vel'koz",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/velkoz/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Velkoz/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "vi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vi/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "viego",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/viego/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Viego/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "vex",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vex/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vex/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "viktor",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/viktor/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "vladimir",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vladimir/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "volibear",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/volibear/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "jungle"]
+    "positions": ["top", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "warwick",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/warwick/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle", "top"]
+    "positions": ["jungle", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "wukong",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/monkeyking/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Monkeyking/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["top", "jungle"]
+    "positions": ["jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "xayah",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/xayah/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "xerath",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/xerath/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "support"]
+    "positions": ["mid", "support"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "xin zhao",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/xinzhao/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Xinzhao/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle", "top"]
+    "positions": ["jungle", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "yasuo",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yasuo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "yone",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yone/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yone/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "top"]
+    "positions": ["mid", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "yorick",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yorick/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"]
+    "positions": ["top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "yuumi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yuumi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support", "jungle"]
+    "positions": ["support", "jungle"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "zac",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zac/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zac/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle", "top"]
+    "positions": ["jungle", "top"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "zed",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zed/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zed/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "zeri",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zeri/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["adc"]
+    "positions": ["adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "ziggs",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ziggs/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "adc"]
+    "positions": ["mid", "adc"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "zilean",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zilean/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "mid"]
+    "positions": ["support", "mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "zoe",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zoe/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"]
+    "positions": ["mid"],
+    "counters": [],
+    "buenoContra": []
   },
   {
     "name": "zyra",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zyra/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"]
+    "positions": ["support"],
+    "counters": [],
+    "buenoContra": []
   }
 ]

@@ -3,13 +3,6 @@ import personajesData from '../data/champions.json';
 import TierListLogo from '../assets/tierlist_logo.svg?raw';
 
 const positions = ['all', 'top', 'jungle', 'mid', 'adc', 'support'];
-
-const DEFAULT_RATES = {
-    winRate: 50.0,
-    pickRate: 5.0,
-    banRate: 3.0
-};
-
 // Función para convertir tier a número para ordenamiento
 function getTierValue(tier) {
     const tiers = {

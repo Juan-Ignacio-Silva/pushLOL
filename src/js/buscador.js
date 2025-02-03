@@ -50,6 +50,9 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
+
+// Funcion vista Champions
+
 document.querySelector('.contenido-pjs').addEventListener('click', function(e) {
     if (e.target.tagName === 'IMG') {
         const championName = e.target.id.toLowerCase();

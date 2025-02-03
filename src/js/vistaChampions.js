@@ -22,24 +22,23 @@ fetch("../src/data/champions.json")
     }
 
     let championInfo = championsData;
-    console.log("info " + championInfo.name)
-    //let champion = null;
+    let champion = null;
 
     //// Buscar el campeón con forEach
-    //championInfo.forEach(champ => {
-    //    if (champ.name.toLowerCase() === nombre.toLowerCase()) {
-    //        champion = champ;
-    //        console.log("Champseect" + champion)
-    //    }
-    //});
-
-    //if (champion) {
-    //    document.getElementById("champion-info").style.display = "block";
-    //    document.getElementById("champion-title").textContent = champion.name;
-    //    document.getElementById("champion-role").textContent = "Rol: " + champion.role;
-    //    document.getElementById("champion-difficulty").textContent = "Dificultad: " + champion.difficulty;
-    //    document.getElementById("champion-img").src = champion.image;
-    //} else {
-    //    alert("Campeón no encontrado.");
-    //}
-}
+    championInfo.forEach(champ => {
+        if (champ.name.toLowerCase() === nombre.toLowerCase()) {
+            champion = champ;
+            console.log("ChampSeleccinado: " + champion.image_url)
+        }
+    });
+    const championAvatar = document.querySelector(".champion-avatar")
+    if (champion) {
+        championAvatar.innerHTML = `
+            <img 
+            src="${champion.image_url}" 
+            alt="${champion.name}"
+            style="width: 100px; border-radius: 8px;"
+            >
+        `;
+    }
+    }
