@@ -1,0 +1,42 @@
+[
+  {
+    "wombo": {
+      "champion1": {
+        "name": "malphite",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malphite/square"
+      },
+      "champion2": {
+        "name": "yasuo",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yasuo/square"
+      }
+    },
+    "tier": "S+",
+    "positionCombo": "top/mid",
+    "positions": ["top", "mid"],
+    "winrate": 54.2,
+    "pickrate": 3.8,
+    "banrate": 1.2,
+    "gif_url": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG5keWh4YWVrYWZmb2liaDVia2YzNmV0MWVtN3N3c2U4azBmNHR3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fCCCy9QuTtsFM9S88n/giphy.gif",
+    "video_url": "https://example.com/malphite-yasuo-wombo.mp4"
+  },
+  {
+    "wombo": {
+      "champion1": {
+        "name": "orianna",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/orianna/square"
+      },
+      "champion2": {
+        "name": "samira",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/samira/square"
+      }
+    },
+    "tier": "S",
+    "positionCombo": "mid/adc",
+    "positions": ["mid", "adc"],
+    "winrate": 53.1,
+    "pickrate": 2.9,
+    "banrate": 0.8,
+    "gif_url": "https://example.com/orianna-samira-wombo.gif",
+    "video_url": "https://example.com/orianna-samira-wombo.mp4"
+  }
+] 

@@ -1,23 +1,27 @@
 ---
 import personajesData from '../data/champions.json';
+import duosData from '../data/Duos.json';
+import wombosData from '../data/Wombos.json';
+import composData from '../data/Compos.json';
 import TierListLogo from '../assets/tierlist_logo.svg?raw';
 
 const positions = ['all', 'top', 'jungle', 'mid', 'adc', 'support'];
+
+const DEFAULT_RATES = {
+    winRate: 50.0,
+    pickRate: 5.0,
+    banRate: 3.0
+};
+
 // Función para convertir tier a número para ordenamiento
 function getTierValue(tier) {
     const tiers = {
+        'S+': 7,
         'S': 6,
-        'S-': 5.5,
-        'A+': 5,
-        'A': 4.5,
-        'A-': 4,
-        'B+': 3.5,
-        'B': 3,
-        'B-': 2.5,
-        'C+': 2,
-        'C': 1.5,
-        'C-': 1,
-        'D': 0.5
+        'A': 5,
+        'B': 4,
+        'C': 3,
+        'D': 2
     };
     return tiers[tier] || 0;
 }
@@ -42,7 +46,7 @@ const tierGroups = championsWithStatsSorted.reduce((groups, champion) => {
 
 // Agregar rango a los campeones
 let currentRank = 1;
-const tiersInOrder = ['S+','S', 'A+', 'A', 'B+', 'B', 'C+', 'C', 'D'];
+const tiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
 const tierGroupsOrdered = {};
 
 tiersInOrder.forEach(tier => {
@@ -53,6 +57,55 @@ tiersInOrder.forEach(tier => {
         tierGroupsOrdered[tier] = tierGroups[tier];
     }
 });
+
+// Ordenar y agrupar duos
+const duosGrouped = duosData.reduce((groups, duo) => {
+    const tier = duo.tier;
+    if (!groups[tier]) {
+        groups[tier] = [];
+    }
+    groups[tier].push(duo);
+    return groups;
+}, {});
+
+let duoRank = 1;
+const duoTiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
+const duosGroupedOrdered = {};
+
+duoTiersInOrder.forEach(tier => {
+    if (duosGrouped[tier]) {
+        duosGrouped[tier].forEach(duo => {
+            duo.rank = duoRank++;
+        });
+        duosGroupedOrdered[tier] = duosGrouped[tier];
+    }
+});
+
+// Ordenar y agrupar wombos
+const wombosGrouped = wombosData.reduce((groups, wombo) => {
+    const tier = wombo.tier;
+    if (!groups[tier]) {
+        groups[tier] = [];
+    }
+    groups[tier].push(wombo);
+    return groups;
+}, {});
+
+let womboRank = 1;
+const womboTiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
+const wombosGroupedOrdered = {};
+
+womboTiersInOrder.forEach(tier => {
+    if (wombosGrouped[tier]) {
+        wombosGrouped[tier].forEach(wombo => {
+            wombo.rank = womboRank++;
+        });
+        wombosGroupedOrdered[tier] = wombosGrouped[tier];
+    }
+});
+
+// Variable para el tipo de vista inicial
+const viewType = 'single';
 ---
 
 <div class="tierlist-container">
@@ -61,7 +114,7 @@ tiersInOrder.forEach(tier => {
     </div>
     <div class="glass-panel">
         <div class="header-section">
-            <div class="position-tabs">
+            <div id="position-tabs" class="position-tabs">
                 {positions.map(position => (
                     <button 
                         class:list={['tab-btn', { active: position === 'all' }]} 
@@ -73,7 +126,7 @@ tiersInOrder.forEach(tier => {
                                 <g fill="none" fill-rule="evenodd">
                                     <g fill="currentcolor" fill-rule="nonzero">
                                         <g>
-                                            <path d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z" transform="translate(-2388.000000, -699.000000) translate(2388.000000, 699.000000)"/>
+                                            <path d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z"/>
                                         </g>
                                     </g>
                                 </g>
@@ -113,7 +166,71 @@ tiersInOrder.forEach(tier => {
                     </button>
                 ))}
             </div>
+
+            <div id="duo-filters" class="filter-buttons" style="display: none;">
+                <button class="tab-btn" data-positions="all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <g fill="currentcolor" fill-rule="nonzero">
+                                <g>
+                                    <path d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button class="tab-btn" data-positions="adc,support">
+                    <div class="duo-icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="currentColor" fill-rule="nonzero">
+                                <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                            </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                        </svg>
+                    </div>
+                </button>
+                <button class="tab-btn" data-positions="mid,jungle">
+                    <div class="duo-icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="currentColor" fill-rule="nonzero">
+                                <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                <path d="M18 3h3v3L6 21H3v-3z"></path>
+                            </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                        </svg>
+                    </div>
+                </button>
+                <button class="tab-btn" data-positions="top,jungle">
+                    <div class="duo-icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="currentColor" fill-rule="nonzero">
+                                <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                            </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+
+            <button id="compos-btn" class="compos-button">
+                Compos
+            </button>
             <div class="search-container">
+                <select id="view-type" class="tier-select">
+                    <option value="single">Campeones</option>
+                    <option value="duos">Duos</option>
+                    <option value="wombos">Wombos</option>
+                </select>
                 <input 
                     type="text" 
                     id="champion-search" 
@@ -128,89 +245,340 @@ tiersInOrder.forEach(tier => {
             </div>
         </div>
 
-        <!-- Agregamos el header de la tabla -->
+        <!-- Título para composiciones -->
+        <h1 id="compos-title" class="compos-title" style="display: none;">
+            COMPOSICIONES DE EQUIPO POPULARES Y COMPETITIVAS
+        </h1>
+
+        <!-- Nueva vista de composiciones -->
+        <div id="compos-view" class="compos-grid" style="display: none;">
+            {composData.map((comp) => (
+                <div class="compo-card">
+                    <div class="compo-name">{comp.name}</div>
+                    <div class="compo-champions">
+                        {comp.champions.map((champion) => (
+                            <div class="compo-champion">
+                                <img 
+                                    src={champion.image_url} 
+                                    alt={champion.name}
+                                    class="champion-img"
+                                />
+                                <span class={`position-icon ${champion.position}`}>
+                                    {champion.position === 'top' && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="currentColor" fill-rule="nonzero">
+                                                <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                                <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                            </g>
+                                        </svg>
+                                    )}
+                                    {champion.position === 'jungle' && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                                        </svg>
+                                    )}
+                                    {champion.position === 'mid' && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="currentColor" fill-rule="nonzero">
+                                                <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                                <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                            </g>
+                                        </svg>
+                                    )}
+                                    {champion.position === 'adc' && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <g fill="currentColor" fill-rule="nonzero">
+                                                <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                                <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                            </g>
+                                        </svg>
+                                    )}
+                                    {champion.position === 'support' && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                                        </svg>
+                                    )}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                    <div class="compo-description">{comp.description}</div>
+                </div>
+            ))}
+        </div>
+
         <div class="table-header">
             <div class="col">RANGO</div>
-            <div class="col">CAMPEÓN</div>
+            <div class="col champions-col">CAMPEÓN</div>
             <div class="col positions">POSICIÓN</div>
             <div class="col">WIN RATE %</div>
             <div class="col">PICK RATE %</div>
             <div class="col">BAN RATE %</div>
+            {viewType === 'wombos' && (
+                <div class="col">EJEMPLO</div>
+            )}
         </div>
 
-        {Object.entries(tierGroupsOrdered).map(([tier, champions]) => (
-            <div class="tier-section" data-tier={tier}>
-                <div class="tier-header">
-                    <span class="tier-label">{tier}</span>
-                    <div class="tier-line"></div>
-                </div>
-                <div class="tier-champions">
-                    {champions.map(champion => (
-                        <div class="table-row" 
-                            data-positions={JSON.stringify(champion.positions)}
-                            style={`--tier-color: ${
-                                tier.startsWith('S') ? '#ffdd75' :
-                                tier.startsWith('A') ? '#beecfa' :
-                                tier.startsWith('B') ? '#9ad47f' :
-                                tier.startsWith('C') ? '#f59551' :
-                                '#686b6e'
-                            }`}
-                        >
-                            <div class="col rank">{champion.rank}</div>
-                            <div class="col champion">
-                                <img src={champion.image_url} alt={champion.name} />
-                                <span class="champion-name">{champion.name.toUpperCase()}</span>
+        <div id="single-view">
+            {Object.entries(tierGroupsOrdered).map(([tier, champions]) => (
+                <div class="tier-section" data-tier={tier}>
+                    <div class="tier-header">
+                        <span class="tier-label">{tier}</span>
+                        <div class="tier-line"></div>
+                    </div>
+                    <div class="tier-champions">
+                        {champions.map(champion => (
+                            <div class="table-row" 
+                                data-positions={JSON.stringify(champion.positions)}
+                            >
+                                <div class="col rank">{champion.rank}</div>
+                                <div class="col champion">
+                                    <img src={champion.image_url} alt={champion.name} />
+                                    <span class="champion-name">{champion.name.toUpperCase()}</span>
+                                </div>
+                                <div class="col positions">
+                                    {champion.positions.map(pos => (
+                                        <span class={`position-icon ${pos}`}>
+                                            {pos === 'top' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'jungle' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                                                </svg>
+                                            )}
+                                            {pos === 'mid' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'adc' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'support' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                                                </svg>
+                                            )}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div class="col winrate"></div>
+                                <div class="col pickrate"></div>
+                                <div class="col banrate"></div>
                             </div>
-                            <div class="col positions">
-                                {champion.positions.map(pos => (
-                                    <span class={`position-icon ${pos}`}>
-                                        {pos === 'top' && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                <g fill="currentColor" fill-rule="nonzero">
-                                                    <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                                    <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                </g>
-                                            </svg>
-                                        )}
-                                        {pos === 'jungle' && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                                            </svg>
-                                        )}
-                                        {pos === 'mid' && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                <g fill="currentColor" fill-rule="nonzero">
-                                                    <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                                    <path d="M18 3h3v3L6 21H3v-3z"></path>
-                                                </g>
-                                            </svg>
-                                        )}
-                                        {pos === 'adc' && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                <g fill="currentColor" fill-rule="nonzero">
-                                                    <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                                    <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                </g>
-                                            </svg>
-                                        )}
-                                        {pos === 'support' && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                                            </svg>
-                                        )}
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <div id="duo-view" style="display: none;">
+            {Object.entries(duosGroupedOrdered).map(([tier, duos]) => (
+                <div class="tier-section" data-tier={tier}>
+                    <div class="tier-header">
+                        <span class="tier-label">{tier}</span>
+                        <div class="tier-line"></div>
+                    </div>
+                    <div class="tier-champions">
+                        {duos.map(duo => (
+                            <div class="table-row" data-duo={JSON.stringify({ positionCombo: duo.positions.join(',') })}>
+                                <div class="col rank">#{duo.rank}</div>
+                                <div class="col champion">
+                                    <div class="champion-pair">
+                                        <img 
+                                            class="champion-img"
+                                            src={duo.duo.champion1.image_url} 
+                                            alt={duo.duo.champion1.name}
+                                        />
+                                        <span class="separator">/</span>
+                                        <img 
+                                            class="champion-img"
+                                            src={duo.duo.champion2.image_url} 
+                                            alt={duo.duo.champion2.name}
+                                        />
+                                    </div>
+                                    <span class="champion-name">
+                                        {duo.duo.champion1.name.toUpperCase()} + {duo.duo.champion2.name.toUpperCase()}
                                     </span>
-                                ))}
+                                </div>
+                                <div class="col positions">
+                                    {duo.positions.map(pos => (
+                                        <span class={`position-icon ${pos}`}>
+                                            {pos === 'top' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'jungle' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                                                </svg>
+                                            )}
+                                            {pos === 'mid' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'adc' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'support' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                                                </svg>
+                                            )}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div class="col winrate">{duo.winrate}%</div>
+                                <div class="col pickrate">{duo.pickrate}%</div>
+                                <div class="col banrate">{duo.banrate}%</div>
                             </div>
-                            <div class="col winrate"></div>
-                            <div class="col pickrate"></div>
-                            <div class="col banrate"></div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))}
+        </div>
+
+        <div id="wombo-view" style="display: none;">
+            {Object.entries(wombosGroupedOrdered).map(([tier, wombos]) => (
+                <div class="tier-section" data-tier={tier}>
+                    <div class="tier-header">
+                        <span class="tier-label">{tier}</span>
+                        <div class="tier-line"></div>
+                    </div>
+                    <div class="tier-champions">
+                        {wombos.map((wombo) => (
+                            <div class="table-row" 
+                                data-position-combo={wombo.positionCombo}
+                                data-positions={JSON.stringify(wombo.positions)}
+                            >
+                                <div class="col rank">{wombo.rank}</div>
+                                <div class="col champions-wombo">
+                                    <div class="champion-pair">
+                                        <img 
+                                            class="champion-img"
+                                            src={wombo.wombo.champion1.image_url} 
+                                            alt={wombo.wombo.champion1.name}
+                                        />
+                                        <span class="separator">/</span>
+                                        <img 
+                                            class="champion-img"
+                                            src={wombo.wombo.champion2.image_url} 
+                                            alt={wombo.wombo.champion2.name}
+                                        />
+                                    </div>
+                                    <span class="champion-names">
+                                        {wombo.wombo.champion1.name.toUpperCase()} + {wombo.wombo.champion2.name.toUpperCase()}
+                                    </span>
+                                </div>
+                                <div class="col positions">
+                                    {wombo.positions.map(pos => (
+                                        <span class={`position-icon ${pos}`}>
+                                            {pos === 'top' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'jungle' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                                                </svg>
+                                            )}
+                                            {pos === 'mid' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'adc' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <g fill="currentColor" fill-rule="nonzero">
+                                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                                    </g>
+                                                </svg>
+                                            )}
+                                            {pos === 'support' && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                                                </svg>
+                                            )}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div class="col winrate">{wombo.winrate}%</div>
+                                <div class="col pickrate">{wombo.pickrate}%</div>
+                                <div class="col banrate">{wombo.banrate}%</div>
+                                <div class="col gif-preview">
+                                    <img 
+                                        src={wombo.gif_url} 
+                                        alt="Wombo Combo Preview"
+                                        class="wombo-gif"
+                                        data-video-url={wombo.video_url}
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</div>
+
+<!-- Video Player Modal -->
+<div id="video-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Wombo Combo</h2>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <video id="wombo-player" controls style="display: none;">
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <img id="wombo-gif" src="" alt="Wombo Combo" style="display: none;">
+        </div>
     </div>
 </div>
 
@@ -251,13 +619,24 @@ tiersInOrder.forEach(tier => {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 30px;
+        margin: 20px 0 30px 0;
         padding: 5px;
+        gap: 15px;
+        position: sticky;
+        top: 20px;
+        z-index: 100;
+        background: rgba(26, 29, 33, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 15px;
     }
 
     .position-tabs {
         display: flex;
-        gap: 12px;
+        gap: 16px;
+        padding: 10px;
     }
 
     .search-container {
@@ -291,7 +670,7 @@ tiersInOrder.forEach(tier => {
 
     .table-header {
         display: grid;
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
         padding: 15px 20px;
         background: rgba(26, 29, 33, 0.8);
         border-radius: 12px;
@@ -306,11 +685,14 @@ tiersInOrder.forEach(tier => {
 
     .table-header .col {
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .table-row {
         display: grid;
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
         padding: 15px 20px;
         border-radius: 12px;
         align-items: center;
@@ -458,21 +840,34 @@ tiersInOrder.forEach(tier => {
         }
         .tier-line {
             background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
+            box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
+        }
+        .table-row:hover {
+            border-color: #ffdd75;
+            box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
         }
     }
 
     .tier-section[data-tier="S"] {
         .tier-label {
             color: #bd9af2;
-            text-shadow: 0 0 15px rgba(200, 117, 255, 0.514);
+            text-shadow: 0 0 15px rgba(189, 154, 242, 0.4);
         }
         .tier-line {
-            background: linear-gradient(to right, #bd9af2 0%, rgba(255, 221, 117, 0) 100%);
+            background: linear-gradient(to right, #bd9af2 0%, rgba(189, 154, 242, 0) 100%);
+            box-shadow: 0 0 10px rgba(189, 154, 242, 0.2);
         }
-    
+        .table-row:hover {
+            border-color: #bd9af2;
+            box-shadow: 0 0 15px rgba(189, 154, 242, 0.2);
+            background: rgba(26, 29, 33, 0.6);
+            transform: translateY(-2px);
+        }
     }
-    .tier-section[data-tier="A+"],
-    .tier-section[data-tier="A"] {
+    .tier-section[data-tier="A"],
+    .tier-section[data-tier="A+"] {
         .tier-label {
             color: #beecfa;
             text-shadow: 0 0 15px rgba(190, 236, 250, 0.4);
@@ -489,8 +884,8 @@ tiersInOrder.forEach(tier => {
         }
     }
 
-    .tier-section[data-tier="B+"],
-    .tier-section[data-tier="B"] {
+    .tier-section[data-tier="B"],
+    .tier-section[data-tier="B+"] {
         .tier-label {
             color: #9ad47f;
             text-shadow: 0 0 15px rgba(154, 212, 127, 0.4);
@@ -507,8 +902,8 @@ tiersInOrder.forEach(tier => {
         }
     }
 
-    .tier-section[data-tier="C+"],
-    .tier-section[data-tier="C"] {
+    .tier-section[data-tier="C"],
+    .tier-section[data-tier="C+"] {
         .tier-label {
             color: #f59551;
             text-shadow: 0 0 15px rgba(245, 149, 81, 0.4);
@@ -561,6 +956,12 @@ tiersInOrder.forEach(tier => {
         justify-content: center;
     }
 
+    .col:nth-child(7) { /* EJEMPLO */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
     /* Ajuste para los valores numéricos */
     .winrate, 
     .pickrate, 
@@ -570,9 +971,9 @@ tiersInOrder.forEach(tier => {
     }
 
     .tab-btn {
-        padding: 10px;
-        width: 44px;
-        height: 44px;
+        padding: 12px;
+        width: 52px;
+        height: 52px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -584,11 +985,12 @@ tiersInOrder.forEach(tier => {
         font-weight: 500;
         cursor: pointer;
         transition: all 0.3s ease;
+        margin: 0 4px;
     }
 
     .tab-btn svg {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 
     .tab-btn:hover {
@@ -627,51 +1029,997 @@ tiersInOrder.forEach(tier => {
         width: 20px;
         height: 20px;
     }
+
+    .tier-select {
+        width: 150px;
+        height: 44px;
+        background: rgba(26, 29, 33, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 0 15px;
+        color: #e1e5ea;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e1e5ea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 16px;
+        padding-right: 35px;
+    }
+
+    .tier-select:hover {
+        border-color: #f54245;
+    }
+
+    .tier-select:focus {
+        outline: none;
+        border-color: #f54245;
+    }
+
+    .tier-select option {
+        background: rgba(26, 29, 33, 0.95);
+        color: #e1e5ea;
+        padding: 12px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .tier-select option:hover,
+    .tier-select option:checked {
+        background: #f54245 !important;
+        color: #ffffff;
+    }
+
+    /* Estilos específicos para Firefox */
+    @-moz-document url-prefix() {
+        .tier-select {
+            background-color: rgba(26, 29, 33, 0.95);
+        }
+        
+        .tier-select option {
+            background-color: rgba(26, 29, 33, 0.95);
+            color: #e1e5ea;
+        }
+
+        .tier-select option:hover,
+        .tier-select option:checked {
+            background-color: #f54245 !important;
+            color: #ffffff;
+        }
+    }
+
+    /* Estilos específicos para Webkit (Chrome, Safari) */
+    .tier-select::-webkit-scrollbar {
+        width: 8px;
+        background: rgba(26, 29, 33, 0.95);
+    }
+
+    .tier-select::-webkit-scrollbar-thumb {
+        background: #f54245;
+        border-radius: 4px;
+    }
+
+    .tier-select::-webkit-scrollbar-track {
+        background: rgba(26, 29, 33, 0.95);
+        border-radius: 4px;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .champions-duo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-left: 15px;
+    }
+
+    .champion-pair {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .champion-pair .champion-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .champion-pair .champion-img:hover {
+        transform: translateY(-2px);
+        border-color: var(--tier-color);
+        box-shadow: 0 0 15px rgba(var(--tier-color-rgb), 0.2);
+    }
+
+    .champion-names {
+        font-weight: 500;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    #duo-view .table-row {
+        display: grid;
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+        padding: 15px 20px;
+        border-radius: 12px;
+        align-items: center;
+        background: rgba(26, 29, 33, 0.4);
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        gap: 30px;
+        cursor: pointer;
+    }
+
+    #duo-view .tier-section[data-tier="S+"] .table-row:hover {
+        border-color: #ffdd75;
+        box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #duo-view .tier-section[data-tier="S"] .table-row:hover {
+        border-color: #bd9af2;
+        box-shadow: 0 0 15px rgba(189, 154, 242, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #duo-view .tier-section[data-tier="A"] .table-row:hover {
+        border-color: #beecfa;
+        box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #duo-view .tier-section[data-tier="B"] .table-row:hover {
+        border-color: #9ad47f;
+        box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #duo-view .tier-section[data-tier="C"] .table-row:hover {
+        border-color: #f59551;
+        box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #duo-view .tier-section[data-tier="D"] .table-row:hover {
+        border-color: #686b6e;
+        box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #duo-view .champion-pair {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    #duo-view .champion-pair .champion-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    #duo-view .separator {
+        color: #666;
+        font-size: 20px;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #duo-view .champion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #duo-view .champion-name {
+        font-weight: 500;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .wombo-gif {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .wombo-gif:hover {
+        transform: scale(1.05);
+    }
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .modal.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .modal-content {
+        background: rgba(26, 29, 33, 0.95);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+        padding: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-header h2 {
+        color: white;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .close-modal {
+        background: none;
+        border: none;
+        color: #9aa4af;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 0;
+        transition: color 0.3s ease;
+    }
+
+    .close-modal:hover {
+        color: #f54245;
+    }
+
+    .modal-body {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    #wombo-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background: #000;
+    }
+
+    #wombo-gif {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+        background: #000;
+    }
+
+    .tab-btn.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    #wombo-view .champion-pair .champion-img:hover {
+        transform: translateY(-2px);
+        border-color: var(--tier-color, #f54245);
+        box-shadow: 0 0 15px rgba(var(--tier-color-rgb, 245, 66, 69), 0.2);
+    }
+
+    #wombo-view .tier-section[data-tier="S+"] { 
+        --tier-color: #ffdd75;
+        --tier-color-rgb: 255, 221, 117;
+    }
+
+    #wombo-view .tier-section[data-tier="S"] { 
+        --tier-color: #bd9af2;
+        --tier-color-rgb: 189, 154, 242;
+    }
+
+    #wombo-view .tier-section[data-tier="A"] { 
+        --tier-color: #beecfa;
+        --tier-color-rgb: 190, 236, 250;
+    }
+
+    #wombo-view .tier-section[data-tier="B"] { 
+        --tier-color: #9ad47f;
+        --tier-color-rgb: 154, 212, 127;
+    }
+
+    .search-container input:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    .compos-button {
+        padding: 10px 15px;
+        background: #f54245;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px; /* Agregar margen a los lados */
+        min-width: 80px; /* Ancho mínimo para mantener consistencia */
+    }
+
+    .compos-button:hover {
+        background: #ff5a5d;
+        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+    }
+
+    .compos-title {
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .compos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .compo-card {
+        background: rgba(26, 29, 33, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 30px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .compo-card:hover {
+        background: rgba(26, 29, 33, 0.6);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .compo-name {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .compo-champions {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .compo-champion {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .compo-champion .champion-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .compo-champion .champion-img:hover {
+        transform: translateY(-4px);
+        border-color: #f54245;
+        box-shadow: 0 8px 24px rgba(245, 66, 69, 0.3);
+    }
+
+    .compo-champion .position-icon {
+        width: 24px;
+        height: 24px;
+        background: rgba(26, 29, 33, 0.6);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+    }
+
+    .compo-description {
+        color: #9aa4af;
+        font-size: 15px;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 16px;
+        margin: 10px 0;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .filter-buttons .tab-btn {
+        padding: 8px 16px;
+        min-width: 80px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(26, 29, 33, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #9aa4af;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-buttons .tab-btn:hover {
+        background: rgba(245, 66, 69, 0.1);
+        color: white;
+    }
+
+    .filter-buttons .tab-btn.active {
+        background: #f54245;
+        color: white;
+        border-color: #f54245;
+        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+    }
+
+    .duo-icons {
+        display: flex;
+        gap: 4px;
+    }
+
+    .duo-icons svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #duo-view .position-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(26, 29, 33, 0.6);
+        border-radius: 4px;
+        padding: 4px;
+        transition: all 0.3s ease;
+        pointer-events: none; /* Eliminar interacción */
+    }
+
+    #duo-view .position-icon svg {
+        width: 100%;
+        height: 100%;
+        color: #e1e5ea;
+    }
+
+    /* Eliminar estilos de hover en los iconos de posición */
+    #duo-view .position-icon:hover {
+        background: rgba(26, 29, 33, 0.6);
+        transform: none;
+    }
+
+    #duo-view .tier-section[data-tier="S+"] .tier-line {
+        background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
+        box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="S"] .tier-line {
+        background: linear-gradient(to right, #bd9af2 0%, rgba(189, 154, 242, 0) 100%);
+        box-shadow: 0 0 10px rgba(189, 154, 242, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="A"] .tier-line {
+        background: linear-gradient(to right, #beecfa 0%, rgba(190, 236, 250, 0) 100%);
+        box-shadow: 0 0 10px rgba(190, 236, 250, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="B"] .tier-line {
+        background: linear-gradient(to right, #9ad47f 0%, rgba(154, 212, 127, 0) 100%);
+        box-shadow: 0 0 10px rgba(154, 212, 127, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="C"] .tier-line {
+        background: linear-gradient(to right, #f59551 0%, rgba(245, 149, 81, 0) 100%);
+        box-shadow: 0 0 10px rgba(245, 149, 81, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="D"] .tier-line {
+        background: linear-gradient(to right, #686b6e 0%, rgba(104, 107, 110, 0) 100%);
+        box-shadow: 0 0 10px rgba(104, 107, 110, 0.2);
+    }
+
+    /* Ajustar el grid para la vista de duos */
+    #duo-view .table-row {
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+    }
+
+    /* Ajustar el encabezado para la vista de duos */
+    .table-header {
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
+    }
+
+    /* Cuando estamos en la vista de wombos, ajustar el grid */
+    #wombo-view .table-row,
+    #wombo-view ~ .table-header {
+        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #duo-view .tier-section[data-tier="S+"] .champion-pair .champion-img:hover {
+        border-color: #ffdd75;
+        box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="S"] .champion-pair .champion-img:hover {
+        border-color: #bd9af2;
+        box-shadow: 0 0 15px rgba(189, 154, 242, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="A"] .champion-pair .champion-img:hover {
+        border-color: #beecfa;
+        box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="B"] .champion-pair .champion-img:hover {
+        border-color: #9ad47f;
+        box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="C"] .champion-pair .champion-img:hover {
+        border-color: #f59551;
+        box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
+    }
+
+    #duo-view .tier-section[data-tier="D"] .champion-pair .champion-img:hover {
+        border-color: #686b6e;
+        box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
+    }
+
+    #wombo-view .champion-pair {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    #wombo-view .champion-pair .champion-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    #wombo-view .separator {
+        color: #666;
+        font-size: 20px;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #wombo-view .champions-wombo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #wombo-view .champion-names {
+        font-weight: 500;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    #single-view .position-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(26, 29, 33, 0.6);
+        border-radius: 4px;
+        padding: 4px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    #single-view .position-icon:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    #single-view .position-icon svg {
+        width: 100%;
+        height: 100%;
+        color: #e1e5ea;
+    }
 </style>
 
 <script>
-    const tabs = document.querySelectorAll('.tab-btn');
-    const rows = document.querySelectorAll('.table-row');
-    const searchInput = document.getElementById('champion-search');
-    const tierSections = document.querySelectorAll('.tier-section');
+    let tabs;
+    let rows;
+    let searchInput;
+    let tierSections;
+    let viewTypeSelect;
+    let positionTabs;
+    let duoFilters;
+    let composBtn;
+    let composView;
+    let composTitle;
+    let mainViews;
+    let tableHeader;
+    let modal;
+    let videoPlayer;
+    let gifPlayer;
+    let closeModal;
+
+    function initializeElements() {
+        tabs = document.querySelectorAll('.tab-btn');
+        rows = document.querySelectorAll('.table-row');
+        searchInput = document.getElementById('champion-search');
+        tierSections = document.querySelectorAll('.tier-section');
+        viewTypeSelect = document.getElementById('view-type');
+        positionTabs = document.getElementById('position-tabs');
+        duoFilters = document.getElementById('duo-filters');
+        composBtn = document.getElementById('compos-btn');
+        composView = document.getElementById('compos-view');
+        composTitle = document.getElementById('compos-title');
+        mainViews = document.querySelectorAll('#single-view, #duo-view, #wombo-view');
+        tableHeader = document.querySelector('.table-header');
+        modal = document.getElementById('video-modal');
+        videoPlayer = document.getElementById('wombo-player');
+        gifPlayer = document.getElementById('wombo-gif');
+        closeModal = document.querySelector('.close-modal');
+    }
 
     function filterChampions() {
+        if (!searchInput || !tierSections) return;
+
         const searchTerm = searchInput.value.toLowerCase();
-        const activePosition = document.querySelector('.tab-btn.active').dataset.position;
+        const viewType = viewTypeSelect?.value || 'single';
+        const activePosition = document.querySelector('#position-tabs .tab-btn.active')?.dataset.position || 'all';
+        const activeDuoFilter = document.querySelector('#duo-filters .tab-btn.active')?.dataset.positions || 'all';
 
-        // Recorremos cada sección de tier
         tierSections.forEach(section => {
-            const championsInTier = section.querySelectorAll('.table-row');
-            let hasVisibleChampions = false;
+            const rowsInTier = section.querySelectorAll('.table-row');
+            let hasVisibleRows = false;
 
-            // Filtramos los campeones dentro de cada tier
-            championsInTier.forEach(row => {
-                const championName = row.querySelector('.champion-name').textContent.toLowerCase();
-                const positions = JSON.parse(row.dataset.positions);
-                const matchesSearch = championName.includes(searchTerm);
-                const matchesPosition = activePosition === 'all' || positions.includes(activePosition);
+            rowsInTier.forEach(row => {
+                let shouldShow = false;
 
-                if (matchesSearch && matchesPosition) {
-                    row.style.display = 'grid';
-                    hasVisibleChampions = true;
-                } else {
-                    row.style.display = 'none';
+                if (viewType === 'single') {
+                    const championName = row.querySelector('.champion-name')?.textContent.toLowerCase() || '';
+                    const positions = JSON.parse(row.dataset.positions || '[]');
+                    shouldShow = championName.includes(searchTerm) && 
+                               (activePosition === 'all' || positions.includes(activePosition));
+                } else if (viewType === 'duos') {
+                    const championNames = row.querySelector('.champion-name')?.textContent.toLowerCase() || '';
+                    const duoPositions = row.dataset.duo ? JSON.parse(row.dataset.duo).positionCombo : '';
+                    shouldShow = championNames.includes(searchTerm) &&
+                               (activeDuoFilter === 'all' || duoPositions === activeDuoFilter);
+                } else if (viewType === 'wombos') {
+                    const championNames = row.querySelector('.champion-names')?.textContent.toLowerCase() || '';
+                    shouldShow = championNames.includes(searchTerm);
                 }
+
+                row.style.display = shouldShow ? 'grid' : 'none';
+                if (shouldShow) hasVisibleRows = true;
             });
 
-            // Mostramos u ocultamos la sección completa del tier
-            section.style.display = hasVisibleChampions ? 'block' : 'none';
+            section.style.display = hasVisibleRows ? 'block' : 'none';
         });
     }
 
-    // Event listeners
-    searchInput.addEventListener('input', filterChampions);
+    function filterCompositions(searchTerm) {
+        const compoCards = document.querySelectorAll('.compo-card');
+        searchTerm = searchTerm.toLowerCase();
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            filterChampions();
+        compoCards.forEach(card => {
+            const compoName = card.querySelector('.compo-name')?.textContent.toLowerCase() || '';
+            const compoDescription = card.querySelector('.compo-description')?.textContent.toLowerCase() || '';
+            const championNames = Array.from(card.querySelectorAll('.champion-img'))
+                .map(img => img.alt.toLowerCase())
+                .join(' ');
+
+            const shouldShow = compoName.includes(searchTerm) || 
+                             compoDescription.includes(searchTerm) ||
+                             championNames.includes(searchTerm);
+
+            card.style.display = shouldShow ? 'flex' : 'none';
         });
+    }
+
+    function initializeEventListeners() {
+        // Event listener para el buscador
+        searchInput?.addEventListener('input', (e) => {
+            const searchTerm = e.target.value;
+            if (composView?.style.display === 'grid') {
+                filterCompositions(searchTerm);
+            } else {
+                filterChampions();
+            }
+        });
+
+        // Event listeners para los tabs de posición
+        document.querySelectorAll('#position-tabs .tab-btn').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                filterChampions();
+            });
+        });
+
+        // Event listeners para los filtros de duos
+        document.querySelectorAll('#duo-filters .tab-btn')?.forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('#duo-filters .tab-btn').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                filterChampions();
+            });
+        });
+
+        // Event listener para el cambio de vista
+        viewTypeSelect?.addEventListener('change', (e) => {
+            const viewType = e.target.value;
+            updateViewVisibility(viewType);
+            
+            // Resetear los filtros activos según la vista
+            if (viewType === 'single') {
+                const allPositionButton = document.querySelector('#position-tabs [data-position="all"]');
+                if (allPositionButton) {
+                    document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
+                    allPositionButton.classList.add('active');
+                }
+            } else if (viewType === 'duos') {
+                const allDuoButton = document.querySelector('#duo-filters [data-positions="all"]');
+                if (allDuoButton) {
+                    document.querySelectorAll('#duo-filters .tab-btn').forEach(t => t.classList.remove('active'));
+                    allDuoButton.classList.add('active');
+                }
+            }
+            
+            if (searchInput) {
+                searchInput.value = '';
+                filterChampions();
+            }
+        });
+
+        // Event listener para el botón de compos
+        let isComposView = false;
+        composBtn?.addEventListener('click', () => {
+            isComposView = !isComposView;
+            
+            if (isComposView) {
+                mainViews?.forEach(view => view.style.display = 'none');
+                if (tableHeader) tableHeader.style.display = 'none';
+                if (composView) composView.style.display = 'grid';
+                if (composTitle) composTitle.style.display = 'block';
+                if (viewTypeSelect) viewTypeSelect.style.display = 'none';
+                if (positionTabs) positionTabs.style.display = 'none';
+                if (duoFilters) duoFilters.style.display = 'none';
+                if (searchInput) {
+                    searchInput.placeholder = 'Buscar composición...';
+                    searchInput.value = '';
+                }
+                if (composBtn) {
+                    composBtn.textContent = 'Cerrar';
+                    composBtn.style.background = '#686b6e';
+                }
+            } else {
+                if (composView) composView.style.display = 'none';
+                if (composTitle) composTitle.style.display = 'none';
+                if (tableHeader) tableHeader.style.display = 'grid';
+                if (viewTypeSelect) {
+                    viewTypeSelect.style.display = 'block';
+                    const currentView = viewTypeSelect.value || 'single';
+                    updateViewVisibility(currentView);
+                }
+                if (searchInput) {
+                    searchInput.placeholder = 'Buscar campeón...';
+                    searchInput.value = '';
+                }
+                if (composBtn) {
+                    composBtn.textContent = 'Compos';
+                    composBtn.style.background = '#f54245';
+                }
+                filterChampions(); // Aplicar filtros al volver
+            }
+        });
+
+        // Event listeners para el modal de video
+        document.querySelectorAll('.wombo-gif')?.forEach(gif => {
+            gif.addEventListener('click', () => {
+                const videoUrl = gif.dataset.videoUrl;
+                const gifUrl = gif.src;
+                
+                if (videoUrl && !videoUrl.includes('example.com')) {
+                    if (videoPlayer) {
+                        videoPlayer.style.display = 'block';
+                        videoPlayer.src = videoUrl;
+                    }
+                    if (gifPlayer) gifPlayer.style.display = 'none';
+                } else {
+                    if (videoPlayer) videoPlayer.style.display = 'none';
+                    if (gifPlayer) {
+                        gifPlayer.style.display = 'block';
+                        gifPlayer.src = gifUrl;
+                    }
+                }
+                if (modal) modal.classList.add('active');
+            });
+        });
+
+        closeModal?.addEventListener('click', () => {
+            if (modal) modal.classList.remove('active');
+            if (videoPlayer) {
+                videoPlayer.pause();
+                videoPlayer.src = '';
+            }
+            if (gifPlayer) gifPlayer.src = '';
+        });
+    }
+
+    function initialize() {
+        initializeElements();
+        initializeEventListeners();
+        
+        // Establecer vista inicial
+        const initialView = viewTypeSelect?.value || 'single';
+        updateViewVisibility(initialView);
+
+        // Activar el filtro "all" por defecto según la vista actual
+        if (initialView === 'single') {
+            const allPositionButton = document.querySelector('#position-tabs [data-position="all"]');
+            if (allPositionButton) {
+                document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
+                allPositionButton.classList.add('active');
+            }
+        }
+
+        // Aplicar filtros iniciales
+        filterChampions();
+    }
+
+    // Inicializar cuando el DOM está listo
+    document.addEventListener('DOMContentLoaded', initialize);
+
+    // Inicializar después de cualquier navegación
+    document.addEventListener('astro:page-load', initialize);
+    document.addEventListener('astro:after-swap', initialize);
+
+    // Manejar la navegación del historial
+    window.addEventListener('popstate', () => {
+        setTimeout(initialize, 0);
     });
+
+    // Manejar el botón de home
+    document.addEventListener('click', (e) => {
+        const target = e.target.closest('.home-button');
+        if (target) {
+            e.preventDefault();
+            const href = target.getAttribute('href');
+            window.location = href;
+        }
+    });
+
+    // Asegurarse de que los event listeners se mantengan después de la navegación
+    const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+            if (mutation.type === 'childList' && 
+                (mutation.target.matches('#position-tabs') || 
+                 mutation.target.matches('#champion-search'))) {
+                initialize();
+                break;
+            }
+        }
+    });
+
+    // Observar cambios en el DOM
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
+    function updateViewVisibility(viewType) {
+        // Ocultar todas las vistas
+        document.getElementById('single-view').style.display = 'none';
+        document.getElementById('duo-view').style.display = 'none';
+        document.getElementById('wombo-view').style.display = 'none';
+        
+        // Ocultar los filtros
+        if (positionTabs) positionTabs.style.display = 'none';
+        if (duoFilters) duoFilters.style.display = 'none';
+
+        // Mostrar la vista correspondiente
+        if (viewType === 'single') {
+            document.getElementById('single-view').style.display = 'block';
+            if (positionTabs) positionTabs.style.display = 'flex';
+        } else if (viewType === 'duos') {
+            document.getElementById('duo-view').style.display = 'block';
+            if (duoFilters) duoFilters.style.display = 'flex';
+        } else if (viewType === 'wombos') {
+            document.getElementById('wombo-view').style.display = 'block';
+        }
+
+        // Ajustar el grid del encabezado
+        if (tableHeader) {
+            if (viewType === 'wombos') {
+                tableHeader.style.gridTemplateColumns = '0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr';
+            } else {
+                tableHeader.style.gridTemplateColumns = '0.7fr 2.5fr 1fr 1fr 1fr 1fr';
+            }
+        }
+    }
 </script> 
