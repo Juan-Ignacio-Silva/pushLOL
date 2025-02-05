@@ -1,0 +1,102 @@
+{
+  "banner": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/dbbebe5a6cf04a2a8ae98d5b4bcff0caf586ad22-1920x1080.jpg",
+  "champions": [
+    {
+      "name": "Cassiopeia",
+      "image_URL": "https://cdn.communitydragon.org/15.2.1/champion/cassiopeia/square",
+      "summary": "Velocidad de movimiento reducida en su pasiva",
+      "changes": {
+        "passive": {
+          "name": "Gracia Serpentina",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/passive/Cassiopeia_Passive.png",
+          "changes": "Velocidad por nivel: 6 --> 5"
+        }
+      }
+    },
+    {
+      "name": "Evelynn",
+      "image_URL": "https://cdn.communitydragon.org/15.2.1/champion/evelynn/square",
+      "summary": "Aumentos en velocidad (E) y daño definitivo (R)",
+      "changes": {
+        "E": {
+          "name": "Latigazo",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/EvelynnE.png",
+          "changes": "Velocidad: 30% --> 30/35/40/45/50%"
+        },
+        "R": {
+          "name": "Última Caricia",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/EvelynnR.png",
+          "changes": "Ratio AP: 65% --> 75% | Daño total AP: 156% --> 180%"
+        }
+      }
+    },
+    {
+      "name": "Irelia",
+      "image_URL": "https://cdn.communitydragon.org/15.2.1/champion/irelia/square",
+      "summary": "Reducción general de daño en habilidades",
+      "changes": {
+        "W": {
+          "name": "Danza de Insurrección",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/IreliaW.png",
+          "changes": "Daño mínimo: 70 --> 50 | Máximo: 210 --> 150"
+        },
+        "E": {
+          "name": "Dueto Perfecto",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/IreliaE.png",
+          "changes": "Daño: 260 --> 230"
+        },
+        "R": {
+          "name": "Filo de Vanguardia",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/IreliaR.png",
+          "changes": "Daño total: 375 --> 275"
+        }
+      }
+    },
+    {
+      "name": "Kayn",
+      "image_URL": "https://cdn.communitydragon.org/15.2.1/champion/kayn/square",
+      "summary": "Mejora temprana de pasiva (forma Darkin)",
+      "changes": {
+        "passive": {
+          "name": "La Guadaña Darkin",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/passive/Kayn_Passive_Primary.png",
+          "changes": "Daño mágico: 15-45% --> 25-45%"
+        }
+      }
+    },
+    {
+      "name": "Yuumi",
+      "image_URL": "https://cdn.communitydragon.org/15.2.1/champion/yuumi/square",
+      "summary": "Mejoras en curación (pasiva) y daño definitivo",
+      "changes": {
+        "passive": {
+          "name": "Amistad Felina",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/passive/YuumiP.png",
+          "changes": "Curación: 15% AP --> 25% AP"
+        },
+        "R": {
+          "name": "Últimas Páginas",
+          "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/YuumiR.png",
+          "changes": "Daño: 125 (+20% AP) --> 175 (+25% AP)"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "name": "Recuerdos de Lord Dominik",
+      "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/item/223036.png",
+      "changes": "Penetración de armadura: 35% --> 40%"
+    },
+    {
+      "name": "Recordatorio Mortal",
+      "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.1.1/img/item/3033.png",
+      "changes": "Penetración de armadura: 30% --> 35%"
+    }
+  ],
+  "gameChanges": [
+    {
+      "description": "Esencia Azul aumentada: 4750 --> 9000 (desde Acto 2)"
+    }
+  ]
+} 

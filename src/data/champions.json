@@ -4,1529 +4,3153 @@
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aatrox/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
-    "counters": [],
-    "buenoContra": []
+    "positions": [
+      "top"
+    ],
+    "counters": [
+      "jinx",
+      "jax",
+      "irelia",
+      "riven",
+      "pantheon"
+    ],
+    "buenosContra": [
+      "teemo",
+      "darius",
+      "sett",
+      "mordekaiser",
+      "malphite"
+    ],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/r"
+    }
   },
   {
     "name": "ahri",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ahri/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"],
-    "counters": [],
-    "buenoContra": []
+    "positions": [
+      "mid"
+    ],
+    "counters": [
+      "zed",
+      "yasuo",
+      "leblanc",
+      "fizz",
+      "kassadin"
+    ],
+    "buenosContra": [
+      "lux",
+      "veigar",
+      "annie",
+      "xerath",
+      "ziggs"
+    ],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/r"
+    }
   },
   {
     "name": "akali",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/akali/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Akali/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"],
-    "counters": [],
-    "buenoContra": []
+    "positions": [
+      "mid",
+      "top"
+    ],
+    "counters": [
+      "galio",
+      "kassadin",
+      "malzahar",
+      "lissandra",
+      "pantheon"
+    ],
+    "buenosContra": [
+      "katarina",
+      "zed",
+      "yasuo",
+      "lux",
+      "veigar"
+    ],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/r"
+    }
   },
   {
     "name": "akshan",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/akshan/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/r"
+    }
   },
   {
     "name": "ambessa",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ambessa/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/r"
+    }
   },
   {
     "name": "alistar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/alistar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/r"
+    }
   },
   {
     "name": "amumu",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/amumu/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle", "support"],
+    "positions": [
+      "jungle",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/r"
+    }
   },
   {
     "name": "anivia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/anivia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/r"
+    }
   },
   {
     "name": "annie",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/annie/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Annie/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/r"
+    }
   },
   {
     "name": "aphelios",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aphelios/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/r"
+    }
   },
   {
     "name": "ashe",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ashe/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["adc", "support"],
+    "positions": [
+      "adc",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/r"
+    }
   },
   {
     "name": "aurelion sol",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aurelionsol/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/r"
+    }
   },
   {
     "name": "aurora",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/aurora/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/r"
+    }
   },
   {
     "name": "azir",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/azir/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Azir/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/r"
+    }
   },
   {
     "name": "bard",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/bard/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Bard/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/r"
+    }
   },
   {
     "name": "bel'veth",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/belveth/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/r"
+    }
   },
   {
     "name": "blitzcrank",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/blitzcrank/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/r"
+    }
   },
   {
     "name": "brand",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/brand/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Brand/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/r"
+    }
   },
   {
     "name": "braum",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/braum/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Braum/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/r"
+    }
   },
   {
     "name": "briar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/briar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Briar/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/r"
+    }
   },
   {
     "name": "caitlyn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/caitlyn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/r"
+    }
   },
   {
     "name": "camille",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/camille/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Camille/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/r"
+    }
   },
   {
     "name": "cassiopeia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/cassiopeia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/r"
+    }
   },
   {
     "name": "cho'gath",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/chogath/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Chogath/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top", "mid"],
+    "positions": [
+      "top",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/r"
+    }
   },
   {
     "name": "corki",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/corki/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Corki/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/r"
+    }
   },
   {
     "name": "darius",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/darius/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Darius/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/r"
+    }
   },
   {
     "name": "diana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/diana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Diana/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["jungle", "mid"],
+    "positions": [
+      "jungle",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/r"
+    }
   },
   {
     "name": "dr mundo",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/drmundo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/r"
+    }
   },
   {
     "name": "draven",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/draven/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Draven/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/r"
+    }
   },
   {
     "name": "ekko",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ekko/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "mid"],
+    "positions": [
+      "jungle",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/r"
+    }
   },
   {
     "name": "elise",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/elise/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Elise/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/r"
+    }
   },
   {
     "name": "evelynn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/evelynn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/r"
+    }
   },
   {
     "name": "ezreal",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ezreal/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/r"
+    }
   },
   {
     "name": "fiddlesticks",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/fiddlesticks/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/r"
+    }
   },
   {
     "name": "fiora",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/fiora/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/r"
+    }
   },
   {
     "name": "fizz",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/fizz/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/r"
+    }
   },
   {
     "name": "galio",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/galio/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Galio/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/r"
+    }
   },
   {
     "name": "gangplank",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gangplank/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/r"
+    }
   },
   {
     "name": "garen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/garen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Garen/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/r"
+    }
   },
   {
     "name": "gnar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gnar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/r"
+    }
   },
   {
     "name": "gragas",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gragas/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle", "top"],
+    "positions": [
+      "jungle",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/r"
+    }
   },
   {
     "name": "graves",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/graves/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Graves/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/r"
+    }
   },
   {
     "name": "gwen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/gwen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top", "jungle"],
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/r"
+    }
   },
   {
     "name": "hecarim",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/hecarim/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/r"
+    }
   },
   {
     "name": "heimerdinger",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/heimerdinger/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/r"
+    }
   },
   {
     "name": "hwei",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/hwei/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/r"
+    }
   },
   {
     "name": "illaoi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/illaoi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/r"
+    }
   },
   {
     "name": "irelia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/irelia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "mid"],
+    "positions": [
+      "top",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/r"
+    }
   },
   {
     "name": "ivern",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ivern/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/r"
+    }
   },
   {
     "name": "janna",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/janna/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Janna/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/r"
+    }
   },
   {
     "name": "jarvan iv",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jarvaniv/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIV/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/r"
+    }
   },
   {
     "name": "jax",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jax/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jax/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top", "jungle"],
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/r"
+    }
   },
   {
     "name": "jayce",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jayce/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "mid"],
+    "positions": [
+      "top",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/r"
+    }
   },
   {
     "name": "jhin",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jhin/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/r"
+    }
   },
   {
     "name": "jinx",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jinx/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/r"
+    }
   },
   {
     "name": "kai'sa",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kaisa/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kaisa/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/r"
+    }
   },
   {
     "name": "kalista",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kalista/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/r"
+    }
   },
   {
     "name": "karma",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/karma/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Karma/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support", "mid"],
+    "positions": [
+      "support",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/r"
+    }
   },
   {
     "name": "karthus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/karthus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle", "mid"],
+    "positions": [
+      "jungle",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/r"
+    }
   },
   {
     "name": "kassadin",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kassadin/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/r"
+    }
   },
   {
     "name": "katarina",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/katarina/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/r"
+    }
   },
   {
     "name": "kayle",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kayle/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top", "mid"],
+    "positions": [
+      "top",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/r"
+    }
   },
   {
     "name": "kayn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kayn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/r"
+    }
   },
   {
     "name": "kennen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kennen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "mid"],
+    "positions": [
+      "top",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/r"
+    }
   },
   {
     "name": "kha'zix",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/khazix/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Khazix/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/r"
+    }
   },
   {
     "name": "kindred",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kindred/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/r"
+    }
   },
   {
     "name": "kled",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kled/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kled/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/r"
+    }
   },
   {
     "name": "kog'maw",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kogmaw/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Kogmaw/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/r"
+    }
   },
   {
     "name": "ksante",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ksante/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/r"
+    }
   },
   {
     "name": "leblanc",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leblanc/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/r"
+    }
   },
   {
     "name": "lee sin",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leesin/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Leesin/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/r"
+    }
   },
   {
     "name": "leona",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leona/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Leona/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/r"
+    }
   },
   {
     "name": "lillia",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lillia/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/r"
+    }
   },
   {
     "name": "lissandra",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lissandra/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/r"
+    }
   },
   {
     "name": "lucian",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lucian/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/p ",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/r"
+    }
   },
   {
     "name": "lulu",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lulu/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/r"
+    }
   },
   {
     "name": "lux",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lux/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Lux/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/p ",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/r"
+    }
   },
   {
     "name": "malphite",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malphite/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "support", "mid"],
+    "positions": [
+      "top",
+      "support",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/r"
+    }
   },
   {
     "name": "malzahar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malzahar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/r"
+    }
   },
   {
     "name": "maokai",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/maokai/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["top", "support", "jungle"],
+    "positions": [
+      "top",
+      "support",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/r"
+    }
   },
   {
     "name": "master yi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/masteryi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Masteryi/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/r"
+    }
   },
   {
     "name": "mel",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/mel/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Mel/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/r"
+    }
   },
   {
     "name": "milio",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/milio/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Milio/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/r"
+    }
   },
   {
     "name": "miss fortune",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/missfortune/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Missfortune/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/r"
+    }
   },
   {
     "name": "mordekaiser",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/mordekaiser/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/r"
+    }
   },
   {
     "name": "morgana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/morgana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support", "jungle"],
+    "positions": [
+      "support",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/r"
+    }
   },
   {
     "name": "naafiri",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/naafiri/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/r"
+    }
   },
   {
     "name": "nami",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nami/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nami/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/r"
+    }
   },
   {
     "name": "nasus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nasus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/r"
+    }
   },
   {
     "name": "nautilus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nautilus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/r"
+    }
   },
   {
     "name": "neeko",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/neeko/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/r"
+    }
   },
   {
     "name": "nidalee",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nidalee/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/r"
+    }
   },
   {
     "name": "nilah",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nilah/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/r"
+    }
   },
   {
     "name": "nocturne",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nocturne/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/r"
+    }
   },
   {
     "name": "nunu & willump",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nunu/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nunu/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/r"
+    }
   },
   {
     "name": "olaf",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/olaf/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle", "top"],
+    "positions": [
+      "jungle",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/r"
+    }
   },
   {
     "name": "orianna",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/orianna/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/r"
+    }
   },
   {
     "name": "ornn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ornn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/r"
+    }
   },
   {
     "name": "pantheon",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/pantheon/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "top", "support"],
+    "positions": [
+      "mid",
+      "top",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/r"
+    }
   },
   {
     "name": "poppy",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/poppy/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top", "support"],
+    "positions": [
+      "top",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/r"
+    }
   },
   {
     "name": "pyke",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/pyke/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/r"
+    }
   },
   {
     "name": "qiyana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/qiyana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/r"
+    }
   },
   {
     "name": "quinn",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/quinn/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/r"
+    }
   },
   {
     "name": "rakan",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rakan/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/r"
+    }
   },
   {
     "name": "rammus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rammus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/r"
+    }
   },
   {
     "name": "rek'sai",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/reksai/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Reksai/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/r"
+    }
   },
   {
     "name": "rell",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rell/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rell/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/r"
+    }
   },
   {
     "name": "renata glasc",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/renata/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Renata/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/r"
+    }
   },
   {
     "name": "renekton",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/renekton/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/r"
+    }
   },
   {
     "name": "rengar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rengar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/r"
+    }
   },
   {
     "name": "riven",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/riven/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Riven/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/r"
+    }
   },
   {
     "name": "rumble",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/rumble/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/r"
+    }
   },
   {
     "name": "ryze",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ryze/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/r"
+    }
   },
   {
     "name": "samira",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/samira/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Samira/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/r"
+    }
   },
   {
     "name": "sejuani",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sejuani/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/r"
+    }
   },
   {
     "name": "senna",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/senna/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Senna/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "adc"],
+    "positions": [
+      "support",
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/r"
+    }
   },
   {
     "name": "seraphine",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/seraphine/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "mid"],
+    "positions": [
+      "support",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/r"
+    }
   },
   {
     "name": "sett",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sett/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sett/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/r"
+    }
   },
   {
     "name": "shaco",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shaco/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "support"],
+    "positions": [
+      "jungle",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/r"
+    }
   },
   {
     "name": "shen",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shen/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Shen/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/r"
+    }
   },
   {
     "name": "shyvana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shyvana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/r"
+    }
   },
   {
     "name": "singed",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/singed/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Singed/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/r"
+    }
   },
   {
     "name": "sion",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sion/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sion/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/r"
+    }
   },
   {
     "name": "sivir",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sivir/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/r"
+    }
   },
   {
     "name": "skarner",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/skarner/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/r"
+    }
   },
   {
     "name": "smolder",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/smolder/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/r"
+    }
   },
   {
     "name": "sona",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sona/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sona/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/r"
+    }
   },
   {
     "name": "soraka",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/soraka/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/r"
+    }
   },
   {
     "name": "swain",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/swain/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Swain/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/r"
+    }
   },
   {
     "name": "sylas",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/sylas/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "top", "jungle"],
+    "positions": [
+      "mid",
+      "top",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/r"
+    }
   },
   {
     "name": "syndra",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/syndra/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/r"
+    }
   },
   {
     "name": "tahm kench",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/tahmkench/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Tahmkench/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["support", "top"],
+    "positions": [
+      "support",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/r"
+    }
   },
   {
     "name": "taliyah",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/taliyah/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "mid"],
+    "positions": [
+      "jungle",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/r"
+    }
   },
   {
     "name": "talon",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/talon/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Talon/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid", "jungle"],
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/r"
+    }
   },
   {
     "name": "taric",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/taric/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Taric/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/r"
+    }
   },
   {
     "name": "teemo",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/teemo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/r"
+    }
   },
   {
     "name": "thresh",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/thresh/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["support"],
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/r"
+    }
   },
   {
     "name": "tristana",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/tristana/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc", "mid"],
+    "positions": [
+      "adc",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/r"
+    }
   },
   {
     "name": "trundle",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/trundle/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top", "jungle"],
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/r"
+    }
   },
   {
     "name": "tryndamere",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/tryndamere/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/r"
+    }
   },
   {
     "name": "twisted fate",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/twistedfate/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Twistedfate/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/r"
+    }
   },
   {
     "name": "twitch",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/twitch/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/r"
+    }
   },
   {
     "name": "udyr",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/udyr/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["jungle", "top"],
+    "positions": [
+      "jungle",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/r"
+    }
   },
   {
     "name": "urgot",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/urgot/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/r"
+    }
   },
   {
     "name": "varus",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/varus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Varus/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/r"
+    }
   },
   {
     "name": "vayne",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vayne/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["adc", "top"],
+    "positions": [
+      "adc",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/r"
+    }
   },
   {
     "name": "veigar",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/veigar/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/r"
+    }
   },
   {
     "name": "vel'koz",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/velkoz/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Velkoz/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/r"
+    }
   },
   {
     "name": "vi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vi/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/r"
+    }
   },
   {
     "name": "viego",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/viego/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Viego/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/r"
+    }
   },
   {
     "name": "vex",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vex/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vex/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/r"
+    }
   },
   {
     "name": "viktor",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/viktor/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/splash-art/centered/skin/0",
     "tier": "S",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/r"
+    }
   },
   {
     "name": "vladimir",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/vladimir/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/r"
+    }
   },
   {
     "name": "volibear",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/volibear/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top", "jungle"],
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/r"
+    }
   },
   {
     "name": "warwick",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/warwick/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["jungle", "top"],
+    "positions": [
+      "jungle",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/r"
+    }
   },
   {
     "name": "wukong",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/monkeyking/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Monkeyking/splash-art/centered/skin/0",
     "tier": "S+",
-    "positions": ["jungle"],
+    "positions": [
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/r"
+    }
   },
   {
     "name": "xayah",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/xayah/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/r"
+    }
   },
   {
     "name": "xerath",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/xerath/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "support"],
+    "positions": [
+      "mid",
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/r"
+    }
   },
   {
     "name": "xin zhao",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/xinzhao/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Xinzhao/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["jungle", "top"],
+    "positions": [
+      "jungle",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/r"
+    }
   },
   {
     "name": "yasuo",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yasuo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/r"
+    }
   },
   {
     "name": "yone",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yone/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yone/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "top"],
+    "positions": [
+      "mid",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/r"
+    }
   },
   {
     "name": "yorick",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yorick/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["top"],
+    "positions": [
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/r"
+    }
   },
   {
     "name": "yuumi",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yuumi/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/splash-art/centered/skin/0",
     "tier": "B",
-    "positions": ["support", "jungle"],
+    "positions": [
+      "support",
+      "jungle"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/r"
+    }
   },
   {
     "name": "zac",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zac/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zac/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["jungle", "top"],
+    "positions": [
+      "jungle",
+      "top"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/r"
+    }
   },
   {
     "name": "zed",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zed/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zed/splash-art/centered/skin/0",
     "tier": "C",
-    "positions": ["mid"],
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/r"
+    }
   },
   {
     "name": "zeri",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zeri/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/splash-art/centered/skin/0",
     "tier": "D",
-    "positions": ["adc"],
+    "positions": [
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/r"
+    }
   },
   {
     "name": "ziggs",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ziggs/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/splash-art/centered/skin/0",
     "tier": "A",
-    "positions": ["mid", "adc"],
+    "positions": [
+      "mid",
+      "adc"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/r"
+    }
   },
   {
     "name": "zilean",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zilean/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/splash-art/centered/skin/0",
-    "tier": "C",
-    "positions": ["support", "mid"],
+    "tier": "B",
+    "positions": [
+      "support",
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/r"
+    }
   },
   {
     "name": "zoe",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zoe/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/splash-art/centered/skin/0",
-    "tier": "C",
-    "positions": ["mid"],
+    "tier": "B",
+    "positions": [
+      "mid"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/r"
+    }
   },
   {
     "name": "zyra",
     "image_url": "https://cdn.communitydragon.org/15.2.1/champion/zyra/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/splash-art/centered/skin/0",
-    "tier": "D",
-    "positions": ["support"],
+    "tier": "B",
+    "positions": [
+      "support"
+    ],
     "counters": [],
-    "buenoContra": []
+    "buenoContra": [],
+    "habilidades": {
+      "P": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/p",
+      "Q": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/q",
+      "W": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/w",
+      "E": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/e",
+      "R": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/r"
+    }
   }
 ]

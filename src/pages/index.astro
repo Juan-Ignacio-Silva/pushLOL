@@ -5,6 +5,7 @@ import TextoPush from '../assets/textoPush.svg'
 import Barra from '../components/SearchBar.astro'
 import GenerarChampions from '../components/generarChampions.astro';
 import BotonesPosiciones from '../components/botonesPosiciones.astro';
+import Randomizer from '../components/Randomizer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -24,33 +25,44 @@ import BotonesPosiciones from '../components/botonesPosiciones.astro';
 			<GenerarChampions />
 			<div class="contenedor-button">
 				<a href="tierlist" class="tierlist-button">TIERLIST 15.2</a>
+				<div class="mouse-icon">
+					<svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+						<path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+						<path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+					</svg>
+				</div>
+				<a href="parches" class="tierlist-button">PARCHES 25-s1-2</a>
 			</div>
 		</div>
 	</main>
+	<Randomizer />
 </Layout>
 
 <script src="../js/buscador.js"></script>
+<script id="champions-data" type="application/json">
+	{JSON.stringify(champions)}
+</script>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 	main {
 		width: 100%;
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		overflow: hidden;
+		align-items: flex-start;
+		padding: 2rem 0;
+		overflow-y: auto;
 	}
 
 	.contenedor-principal {
 		width: 700px;
 		padding: 2rem;
 		border-radius: 1rem;
-		height: 100%;
-		max-height: 800px;
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.logo {
@@ -59,15 +71,16 @@ import BotonesPosiciones from '../components/botonesPosiciones.astro';
 		display: flex;
 		justify-content: center;
 		gap: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		flex-shrink: 0;
 	}
 
 	.search-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: -16px;
+	}
 
 	#LogoPush {
 		width: 4rem;
@@ -77,31 +90,52 @@ import BotonesPosiciones from '../components/botonesPosiciones.astro';
 		width: 14rem;
 	}
 	
-	.contenedor-button{
+	.contenedor-button {
 		width: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		margin: 10px 0;
+		gap: 20px;
 	}
 	
 	.tierlist-button {
 		width: 30%;
-		margin-top: 20px;
-        background-color: #f54245;
-        color: white;
-        border: none;
-        padding: 10px 30px;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
+		background-color: #f54245;
+		color: white;
+		border: none;
+		padding: 10px 30px;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: all 0.3s ease;
 		font-family: "Roboto mono", monospace;
 		text-align: center;
 		text-decoration: none;
-    }
+	}
 
-    .tierlist-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
-    }
+	.tierlist-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+	}
+
+	.mouse-icon {
+		width: 40px;
+		height: 40px;
+		opacity: 0.7;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateY(0);
+		}
+		30% {
+			transform: translateY(100px);
+		}
+	}
+
+	svg #wheel {
+		animation: scroll ease 1.5s infinite;
+	}
 </style>

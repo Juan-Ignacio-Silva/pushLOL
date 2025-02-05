@@ -1,0 +1,62 @@
+[
+  {
+    "duo": {
+      "champion1": {
+        "name": "lulu",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lulu/square"
+      },
+      "champion2": {
+        "name": "kog'maw",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kogmaw/square"
+      }
+    },
+    "tier": "S+",
+    "positionCombo": "adc/support",
+    "positions": ["adc", "support"]
+  },
+  {
+    "duo": {
+      "champion1": {
+        "name": "nilah",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nilah/square"
+      },
+      "champion2": {
+        "name": "nautilus",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nautilus/square"
+      }
+    },
+    "tier": "A",
+    "positionCombo": "adc/support",
+    "positions": ["adc", "support"]
+  },
+  {
+    "duo": {
+      "champion1": {
+        "name": "ahri",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ahri/square"
+      },
+      "champion2": {
+        "name": "lee sin",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leesin/square"
+      }
+    },
+    "tier": "S",
+    "positionCombo": "mid/jungle",
+    "positions": ["mid", "jungle"]
+  },
+  {
+    "duo": {
+      "champion1": {
+        "name": "garen",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/garen/square"
+      },
+      "champion2": {
+        "name": "hecarim",
+        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/hecarim/square"
+      }
+    },
+    "tier": "A",
+    "positionCombo": "top/jungle",
+    "positions": ["top", "jungle"]
+  }
+] 
