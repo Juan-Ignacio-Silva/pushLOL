@@ -1,6 +1,6 @@
 let champions = [];
 
-fetch("../data/champions.json")
+fetch("../src/data/champions.json")
     .then(respuesta => {
         console.log("Respuesta del fetch:", respuesta);
         return respuesta.json(); // Convertir a JSON
