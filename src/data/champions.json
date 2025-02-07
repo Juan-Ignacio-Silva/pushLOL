@@ -27,7 +27,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Aatrox/ability-icon/r"
-    }
+    },
+    "id": "266"
   },
   {
     "name": "ahri",
@@ -38,8 +39,8 @@
       "mid"
     ],
     "counters": [
-      "zed",
-      "yasuo",
+      "nautilus",
+      "nami",
       "leblanc",
       "fizz",
       "kassadin"
@@ -57,7 +58,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/ability-icon/r"
-    }
+    },
+    "id": "103"
   },
   {
     "name": "akali",
@@ -88,7 +90,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Akali/ability-icon/r"
-    }
+    },
+    "id": "84"
   },
   {
     "name": "akshan",
@@ -107,7 +110,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Akshan/ability-icon/r"
-    }
+    },
+    "id": "166"
   },
   {
     "name": "ambessa",
@@ -125,7 +129,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ambessa/ability-icon/r"
-    }
+    },
+    "id": "799"
   },
   {
     "name": "alistar",
@@ -143,7 +148,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Alistar/ability-icon/r"
-    }
+    },
+    "id": "12"
   },
   {
     "name": "amumu",
@@ -162,7 +168,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Amumu/ability-icon/r"
-    }
+    },
+    "id": "32"
   },
   {
     "name": "anivia",
@@ -180,7 +187,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Anivia/ability-icon/r"
-    }
+    },
+    "id": "34"
   },
   {
     "name": "annie",
@@ -199,7 +207,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Annie/ability-icon/r"
-    }
+    },
+    "id": "1"
   },
   {
     "name": "aphelios",
@@ -217,7 +226,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Aphelios/ability-icon/r"
-    }
+    },
+    "id": "523"
   },
   {
     "name": "ashe",
@@ -236,7 +246,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ashe/ability-icon/r"
-    }
+    },
+    "id": "22"
   },
   {
     "name": "aurelion sol",
@@ -254,7 +265,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/AurelionSol/ability-icon/r"
-    }
+    },
+    "id": "136"
   },
   {
     "name": "aurora",
@@ -273,7 +285,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Aurora/ability-icon/r"
-    }
+    },
+    "id": "893"
   },
   {
     "name": "azir",
@@ -291,7 +304,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Azir/ability-icon/r"
-    }
+    },
+    "id": "268"
   },
   {
     "name": "bard",
@@ -309,7 +323,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Bard/ability-icon/r"
-    }
+    },
+    "id": "432"
   },
   {
     "name": "bel'veth",
@@ -327,7 +342,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Belveth/ability-icon/r"
-    }
+    },
+    "id": "200"
   },
   {
     "name": "blitzcrank",
@@ -345,7 +361,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Blitzcrank/ability-icon/r"
-    }
+    },
+    "id": "53"
   },
   {
     "name": "brand",
@@ -364,7 +381,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Brand/ability-icon/r"
-    }
+    },
+    "id": "63"
   },
   {
     "name": "braum",
@@ -382,7 +400,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Braum/ability-icon/r"
-    }
+    },
+    "id": "201"
   },
   {
     "name": "briar",
@@ -400,7 +419,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Briar/ability-icon/r"
-    }
+    },
+    "id": "233"
   },
   {
     "name": "caitlyn",
@@ -418,7 +438,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Caitlyn/ability-icon/r"
-    }
+    },
+    "id": "51"
   },
   {
     "name": "camille",
@@ -436,7 +457,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Camille/ability-icon/r"
-    }
+    },
+    "id": "164"
   },
   {
     "name": "cassiopeia",
@@ -454,7 +476,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Cassiopeia/ability-icon/r"
-    }
+    },
+    "id": "69"
   },
   {
     "name": "cho'gath",
@@ -473,7 +496,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Cho'Gath/ability-icon/r"
-    }
+    },
+    "id": "31"
   },
   {
     "name": "corki",
@@ -491,7 +515,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Corki/ability-icon/r"
-    }
+    },
+    "id": "42"
   },
   {
     "name": "darius",
@@ -509,7 +534,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Darius/ability-icon/r"
-    }
+    },
+    "id": "122"
   },
   {
     "name": "diana",
@@ -528,7 +554,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Diana/ability-icon/r"
-    }
+    },
+    "id": "131"
   },
   {
     "name": "dr mundo",
@@ -546,7 +573,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/DrMundo/ability-icon/r"
-    }
+    },
+    "id": "Unknown"
   },
   {
     "name": "draven",
@@ -564,7 +592,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Draven/ability-icon/r"
-    }
+    },
+    "id": "119"
   },
   {
     "name": "ekko",
@@ -583,7 +612,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ekko/ability-icon/r"
-    }
+    },
+    "id": "245"
   },
   {
     "name": "elise",
@@ -601,7 +631,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Elise/ability-icon/r"
-    }
+    },
+    "id": "60"
   },
   {
     "name": "evelynn",
@@ -619,7 +650,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Evelynn/ability-icon/r"
-    }
+    },
+    "id": "28"
   },
   {
     "name": "ezreal",
@@ -637,7 +669,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ezreal/ability-icon/r"
-    }
+    },
+    "id": "81"
   },
   {
     "name": "fiddlesticks",
@@ -655,7 +688,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Fiddlesticks/ability-icon/r"
-    }
+    },
+    "id": "9"
   },
   {
     "name": "fiora",
@@ -673,7 +707,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Fiora/ability-icon/r"
-    }
+    },
+    "id": "114"
   },
   {
     "name": "fizz",
@@ -691,7 +726,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Fizz/ability-icon/r"
-    }
+    },
+    "id": "105"
   },
   {
     "name": "galio",
@@ -710,7 +746,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Galio/ability-icon/r"
-    }
+    },
+    "id": "3"
   },
   {
     "name": "gangplank",
@@ -728,7 +765,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Gangplank/ability-icon/r"
-    }
+    },
+    "id": "41"
   },
   {
     "name": "garen",
@@ -746,7 +784,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Garen/ability-icon/r"
-    }
+    },
+    "id": "86"
   },
   {
     "name": "gnar",
@@ -764,7 +803,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Gnar/ability-icon/r"
-    }
+    },
+    "id": "150"
   },
   {
     "name": "gragas",
@@ -783,7 +823,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Gragas/ability-icon/r"
-    }
+    },
+    "id": "79"
   },
   {
     "name": "graves",
@@ -801,7 +842,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Graves/ability-icon/r"
-    }
+    },
+    "id": "104"
   },
   {
     "name": "gwen",
@@ -820,7 +862,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Gwen/ability-icon/r"
-    }
+    },
+    "id": "887"
   },
   {
     "name": "hecarim",
@@ -838,7 +881,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Hecarim/ability-icon/r"
-    }
+    },
+    "id": "120"
   },
   {
     "name": "heimerdinger",
@@ -857,7 +901,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Heimerdinger/ability-icon/r"
-    }
+    },
+    "id": "74"
   },
   {
     "name": "hwei",
@@ -875,7 +920,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Hwei/ability-icon/r"
-    }
+    },
+    "id": "910"
   },
   {
     "name": "illaoi",
@@ -893,7 +939,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Illaoi/ability-icon/r"
-    }
+    },
+    "id": "420"
   },
   {
     "name": "irelia",
@@ -912,7 +959,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Irelia/ability-icon/r"
-    }
+    },
+    "id": "39"
   },
   {
     "name": "ivern",
@@ -930,7 +978,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ivern/ability-icon/r"
-    }
+    },
+    "id": "427"
   },
   {
     "name": "janna",
@@ -948,7 +997,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Janna/ability-icon/r"
-    }
+    },
+    "id": "40"
   },
   {
     "name": "jarvan iv",
@@ -966,7 +1016,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/JarvanIv/ability-icon/r"
-    }
+    },
+    "id": "59"
   },
   {
     "name": "jax",
@@ -985,7 +1036,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Jax/ability-icon/r"
-    }
+    },
+    "id": "24"
   },
   {
     "name": "jayce",
@@ -1004,7 +1056,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Jayce/ability-icon/r"
-    }
+    },
+    "id": "126"
   },
   {
     "name": "jhin",
@@ -1022,7 +1075,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Jhin/ability-icon/r"
-    }
+    },
+    "id": "202"
   },
   {
     "name": "jinx",
@@ -1040,7 +1094,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Jinx/ability-icon/r"
-    }
+    },
+    "id": "222"
   },
   {
     "name": "kai'sa",
@@ -1058,7 +1113,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kai'Sa/ability-icon/r"
-    }
+    },
+    "id": "145"
   },
   {
     "name": "kalista",
@@ -1076,7 +1132,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kalista/ability-icon/r"
-    }
+    },
+    "id": "429"
   },
   {
     "name": "karma",
@@ -1095,7 +1152,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Karma/ability-icon/r"
-    }
+    },
+    "id": "43"
   },
   {
     "name": "karthus",
@@ -1114,7 +1172,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Karthus/ability-icon/r"
-    }
+    },
+    "id": "30"
   },
   {
     "name": "kassadin",
@@ -1132,7 +1191,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kassadin/ability-icon/r"
-    }
+    },
+    "id": "38"
   },
   {
     "name": "katarina",
@@ -1150,7 +1210,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Katarina/ability-icon/r"
-    }
+    },
+    "id": "55"
   },
   {
     "name": "kayle",
@@ -1169,7 +1230,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kayle/ability-icon/r"
-    }
+    },
+    "id": "10"
   },
   {
     "name": "kayn",
@@ -1187,7 +1249,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kayn/ability-icon/r"
-    }
+    },
+    "id": "141"
   },
   {
     "name": "kennen",
@@ -1206,7 +1269,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kennen/ability-icon/r"
-    }
+    },
+    "id": "85"
   },
   {
     "name": "kha'zix",
@@ -1224,7 +1288,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kha'Zix/ability-icon/r"
-    }
+    },
+    "id": "121"
   },
   {
     "name": "kindred",
@@ -1242,7 +1307,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kindred/ability-icon/r"
-    }
+    },
+    "id": "203"
   },
   {
     "name": "kled",
@@ -1260,7 +1326,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kled/ability-icon/r"
-    }
+    },
+    "id": "240"
   },
   {
     "name": "kog'maw",
@@ -1278,7 +1345,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Kog'Maw/ability-icon/r"
-    }
+    },
+    "id": "96"
   },
   {
     "name": "ksante",
@@ -1296,7 +1364,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ksante/ability-icon/r"
-    }
+    },
+    "id": "Unknown"
   },
   {
     "name": "leblanc",
@@ -1314,7 +1383,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Leblanc/ability-icon/r"
-    }
+    },
+    "id": "7"
   },
   {
     "name": "lee sin",
@@ -1332,7 +1402,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/LeeSin/ability-icon/r"
-    }
+    },
+    "id": "64"
   },
   {
     "name": "leona",
@@ -1350,7 +1421,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Leona/ability-icon/r"
-    }
+    },
+    "id": "89"
   },
   {
     "name": "lillia",
@@ -1368,7 +1440,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Lillia/ability-icon/r"
-    }
+    },
+    "id": "876"
   },
   {
     "name": "lissandra",
@@ -1386,7 +1459,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Lissandra/ability-icon/r"
-    }
+    },
+    "id": "127"
   },
   {
     "name": "lucian",
@@ -1404,7 +1478,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Lucian/ability-icon/r"
-    }
+    },
+    "id": "236"
   },
   {
     "name": "lulu",
@@ -1422,7 +1497,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Lulu/ability-icon/r"
-    }
+    },
+    "id": "117"
   },
   {
     "name": "lux",
@@ -1441,7 +1517,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Lux/ability-icon/r"
-    }
+    },
+    "id": "99"
   },
   {
     "name": "malphite",
@@ -1461,7 +1538,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Malphite/ability-icon/r"
-    }
+    },
+    "id": "54"
   },
   {
     "name": "malzahar",
@@ -1479,7 +1557,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Malzahar/ability-icon/r"
-    }
+    },
+    "id": "90"
   },
   {
     "name": "maokai",
@@ -1499,7 +1578,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Maokai/ability-icon/r"
-    }
+    },
+    "id": "57"
   },
   {
     "name": "master yi",
@@ -1517,7 +1597,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/MasterYi/ability-icon/r"
-    }
+    },
+    "id": "11"
   },
   {
     "name": "mel",
@@ -1535,7 +1616,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Mel/ability-icon/r"
-    }
+    },
+    "id": "800"
   },
   {
     "name": "milio",
@@ -1553,7 +1635,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Milio/ability-icon/r"
-    }
+    },
+    "id": "902"
   },
   {
     "name": "miss fortune",
@@ -1571,7 +1654,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/MissFortune/ability-icon/r"
-    }
+    },
+    "id": "21"
   },
   {
     "name": "mordekaiser",
@@ -1589,7 +1673,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Mordekaiser/ability-icon/r"
-    }
+    },
+    "id": "82"
   },
   {
     "name": "morgana",
@@ -1608,7 +1693,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Morgana/ability-icon/r"
-    }
+    },
+    "id": "25"
   },
   {
     "name": "naafiri",
@@ -1627,7 +1713,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Naafiri/ability-icon/r"
-    }
+    },
+    "id": "950"
   },
   {
     "name": "nami",
@@ -1645,7 +1732,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nami/ability-icon/r"
-    }
+    },
+    "id": "267"
   },
   {
     "name": "nasus",
@@ -1663,7 +1751,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/ability-icon/r"
-    }
+    },
+    "id": "75"
   },
   {
     "name": "nautilus",
@@ -1681,7 +1770,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/ability-icon/r"
-    }
+    },
+    "id": "111"
   },
   {
     "name": "neeko",
@@ -1700,7 +1790,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Neeko/ability-icon/r"
-    }
+    },
+    "id": "518"
   },
   {
     "name": "nidalee",
@@ -1718,7 +1809,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nidalee/ability-icon/r"
-    }
+    },
+    "id": "76"
   },
   {
     "name": "nilah",
@@ -1736,7 +1828,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nilah/ability-icon/r"
-    }
+    },
+    "id": "895"
   },
   {
     "name": "nocturne",
@@ -1754,7 +1847,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nocturne/ability-icon/r"
-    }
+    },
+    "id": "56"
   },
   {
     "name": "nunu & willump",
@@ -1772,7 +1866,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Nunu&Willump/ability-icon/r"
-    }
+    },
+    "id": "20"
   },
   {
     "name": "olaf",
@@ -1791,7 +1886,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Olaf/ability-icon/r"
-    }
+    },
+    "id": "2"
   },
   {
     "name": "orianna",
@@ -1809,7 +1905,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Orianna/ability-icon/r"
-    }
+    },
+    "id": "61"
   },
   {
     "name": "ornn",
@@ -1827,7 +1924,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ornn/ability-icon/r"
-    }
+    },
+    "id": "516"
   },
   {
     "name": "pantheon",
@@ -1847,7 +1945,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Pantheon/ability-icon/r"
-    }
+    },
+    "id": "80"
   },
   {
     "name": "poppy",
@@ -1866,7 +1965,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Poppy/ability-icon/r"
-    }
+    },
+    "id": "78"
   },
   {
     "name": "pyke",
@@ -1884,7 +1984,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Pyke/ability-icon/r"
-    }
+    },
+    "id": "555"
   },
   {
     "name": "qiyana",
@@ -1902,7 +2003,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Qiyana/ability-icon/r"
-    }
+    },
+    "id": "246"
   },
   {
     "name": "quinn",
@@ -1920,7 +2022,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Quinn/ability-icon/r"
-    }
+    },
+    "id": "133"
   },
   {
     "name": "rakan",
@@ -1938,7 +2041,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Rakan/ability-icon/r"
-    }
+    },
+    "id": "497"
   },
   {
     "name": "rammus",
@@ -1956,7 +2060,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Rammus/ability-icon/r"
-    }
+    },
+    "id": "33"
   },
   {
     "name": "rek'sai",
@@ -1974,7 +2079,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Rek'Sai/ability-icon/r"
-    }
+    },
+    "id": "421"
   },
   {
     "name": "rell",
@@ -1992,7 +2098,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Rell/ability-icon/r"
-    }
+    },
+    "id": "526"
   },
   {
     "name": "renata glasc",
@@ -2010,7 +2117,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/RenataGlasc/ability-icon/r"
-    }
+    },
+    "id": "888"
   },
   {
     "name": "renekton",
@@ -2028,7 +2136,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Renekton/ability-icon/r"
-    }
+    },
+    "id": "58"
   },
   {
     "name": "rengar",
@@ -2046,7 +2155,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Rengar/ability-icon/r"
-    }
+    },
+    "id": "107"
   },
   {
     "name": "riven",
@@ -2064,7 +2174,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Riven/ability-icon/r"
-    }
+    },
+    "id": "92"
   },
   {
     "name": "rumble",
@@ -2082,7 +2193,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Rumble/ability-icon/r"
-    }
+    },
+    "id": "68"
   },
   {
     "name": "ryze",
@@ -2100,7 +2212,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ryze/ability-icon/r"
-    }
+    },
+    "id": "13"
   },
   {
     "name": "samira",
@@ -2118,7 +2231,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Samira/ability-icon/r"
-    }
+    },
+    "id": "360"
   },
   {
     "name": "sejuani",
@@ -2136,7 +2250,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Sejuani/ability-icon/r"
-    }
+    },
+    "id": "113"
   },
   {
     "name": "senna",
@@ -2155,7 +2270,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Senna/ability-icon/r"
-    }
+    },
+    "id": "235"
   },
   {
     "name": "seraphine",
@@ -2174,7 +2290,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Seraphine/ability-icon/r"
-    }
+    },
+    "id": "147"
   },
   {
     "name": "sett",
@@ -2192,7 +2309,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Sett/ability-icon/r"
-    }
+    },
+    "id": "875"
   },
   {
     "name": "shaco",
@@ -2211,7 +2329,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Shaco/ability-icon/r"
-    }
+    },
+    "id": "35"
   },
   {
     "name": "shen",
@@ -2229,7 +2348,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Shen/ability-icon/r"
-    }
+    },
+    "id": "98"
   },
   {
     "name": "shyvana",
@@ -2247,7 +2367,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Shyvana/ability-icon/r"
-    }
+    },
+    "id": "102"
   },
   {
     "name": "singed",
@@ -2265,7 +2386,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Singed/ability-icon/r"
-    }
+    },
+    "id": "27"
   },
   {
     "name": "sion",
@@ -2283,7 +2405,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Sion/ability-icon/r"
-    }
+    },
+    "id": "14"
   },
   {
     "name": "sivir",
@@ -2301,7 +2424,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Sivir/ability-icon/r"
-    }
+    },
+    "id": "15"
   },
   {
     "name": "skarner",
@@ -2319,7 +2443,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Skarner/ability-icon/r"
-    }
+    },
+    "id": "72"
   },
   {
     "name": "smolder",
@@ -2337,7 +2462,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Smolder/ability-icon/r"
-    }
+    },
+    "id": "901"
   },
   {
     "name": "sona",
@@ -2355,7 +2481,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Sona/ability-icon/r"
-    }
+    },
+    "id": "37"
   },
   {
     "name": "soraka",
@@ -2373,7 +2500,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Soraka/ability-icon/r"
-    }
+    },
+    "id": "16"
   },
   {
     "name": "swain",
@@ -2392,7 +2520,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Swain/ability-icon/r"
-    }
+    },
+    "id": "50"
   },
   {
     "name": "sylas",
@@ -2412,7 +2541,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Sylas/ability-icon/r"
-    }
+    },
+    "id": "517"
   },
   {
     "name": "syndra",
@@ -2430,7 +2560,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Syndra/ability-icon/r"
-    }
+    },
+    "id": "134"
   },
   {
     "name": "tahm kench",
@@ -2449,7 +2580,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/TahmKench/ability-icon/r"
-    }
+    },
+    "id": "223"
   },
   {
     "name": "taliyah",
@@ -2468,7 +2600,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Taliyah/ability-icon/r"
-    }
+    },
+    "id": "163"
   },
   {
     "name": "talon",
@@ -2487,7 +2620,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Talon/ability-icon/r"
-    }
+    },
+    "id": "91"
   },
   {
     "name": "taric",
@@ -2505,7 +2639,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Taric/ability-icon/r"
-    }
+    },
+    "id": "44"
   },
   {
     "name": "teemo",
@@ -2523,7 +2658,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Teemo/ability-icon/r"
-    }
+    },
+    "id": "17"
   },
   {
     "name": "thresh",
@@ -2541,7 +2677,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Thresh/ability-icon/r"
-    }
+    },
+    "id": "412"
   },
   {
     "name": "tristana",
@@ -2560,7 +2697,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Tristana/ability-icon/r"
-    }
+    },
+    "id": "18"
   },
   {
     "name": "trundle",
@@ -2579,7 +2717,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Trundle/ability-icon/r"
-    }
+    },
+    "id": "48"
   },
   {
     "name": "tryndamere",
@@ -2597,7 +2736,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Tryndamere/ability-icon/r"
-    }
+    },
+    "id": "23"
   },
   {
     "name": "twisted fate",
@@ -2615,7 +2755,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/TwistedFate/ability-icon/r"
-    }
+    },
+    "id": "4"
   },
   {
     "name": "twitch",
@@ -2633,7 +2774,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Twitch/ability-icon/r"
-    }
+    },
+    "id": "29"
   },
   {
     "name": "udyr",
@@ -2652,7 +2794,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Udyr/ability-icon/r"
-    }
+    },
+    "id": "77"
   },
   {
     "name": "urgot",
@@ -2670,7 +2813,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Urgot/ability-icon/r"
-    }
+    },
+    "id": "6"
   },
   {
     "name": "varus",
@@ -2688,7 +2832,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Varus/ability-icon/r"
-    }
+    },
+    "id": "110"
   },
   {
     "name": "vayne",
@@ -2707,7 +2852,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Vayne/ability-icon/r"
-    }
+    },
+    "id": "67"
   },
   {
     "name": "veigar",
@@ -2725,7 +2871,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Veigar/ability-icon/r"
-    }
+    },
+    "id": "45"
   },
   {
     "name": "vel'koz",
@@ -2744,7 +2891,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Vel'Koz/ability-icon/r"
-    }
+    },
+    "id": "161"
   },
   {
     "name": "vi",
@@ -2762,7 +2910,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Vi/ability-icon/r"
-    }
+    },
+    "id": "254"
   },
   {
     "name": "viego",
@@ -2780,7 +2929,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Viego/ability-icon/r"
-    }
+    },
+    "id": "234"
   },
   {
     "name": "vex",
@@ -2798,7 +2948,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Vex/ability-icon/r"
-    }
+    },
+    "id": "711"
   },
   {
     "name": "viktor",
@@ -2816,7 +2967,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Viktor/ability-icon/r"
-    }
+    },
+    "id": "112"
   },
   {
     "name": "vladimir",
@@ -2835,7 +2987,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Vladimir/ability-icon/r"
-    }
+    },
+    "id": "8"
   },
   {
     "name": "volibear",
@@ -2854,7 +3007,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Volibear/ability-icon/r"
-    }
+    },
+    "id": "106"
   },
   {
     "name": "warwick",
@@ -2873,7 +3027,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Warwick/ability-icon/r"
-    }
+    },
+    "id": "19"
   },
   {
     "name": "wukong",
@@ -2891,7 +3046,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Wukong/ability-icon/r"
-    }
+    },
+    "id": "62"
   },
   {
     "name": "xayah",
@@ -2909,7 +3065,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Xayah/ability-icon/r"
-    }
+    },
+    "id": "498"
   },
   {
     "name": "xerath",
@@ -2928,7 +3085,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Xerath/ability-icon/r"
-    }
+    },
+    "id": "101"
   },
   {
     "name": "xin zhao",
@@ -2947,7 +3105,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/XinZhao/ability-icon/r"
-    }
+    },
+    "id": "5"
   },
   {
     "name": "yasuo",
@@ -2966,7 +3125,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/ability-icon/r"
-    }
+    },
+    "id": "157"
   },
   {
     "name": "yone",
@@ -2985,7 +3145,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Yone/ability-icon/r"
-    }
+    },
+    "id": "777"
   },
   {
     "name": "yorick",
@@ -3003,7 +3164,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Yorick/ability-icon/r"
-    }
+    },
+    "id": "83"
   },
   {
     "name": "yuumi",
@@ -3022,7 +3184,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Yuumi/ability-icon/r"
-    }
+    },
+    "id": "350"
   },
   {
     "name": "zac",
@@ -3041,7 +3204,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Zac/ability-icon/r"
-    }
+    },
+    "id": "154"
   },
   {
     "name": "zed",
@@ -3059,7 +3223,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Zed/ability-icon/r"
-    }
+    },
+    "id": "238"
   },
   {
     "name": "zeri",
@@ -3077,7 +3242,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Zeri/ability-icon/r"
-    }
+    },
+    "id": "221"
   },
   {
     "name": "ziggs",
@@ -3096,7 +3262,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Ziggs/ability-icon/r"
-    }
+    },
+    "id": "115"
   },
   {
     "name": "zilean",
@@ -3115,7 +3282,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Zilean/ability-icon/r"
-    }
+    },
+    "id": "26"
   },
   {
     "name": "zoe",
@@ -3133,7 +3301,8 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Zoe/ability-icon/r"
-    }
+    },
+    "id": "142"
   },
   {
     "name": "zyra",
@@ -3151,6 +3320,7 @@
       "W": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/w",
       "E": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/e",
       "R": "https://cdn.communitydragon.org/15.2.1/champion/Zyra/ability-icon/r"
-    }
+    },
+    "id": "143"
   }
 ]
