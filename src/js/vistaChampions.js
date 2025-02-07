@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
             font-weight: bold;
             font-size: 9px;
         }
+        .abilities-popup {
+            backdrop-filter: blur(10px) brightness(0.8);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     `;
     document.head.appendChild(style);
 
@@ -27,6 +31,82 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/';
         return;
     }
+
+    const setupAbilitiesPopup = (champion) => {
+        const abilitiesButton = document.querySelector('.abilities-button');
+        const abilitiesPopup = document.querySelector('.abilities-popup');
+        const closePopupButton = document.querySelector('.close-popup');
+        const abilityVideo = document.querySelector('#ability-video');
+        const abilitySelectors = document.querySelectorAll('.ability-selector');
+
+        const updateVideo = (ability) => {
+            const championId = champion.id.toString().padStart(4, '0');
+            const videoUrl = `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${championId}/ability_${championId}_${ability}1.mp4`;
+            
+            const newVideo = document.createElement('video');
+            newVideo.id = 'ability-video';
+            newVideo.autoplay = true;
+            newVideo.loop = true;
+            newVideo.muted = true;
+            newVideo.playsInline = true;
+            newVideo.style.width = '100%';
+            newVideo.style.height = '100%';
+            newVideo.style.objectFit = 'cover';
+            newVideo.style.opacity = '0'; // Empezar invisible
+            newVideo.style.transition = 'opacity 0.3s ease';
+
+            newVideo.onloadeddata = () => {
+                newVideo.style.opacity = '1'; // Hacer visible cuando esté cargado
+                // Actualizar botón activo
+                document.querySelectorAll('.ability-selector').forEach(btn => {
+                    btn.classList.remove('active');
+                    if(btn.getAttribute('data-ability') === ability) {
+                        btn.classList.add('active');
+                    }
+                });
+            };
+
+            newVideo.src = videoUrl;
+            const oldVideo = document.querySelector('#ability-video');
+            if(oldVideo) {
+                oldVideo.style.opacity = '0';
+                setTimeout(() => {
+                    oldVideo.parentNode.replaceChild(newVideo, oldVideo);
+                }, 300);
+            }
+        };
+
+        abilitiesButton?.addEventListener('click', () => {
+            abilitiesPopup.classList.add('active');
+            // Intentar con diferentes habilidades si una falla
+            updateVideo('P');
+        });
+
+        closePopupButton?.addEventListener('click', () => {
+            abilitiesPopup.classList.remove('active');
+            const video = document.querySelector('#ability-video');
+            if (video) {
+                video.pause();
+                video.removeAttribute('src');
+                video.load();
+            }
+        });
+
+        abilitySelectors.forEach(selector => {
+            selector.addEventListener('click', () => {
+                const ability = selector.getAttribute('data-ability');
+                updateVideo(ability);
+            });
+        });
+
+        // Actualizar las imágenes de las habilidades en los botones del popup
+        if (champion.habilidades) {
+            document.querySelectorAll('.popup-ability-img').forEach(img => {
+                const ability = img.parentElement.getAttribute('data-ability');
+                img.src = champion.habilidades[ability];
+            });
+        }
+    };
 
     fetch('../src/data/champions.json')
         .then(response => response.json())
@@ -39,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log('Champion encontrado:', champion);
             console.log('BuenosContra array:', champion.buenosContra);
+
+            // Guardar el ID del campeón para usarlo en los videos
+            sessionStorage.setItem('championId', champion.id);
 
             // Actualizar nombre y avatar
             document.querySelector('.champion-name').textContent = champion.name;
@@ -116,6 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
+
+            // Configurar el popup de habilidades
+            setupAbilitiesPopup(champion);
         })
         .catch(error => {
             console.error('Error:', error);

@@ -1,58 +1,59 @@
 ---
-import Layout from "../layouts/Layout.astro" 
-import Barra from "../components/SearchBar.astro"
+import Layout from "../layouts/Layout.astro"
 ---
 <Layout title="Champion">
     <main>
-        <div class="search-nav">
-          <Barra />
-          <a href="/" class="button-back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/>
-            </svg>
-          </a>
-        </div>
         <div class="champion-info">
           <div class="champion-avatar"></div>
           <div class="champion-details">
             <div class="chmpion-textos">
-              <h1>
-                <span class="champion-name"></span>
-                <div class="position-icon">
-                  <!-- TOP -->
-                  <svg class="role-svg top-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                    <g fill="currentColor" fill-rule="nonzero">
-                      <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                      <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                      <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                    </g>
-                  </svg>
-                  <!-- JUNGLE -->
-                  <svg class="role-svg jungle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                  </svg>
-                  <!-- MID -->
-                  <svg class="role-svg mid-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                    <g fill="currentColor" fill-rule="nonzero">
-                      <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                      <path d="M18 3h3v3L6 21H3v-3z"></path>
-                    </g>
-                  </svg>
-                  <!-- ADC -->
-                  <svg class="role-svg adc-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                    <g fill="currentColor" fill-rule="nonzero">
-                      <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                      <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                      <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                    </g>
-                  </svg>
-                  <!-- SUPPORT -->
-                  <svg class="role-svg support-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                  </svg>
+              <div class="champion-header">
+                <h1>
+                  <span class="champion-name"></span>
+                  <div class="position-icon">
+                    <!-- TOP -->
+                    <svg class="role-svg top-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <g fill="currentColor" fill-rule="nonzero">
+                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                      </g>
+                    </svg>
+                    <!-- JUNGLE -->
+                    <svg class="role-svg jungle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                    </svg>
+                    <!-- MID -->
+                    <svg class="role-svg mid-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <g fill="currentColor" fill-rule="nonzero">
+                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                        <path d="M18 3h3v3L6 21H3v-3z"></path>
+                      </g>
+                    </svg>
+                    <!-- ADC -->
+                    <svg class="role-svg adc-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <g fill="currentColor" fill-rule="nonzero">
+                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                      </g>
+                    </svg>
+                    <!-- SUPPORT -->
+                    <svg class="role-svg support-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                    </svg>
+                  </div>
+                  <span class="champion-subtitle">Counters y Picks, <span class="champion-score">15.2</span></span>
+                </h1>
+                <div class="header-buttons">
+                  <button class="abilities-button">Ver Habilidades</button>
+                  <a href="/" class="button-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/>
+                    </svg>
+                  </a>
                 </div>
-                <span class="champion-subtitle">Counters y Picks, <span class="champion-score">15.2</span></span>
-              </h1>
+              </div>
             </div>
             <div class="champion-bar">
               <div class="tier-letter"></div>
@@ -95,6 +96,37 @@ import Barra from "../components/SearchBar.astro"
             </div>
           </div>
         </div>
+        <div id="abilities-popup" class="abilities-popup">
+          <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <div class="abilities-video-container">
+              <video id="ability-video" autoplay loop muted></video>
+              <div class="ability-controls">
+                <div class="ability-buttons">
+                  <button class="ability-selector active" data-ability="P">
+                    <img class="popup-ability-img p-ability" alt="P">
+                    <span class="popup-ability-key">P</span>
+                  </button>
+                  <button class="ability-selector" data-ability="Q">
+                    <img class="popup-ability-img q-ability" alt="Q">
+                    <span class="popup-ability-key">Q</span>
+                  </button>
+                  <button class="ability-selector" data-ability="W">
+                    <img class="popup-ability-img w-ability" alt="W">
+                    <span class="popup-ability-key">W</span>
+                  </button>
+                  <button class="ability-selector" data-ability="E">
+                    <img class="popup-ability-img e-ability" alt="E">
+                    <span class="popup-ability-key">E</span>
+                  <button class="ability-selector" data-ability="R">
+                    <img class="popup-ability-img r-ability" alt="R">
+                    <span class="popup-ability-key">R</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="counters">
           <h2>BUENO CONTRA</h2>
           <div class="cards-grid">
@@ -130,21 +162,22 @@ import Barra from "../components/SearchBar.astro"
 
   main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    padding-top: 25px;
+    padding-bottom: 25px; /* Añadido padding-bottom para balance */
+    overflow-x: hidden;
   }
 
-  .search-nav{
-    width: 60%;
+  .header-buttons {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
   }
 
-  .button-back{
+  .button-back {
     width: 40px;
     height: 40px;
     border-radius: 8px;
@@ -152,7 +185,6 @@ import Barra from "../components/SearchBar.astro"
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
     color: #45464B;
   }
 
@@ -163,10 +195,11 @@ import Barra from "../components/SearchBar.astro"
 
   .champion-info {
     width: 60%;
-    height: 140px;
-    margin-top: 40px;
+    height: auto; /* Cambiado de 140px a auto */
+    margin-top: 0; /* Eliminado margin-top */
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reducido de 40px a 20px */
+    align-items: flex-start; /* Añadido para alinear contenido */
   }
 
   .champion-avatar {
@@ -182,7 +215,10 @@ import Barra from "../components/SearchBar.astro"
   
   .champion-details {
     width: 100%;
-    height: 140px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reducido de 15px a 10px */
   }
   
   .chmpion-textos{
@@ -191,15 +227,18 @@ import Barra from "../components/SearchBar.astro"
   }
   
   .champion-bar {
+    max-width: 100%; /* Cambiado de 900px a 100% */
     width: 100%;
     height: 100px;
-    margin-top: 10px;
+    margin-top: 0; /* Eliminado margin-top */
     border-radius: 8px;
     background-color: #191d23;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 0px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .champion-bar::after {
@@ -229,21 +268,22 @@ import Barra from "../components/SearchBar.astro"
   }
 
   .champion-stats {
-    flex: 1;
+    flex: 0 1 auto; /* Cambiar a flex-grow: 0 para que no se expanda demasiado */
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start; /* Cambiar a flex-start */
     align-items: center;
     margin-left: 2rem;
     color: #fff;
     font-family: "Roboto Mono", monospace;
     position: relative;
+    min-width: 300px; /* Añadir un ancho mínimo */
   }
 
   .stat {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1.5rem; /* Reducir el padding */
     position: relative;
   }
 
@@ -336,7 +376,12 @@ import Barra from "../components/SearchBar.astro"
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reducido de 15px a 10px */
+  }
+
+  /* La última sección de counters no necesita margin-bottom */
+  .counters:last-child {
+    margin-bottom: 0;
   }
 
   h2 {
@@ -413,5 +458,253 @@ import Barra from "../components/SearchBar.astro"
     padding: 0.1rem 0.3rem;
     border-radius: 0.25rem;
     text-shadow: none;
+  }
+
+  .abilities-button {
+    background: #F54245;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    height: fit-content;
+    white-space: nowrap;
+  }
+
+  .abilities-button:hover {
+    background: #ff6668;
+  }
+
+  .abilities-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    background: #282828;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .abilities-video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .ability-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+  }
+
+  .ability-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .ability-selector {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid rgba(245, 66, 69, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(26, 27, 30, 0.9);
+    overflow: visible;
+  }
+
+  .ability-selector:hover {
+    border-color: #F54245;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+  }
+
+  .ability-selector.active {
+    border-color: #F54245;
+    box-shadow: 0 0 15px rgba(245, 66, 69, 0.5);
+    transform: scale(1.1);
+  }
+
+  .popup-ability-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    z-index: 1;
+    background-color: #1a1a1a;
+    clip-path: inset(0);
+    position: relative;
+  }
+
+  .popup-ability-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .popup-ability-key {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10; /* Aumentado para estar por encima de la imagen */
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-shadow: none;
+    font-family: "Roboto Mono", monospace;
+    border: 1px solid rgba(245, 66, 69, 0.3);
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .popup-ability-key {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10; /* Aumentado para estar por encima de la imagen */
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-shadow: none;
+    font-family: "Roboto Mono", monospace;
+    border: 1px solid rgba(245, 66, 69, 0.3);
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .ability-selector.active .popup-ability-key {
+    background-color: rgba(245, 66, 69, 0.8);
+  }
+
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(245, 66, 69, 0.2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .close-popup:hover {
+    background: #F54245;
+    transform: rotate(90deg);
+  }
+
+  .abilities-popup.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      backdrop-filter: blur(0px);
+    }
+    to {
+      opacity: 1;
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  .abilities-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+
+  .abilities-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .ability-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    background: rgba(10, 10, 10, 0.8);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(245, 66, 69, 0.3);
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+  }
+
+  .ability-selector.active .ability-label {
+    color: #F54245;
+    border-color: #F54245;
+    background: rgba(10, 10, 10, 0.95);
+  }
+
+  .champion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px; /* Añadido espacio entre header y champion-bar */
   }
 </style>
