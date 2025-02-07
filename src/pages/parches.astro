@@ -1,14 +1,10 @@
 ---
-import DotBackground from '../components/DotBackground.astro';
-import { Image } from 'astro:assets';
 import Logo from '../assets/logo.svg?raw';
+import Layout from '../layouts/Layout.astro';
 const patchData = await import('../data/parches/patch-25-s1-2.json');
 ---
 
-<DotBackground>
-    <head>
-        <meta charset="UTF-8">
-    </head>
+<Layout title="Parches">
     <div class="patch-notes-container">
         <div class="patch-header">
             <div class="logo-container" set:html={Logo} />
@@ -78,7 +74,7 @@ const patchData = await import('../data/parches/patch-25-s1-2.json');
             </div>
         </div>
     </div>
-</DotBackground>
+</Layout>
 
 <!-- Modal para la imagen del banner -->
 <div id="banner-modal" class="modal">
