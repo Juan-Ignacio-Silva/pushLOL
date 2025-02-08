@@ -1,0 +1,246 @@
+{
+    "banner": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/39f54afa5f07f719de7f534df4b5381b7ad35194-1920x1080.jpg",
+    "champions": [
+      {
+        "name": "Cassiopeia",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Cassiopeia.png",
+        "summary": "Se reduce el daño de la Q y la W.",
+        "changes": {
+          "Q": {
+            "name": "Explosión perjudicial",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/CassiopeiaQ.png",
+            "changes": "Daño: 75/110/145/180/215 (+65% del PH)"
+          },
+          "W": {
+            "name": "Miasma",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/CassiopeiaW.png",
+            "changes": "Daño: 20/25/30/35/40 (+10% del PH)"
+          }
+        }
+      },
+      {
+        "name": "Evelynn",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Evelynn.png",
+        "summary": "Aumenta el daño de la E.",
+        "changes": {
+          "E": {
+            "name": "Latigazo",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/EvelynnE.png",
+            "changes": "Daño base: 60/90/120/150/180 (+3% [+1.5% del PH] de la vida máx. del objetivo) | Daño potenciado: 80/120/160/200/240 (+4% [+2.5% por cada 100 de PH] de la vida máx. del objetivo)"
+          }
+        }
+      },
+      {
+        "name": "Galio",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Galio.png",
+        "summary": "Se reduce la vida básica.",
+        "changes": {}
+      },
+      {
+        "name": "Kayn",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Kayn.png",
+        "summary": "Aumenta el daño de la Q.",
+        "changes": {
+          "Q": {
+            "name": "Corte de guadaña",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/KaynQ.png",
+            "changes": "Daño: 75/100/125/150/175 (+85% del DA adicional)"
+          }
+        }
+      },
+      {
+        "name": "Jax",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Jax.png",
+        "summary": "Aumentan el crecimiento de vida y la regeneración de maná básica. Aumenta el daño de la R.",
+        "changes": {
+          "R": {
+            "name": "El Maestro de Armas",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/JaxR.png",
+            "changes": "Daño: 75/130/185 (+60% del PH)"
+          }
+        }
+      },
+      {
+        "name": "Jayce",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Jayce.png",
+        "summary": "Se reduce el daño de la Q, W y R.",
+        "changes": {
+          "Q": {
+            "name": "¡Hacia los cielos!",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/JayceToTheSkies.png",
+            "changes": "Daño: 60/105/150/195/240 (+135% del DA adicional)"
+          },
+          "W": {
+            "name": "Campo de rayos",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/JayceStaticField.png",
+            "changes": "Daño: 35/50/65/80/95"
+          },
+          "R": {
+            "name": "Transformar Martillo de mercurio",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/JayceStanceHtG.png",
+            "changes": "Daño: 25/60/100/130"
+          }
+        }
+      },
+      {
+        "name": "Miss Fortune",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/MissFortune.png",
+        "summary": "Se reducen la armadura básica y el crecimiento de armadura.",
+        "changes": {}
+      },
+      {
+        "name": "Nasus",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Nasus.png",
+        "summary": "Aumenta el robo de vida de la pasiva.",
+        "changes": {
+          "passive": {
+            "name": "Devorador de almas",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/passive/Nasus_Passive.png",
+            "changes": "Robo de vida: 12/18/24% (según el nivel)"
+          }
+        }
+      },
+      {
+        "name": "Quinn",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Quinn.png",
+        "summary": "Aumenta la velocidad de ataque de la W.",
+        "changes": {
+          "W": {
+            "name": "Sentidos aguzados",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/QuinnW.png",
+            "changes": "Velocidad de ataque: 28/41/54/67/80%"
+          }
+        }
+      },
+      {
+        "name": "Rakan",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Rakan.png",
+        "summary": "Se reduce el enfriamiento de la W.",
+        "changes": {
+          "W": {
+            "name": "Entrada grandiosa",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/RakanW.png",
+            "changes": "Enfriamiento: 14/13/12/11/10"
+          }
+        }
+      },
+      {
+        "name": "Rell",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Rell.png",
+        "summary": "Se reducen la vida básica y el crecimiento de armadura.",
+        "changes": {}
+      },
+      {
+        "name": "Samira",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Samira.png",
+        "summary": "Aumenta la duración de la velocidad de ataque de la E.",
+        "changes": {
+          "E": {
+            "name": "Carrera salvaje",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/SamiraE.png",
+            "changes": "Duración: 5s"
+          }
+        }
+      },
+      {
+        "name": "Skarner",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Skarner.png",
+        "summary": "Se reduce el crecimiento de armadura y aumenta el enfriamiento de la E.",
+        "changes": {
+          "E": {
+            "name": "Hostilidad ixtalí",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/SkarnerE.png",
+            "changes": "Enfriamiento: 1s"
+          }
+        }
+      },
+      {
+        "name": "Swain",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Swain.png",
+        "summary": "Aumenta la bonificación de la vida máxima de la pasiva y el daño de la E.",
+        "changes": {
+          "passive": {
+            "name": "Bandada de cuervos",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/passive/Swain_P.png",
+            "changes": "Bonificación de vida máxima: 15"
+          },
+          "E": {
+            "name": "Paralizar",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/SwainE.png",
+            "changes": "Daño: 80/120/160/200/240 (+70% del PH)"
+          }
+        }
+      },
+      {
+        "name": "Teemo",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Teemo.png",
+        "summary": "Se reduce el daño de la E.",
+        "changes": {
+          "E": {
+            "name": "Tiro tóxico",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/TeemoE.png",
+            "changes": "Daño de impacto: 9/23/37/51/65 (+30% del PH)"
+          }
+        }
+      },
+      {
+        "name": "Thresh",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Thresh.png",
+        "summary": "Aumenta la vida básica y el daño de la E.",
+        "changes": {
+          "E": {
+            "name": "Despellejar",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/ThreshE.png",
+            "changes": "Daño base: 1.7 por alma (hasta un 90/120/150/180/210%)"
+          }
+        }
+      },
+      {
+        "name": "Viego",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/Viego.png",
+        "summary": "Se reduce el daño de ataque básico.",
+        "changes": {}
+      },
+      {
+        "name": "Wukong",
+        "image_URL": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/champion/MonkeyKing.png",
+        "summary": "Aumenta el enfriamiento de la W y se reduce la velocidad de ataque de la E.",
+        "changes": {
+          "W": {
+            "name": "Señuelo",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/MonkeyKingDecoy.png",
+            "changes": "Enfriamiento: 20/19/18/17/16"
+          },
+          "E": {
+            "name": "Golpe de nimbo",
+            "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/spell/MonkeyKingNimbus.png",
+            "changes": "Velocidad de ataque: 35/40/45/50/55%"
+          }
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "Tonada sanguina",
+        "image": "https://am-a.akamaihd.net/image?f=https://ddragon.leagueoflegends.com/cdn/15.2.1/img/item/3877.png",
+        "changes": "Daño adicional reducido de la pasiva. Daño recibido adicional de Ataque al punto débil: 10% cuerpo a cuerpo | 5% a distancia ⇒ 8% cuerpo a cuerpo | 5% a distancia."
+      },
+      {
+        "name": "Perforaplanos de Zaz'Zak",
+        "image": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/f22f8735b61f44452d90f7c0b003dcf83f51aa73-512x512.png",
+        "changes": "Relación con PH reducida. Relación de PH: 20% ⇒ 15%."
+      }
+    ],
+    "gameChanges": [
+      {
+        "description": "Límite de velocidad de ataque: Aumentado de 2.5 a 10."
+      },
+      {
+        "description": "Recompensas de campeones: Ajustadas para reducir la ventaja de los equipos en desventaja."
+      },
+      {
+        "description": "Monstruos épicos: Se ajustaron la vida y el daño de ciertos monstruos."
+      }
+    ]
+  }
+  

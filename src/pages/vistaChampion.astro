@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import champions from "../data/champions.json"
+const championsData = JSON.stringify(champions);
 ---
 <Layout title="Champion">
     <main>
@@ -35,53 +37,49 @@ import Layout from "../layouts/Layout.astro"
     </main>
 </Layout>
 
+<div id="champions-data" data-json={championsData}></div>
+
 <script>
-  let champions = [];
-
-fetch("../src/data/champions.json")
-    .then(respuesta => {
-        console.log("Respuesta del fetch:", respuesta);
-        return respuesta.json(); // Convertir a JSON
-    })
-    .then(data => {
-        console.log("Datos del JSON:", data); // Verificar los datos obtenidos
-        champions = data;
-        buscarChampionDesdeSessionStorage(champions);
-    })
-    .catch(error => console.error("Error al cargar el JSON:", error));
-
-    function buscarChampionDesdeSessionStorage(championsData) {
-    // Aca declaro nombre = al nombre del champion seleccionado.
-    let nombre = sessionStorage.getItem("championSelected");
-    // Aca obtengo la etiqueta span del html y le coloco el valor del champion seleccionado.
-    const nombreChampion = document.querySelector(".champion-name")
-    if (nombreChampion) {
-        nombreChampion.innerHTML = nombre.toUpperCase();
+  function championDataGenerator() {
+    let nombreChamp = sessionStorage.getItem("championSelected");
+    
+    if (!nombreChamp) {
+        console.error("No hay un campeón seleccionado en sessionStorage.");
+        return;
     }
 
-    let championInfo = championsData;
-    let champion = null;
+    console.log(nombreChamp); // Borar luego, solo de prueba
 
-    //// Buscar el campeón con forEach
-    championInfo.forEach(champ => {
-        if (champ.name.toLowerCase() === nombre.toLowerCase()) {
-            champion = champ;
-            console.log("ChampSeleccinado: " + champion.image_url)
-        }
-    });
-    const championAvatar = document.querySelector(".champion-avatar")
-    if (champion) {
-        championAvatar.innerHTML = `
-            <img 
-            src="${champion.image_url}" 
-            alt="${champion.name}"
-            style="width: 100px; border-radius: 8px;"
-            >
-        `;
+    const nombreChampion = document.querySelector(".champion-name");
+    if (!nombreChampion) {
+        console.error("No se encontró el elemento con la clase .champion-name");
+        return;
     }
-    }
+    nombreChampion.innerHTML = nombreChamp.toUpperCase();
+
+    // Obtener el JSON de campeones
+    const championsElement = document.getElementById("champions-data");
+    const champions = JSON.parse(championsElement.dataset.json || "[]"); 
+    // Buscar el campeón usando .find()
+    let champion = champions.find(champ => champ.name.toLowerCase() === nombreChamp.toLowerCase());
+    if (!champion) {
+      console.error(`No se encontró información para el campeón: ${nombreChamp}`);
+      return;
+    };
+    console.log("Datos del campeón:", champion) 
+    // Seleccionar el avatar y actualizar con la imagen del campeón
+    const championAvatar = document.querySelector(".champion-avatar");
+    championAvatar.innerHTML = `
+      <img 
+        src="${champion.image_url}" 
+        alt="${champion.name}"
+        style="width: 100px; border-radius: 8px;"
+      >
+    `;
+
+  }
+  championDataGenerator();
 </script>
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
   :root {
