@@ -32,7 +32,7 @@
   },
   {
     "name": "ahri",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ahri/square",
+    "image_url": "https://cdn.communitydragon.org/15.3.1/champion/ahri/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Ahri/splash-art/centered/skin/0",
     "tier": "B",
     "positions": [
@@ -1718,7 +1718,7 @@
   },
   {
     "name": "nami",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nami/square",
+    "image_url": "https://cdn.communitydragon.org/15.3.1/champion/nami/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nami/splash-art/centered/skin/0",
     "tier": "S+",
     "positions": [
@@ -1737,7 +1737,7 @@
   },
   {
     "name": "nasus",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nasus/square",
+    "image_url": "https://cdn.communitydragon.org/15.3.1/champion/nasus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nasus/splash-art/centered/skin/0",
     "tier": "B",
     "positions": [
@@ -1756,7 +1756,7 @@
   },
   {
     "name": "nautilus",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nautilus/square",
+    "image_url": "https://cdn.communitydragon.org/15.3.1/champion/nautilus/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Nautilus/splash-art/centered/skin/0",
     "tier": "S",
     "positions": [
@@ -3110,7 +3110,7 @@
   },
   {
     "name": "yasuo",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yasuo/square",
+    "image_url": "https://cdn.communitydragon.org/15.3.1/champion/yasuo/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yasuo/splash-art/centered/skin/0",
     "tier": "B",
     "positions": [
@@ -3130,7 +3130,7 @@
   },
   {
     "name": "yone",
-    "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yone/square",
+    "image_url": "https://cdn.communitydragon.org/15.3.1/champion/yone/square",
     "splash": "https://cdn.communitydragon.org/15.2.1/champion/Yone/splash-art/centered/skin/0",
     "tier": "A",
     "positions": [
