@@ -335,7 +335,7 @@ const viewType = 'single';
                             >
                                 <div class="col rank">{champion.rank}</div>
                                 <div class="col champion">
-                                    <img src={champion.image_url} alt={champion.name} />
+                                    <img class="imagen-champ" id={champion.name} src={champion.image_url} alt={champion.name} />
                                     <span class="champion-name">{champion.name.toUpperCase()}</span>
                                 </div>
                                 <div class="col positions">
@@ -2022,4 +2022,11 @@ const viewType = 'single';
             }
         }
     }
+
+    document.querySelector('.imagen-champ').addEventListener('click', function(e) {
+        const championName = e.target.id.toLowerCase();
+        sessionStorage.setItem("championSelected", championName);
+        window.location.href = 'vistaChampion';
+    });
+
 </script> 
