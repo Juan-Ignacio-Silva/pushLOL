@@ -188,10 +188,24 @@ const championsData = JSON.stringify(champions)
       >
     `;
 
+    // Actualizar tier y barra
+    const championBar = document.querySelector('.champion-bar');
+    championBar.setAttribute('data-tier', champion.tier);
+    const tierLetter = document.querySelector('.tier-letter');
+    tierLetter.textContent = champion.tier;
+
+
+    // Actualizar iconos de habilidades
+    if (champion.habilidades) {
+      document.querySelector('.p-ability').src = champion.habilidades.P;
+      document.querySelector('.q-ability').src = champion.habilidades.Q;
+      document.querySelector('.w-ability').src = champion.habilidades.W;
+      document.querySelector('.e-ability').src = champion.habilidades.E;
+      document.querySelector('.r-ability').src = champion.habilidades.R;
+    }
+
   }
   championDataGenerator();
-
-  
 
 </script>
 
@@ -241,7 +255,7 @@ const championsData = JSON.stringify(champions)
   }
 
   .champion-info {
-    width: 60%;
+    width: 80%;
     height: auto; /* Cambiado de 140px a auto */
     margin-top: 0; /* Eliminado margin-top */
     display: flex;
@@ -281,6 +295,7 @@ const championsData = JSON.stringify(champions)
     background-color: #191d23;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 0px;
     position: relative;
     margin-left: auto;
@@ -303,13 +318,12 @@ const championsData = JSON.stringify(champions)
     font-family: "Plus Jakarta Sans", sans-serif;
     color: var(--tier-color);
     text-shadow: 0 0 15px var(--tier-color);
-    width: 80px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin: 0;
+    padding-left: 1rem;
     line-height: 1;
   }
 
@@ -318,7 +332,6 @@ const championsData = JSON.stringify(champions)
     display: flex;
     justify-content: flex-start; /* Cambiar a flex-start */
     align-items: center;
-    margin-left: 2rem;
     color: #fff;
     font-family: "Roboto Mono", monospace;
     position: relative;
@@ -418,7 +431,7 @@ const championsData = JSON.stringify(champions)
   }
 
   .counters {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -468,7 +481,6 @@ const championsData = JSON.stringify(champions)
   .abilities-container {
     display: flex;
     gap: 0.5rem;
-    margin-left: auto;
     padding-right: 1rem;
     height: 100%;
     align-items: center;
