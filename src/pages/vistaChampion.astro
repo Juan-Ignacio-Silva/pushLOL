@@ -151,6 +151,82 @@ const championsData = JSON.stringify(champions)
 <div id="champions-data" data-json={championsData}></div>
 
 <script>
+  const setupAbilitiesPopup = (champion) => {
+        const abilitiesButton = document.querySelector('.abilities-button');
+        const abilitiesPopup = document.querySelector('.abilities-popup');
+        const closePopupButton = document.querySelector('.close-popup');
+        const abilityVideo = document.querySelector('#ability-video');
+        const abilitySelectors = document.querySelectorAll('.ability-selector');
+
+        const updateVideo = (ability) => {
+            const championId = champion.id.toString().padStart(4, '0');
+            const videoUrl = `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${championId}/ability_${championId}_${ability}1.mp4`;
+            
+            const newVideo = document.createElement('video');
+            newVideo.id = 'ability-video';
+            newVideo.autoplay = true;
+            newVideo.loop = true;
+            newVideo.muted = true;
+            newVideo.playsInline = true;
+            newVideo.style.width = '100%';
+            newVideo.style.height = '100%';
+            newVideo.style.objectFit = 'cover';
+            newVideo.style.opacity = '0'; // Empezar invisible
+            newVideo.style.transition = 'opacity 0.3s ease';
+
+            newVideo.onloadeddata = () => {
+                newVideo.style.opacity = '1'; // Hacer visible cuando esté cargado
+                // Actualizar botón activo
+                document.querySelectorAll('.ability-selector').forEach(btn => {
+                    btn.classList.remove('active');
+                    if(btn.getAttribute('data-ability') === ability) {
+                        btn.classList.add('active');
+                    }
+                });
+            };
+
+            newVideo.src = videoUrl;
+            const oldVideo = document.querySelector('#ability-video');
+            if(oldVideo) {
+                oldVideo.style.opacity = '0';
+                setTimeout(() => {
+                    oldVideo.parentNode.replaceChild(newVideo, oldVideo);
+                }, 300);
+            }
+        };
+
+        abilitiesButton?.addEventListener('click', () => {
+            abilitiesPopup.classList.add('active');
+            // Intentar con diferentes habilidades si una falla
+            updateVideo('P');
+        });
+
+        closePopupButton?.addEventListener('click', () => {
+            abilitiesPopup.classList.remove('active');
+            const video = document.querySelector('#ability-video');
+            if (video) {
+                video.pause();
+                video.removeAttribute('src');
+                video.load();
+            }
+        });
+
+        abilitySelectors.forEach(selector => {
+            selector.addEventListener('click', () => {
+                const ability = selector.getAttribute('data-ability');
+                updateVideo(ability);
+            });
+        });
+
+        // Actualizar las imágenes de las habilidades en los botones del popup
+        if (champion.habilidades) {
+            document.querySelectorAll('.popup-ability-img').forEach(img => {
+                const ability = img.parentElement.getAttribute('data-ability');
+                img.src = champion.habilidades[ability];
+            });
+        }
+    };
+  
   function championDataGenerator() {
     let nombreChamp = sessionStorage.getItem("championSelected");
 
@@ -248,6 +324,7 @@ const championsData = JSON.stringify(champions)
         }
       });
     }
+    setupAbilitiesPopup(champion);
   }
   championDataGenerator();
 
@@ -485,6 +562,14 @@ const championsData = JSON.stringify(champions)
   /* La última sección de counters no necesita margin-bottom */
   .counters:last-child {
     margin-bottom: 0;
+  }
+
+  .counter-card {
+    border: 3px solid #2f3136;
+  }
+  
+  .counter-card:hover {
+    border: 3px solid #f54245;
   }
 
   h2 {
