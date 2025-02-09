@@ -5,27 +5,27 @@
       {
         "name": "malphite",
         "position": "top",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malphite/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/malphite/square"
       },
       {
         "name": "jarvan iv",
         "position": "jungle",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/jarvaniv/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/jarvaniv/square"
       },
       {
         "name": "orianna",
         "position": "mid",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/orianna/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/orianna/square"
       },
       {
         "name": "miss fortune",
         "position": "adc",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/missfortune/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/missfortune/square"
       },
       {
         "name": "leona",
         "position": "support",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leona/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/leona/square"
       }
     ],
     "winrate": 54.2,
@@ -38,27 +38,27 @@
       {
         "name": "shen",
         "position": "top",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/shen/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/shen/square"
       },
       {
         "name": "ivern",
         "position": "jungle",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ivern/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/ivern/square"
       },
       {
         "name": "karma",
         "position": "mid",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/karma/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/karma/square"
       },
       {
         "name": "kogmaw",
         "position": "adc",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kogmaw/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/kogmaw/square"
       },
       {
         "name": "lulu",
         "position": "support",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lulu/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/lulu/square"
       }
     ],
     "winrate": 53.1,
@@ -66,4 +66,4 @@
     "description": "Composición centrada en proteger y potenciar al ADC"
   }
   
-] 
+]

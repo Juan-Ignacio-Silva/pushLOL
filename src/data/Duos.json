@@ -3,11 +3,11 @@
     "duo": {
       "champion1": {
         "name": "lulu",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/lulu/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/lulu/square"
       },
       "champion2": {
         "name": "kog'maw",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/kogmaw/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/kogmaw/square"
       }
     },
     "tier": "S+",
@@ -18,11 +18,11 @@
     "duo": {
       "champion1": {
         "name": "nilah",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nilah/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/nilah/square"
       },
       "champion2": {
         "name": "nautilus",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/nautilus/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/nautilus/square"
       }
     },
     "tier": "A",
@@ -33,11 +33,11 @@
     "duo": {
       "champion1": {
         "name": "ahri",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/ahri/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/ahri/square"
       },
       "champion2": {
         "name": "lee sin",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/leesin/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/leesin/square"
       }
     },
     "tier": "S",
@@ -48,15 +48,15 @@
     "duo": {
       "champion1": {
         "name": "garen",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/garen/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/garen/square"
       },
       "champion2": {
         "name": "hecarim",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/hecarim/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/hecarim/square"
       }
     },
     "tier": "A",
     "positionCombo": "top/jungle",
     "positions": ["top", "jungle"]
   }
-] 
+]

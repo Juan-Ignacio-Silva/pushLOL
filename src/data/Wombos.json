@@ -3,11 +3,11 @@
     "wombo": {
       "champion1": {
         "name": "malphite",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/malphite/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/malphite/square"
       },
       "champion2": {
         "name": "yasuo",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/yasuo/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/yasuo/square"
       }
     },
     "tier": "S+",
@@ -23,11 +23,11 @@
     "wombo": {
       "champion1": {
         "name": "orianna",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/orianna/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/orianna/square"
       },
       "champion2": {
         "name": "samira",
-        "image_url": "https://cdn.communitydragon.org/15.2.1/champion/samira/square"
+        "image_url": "https://cdn.communitydragon.org/15.3.1/champion/samira/square"
       }
     },
     "tier": "S",
@@ -39,4 +39,4 @@
     "gif_url": "https://example.com/orianna-samira-wombo.gif",
     "video_url": "https://example.com/orianna-samira-wombo.mp4"
   }
-] 
+]
