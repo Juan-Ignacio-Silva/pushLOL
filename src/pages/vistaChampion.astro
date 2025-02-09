@@ -204,6 +204,50 @@ const championsData = JSON.stringify(champions)
       document.querySelector('.r-ability').src = champion.habilidades.R;
     }
 
+    // Mostrar buenos contra (primera sección)
+    const goodAgainstCards = document.querySelectorAll('.counter-card.good');
+    console.log('Cards encontradas para buenosContra:', goodAgainstCards.length);
+
+    if (champion.buenosContra && champion.buenosContra.length > 0) {
+      champion.buenosContra.forEach((goodAgainstName, index) => {
+        console.log('Buscando campeón:', goodAgainstName);
+        if (index < goodAgainstCards.length) {
+          const goodAgainstChampion = champions.find(c => c.name.toLowerCase() === goodAgainstName.toLowerCase());
+          console.log('Campeón encontrado:', goodAgainstChampion);
+          if (goodAgainstChampion) {
+            console.log('Aplicando imagen:', goodAgainstChampion.splash);
+            goodAgainstCards[index].style.backgroundImage = `url(${goodAgainstChampion.splash})`;
+            goodAgainstCards[index].style.cursor = 'pointer';
+            goodAgainstCards[index].onclick = () => {
+              sessionStorage.setItem('championSelected', goodAgainstChampion.name);
+              window.location.reload();
+            };
+          } else {
+            console.error('No se encontró el campeón:', goodAgainstName);
+          }
+        }
+      });
+    } else {
+      console.log('No hay buenosContra definidos');
+    }
+
+    // Mostrar counters (malos contra)
+    const counterCards = document.querySelectorAll('.counter-card.bad');
+    if (champion.counters && champion.counters.length > 0) {
+      champion.counters.forEach((counterName, index) => {
+        if (index < counterCards.length) {
+          const counterChampion = champions.find(c => c.name.toLowerCase() === counterName.toLowerCase());
+          if (counterChampion) {
+            counterCards[index].style.backgroundImage = `url(${counterChampion.splash})`;
+            counterCards[index].style.cursor = 'pointer';
+            counterCards[index].onclick = () => {
+              sessionStorage.setItem('championSelected', counterChampion.name);
+              window.location.reload();
+            };
+          }
+        }
+      });
+    }
   }
   championDataGenerator();
 
