@@ -1,27 +1,30 @@
 ---
 ---
-
-<input id="buscador" type="text" placeholder="Buscar campeon">
+<div class="input-border">
+    <input id="buscador" type="text" placeholder="Buscar campeon">
+</div>
 
 <style>
-    .search-container {
+    .input-border {
+        width: 600px;
+        height: 60px;
+        padding: 8px;
+        background-color: #414853;
+        border-radius: 8px;
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 8px;
     }
 
     #buscador {
         border-radius: 8px;
-        width: 435px;
-        height: 40px;
-        background-color: #1A1D21;
+        width: 100%;
+        height: 100%;
+        background-color: #2A2F38;
         border: none;
-        padding-left: 15px;
         color: white;
         font-family: "Roboto", monospace;
-    }
-
-    #buscador:active {
-        border: none;
+        padding: 5px;
+        font-family: "Roboto Mono", monospace;
     }
 </style>
