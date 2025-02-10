@@ -9,22 +9,33 @@
         width: 600px;
         height: 60px;
         padding: 8px;
-        background-color: #414853;
+        background: rgba(255, 255, 255, 0.034);
         border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(25px);
     }
 
     #buscador {
         border-radius: 8px;
         width: 100%;
         height: 100%;
-        background-color: #2A2F38;
+        background-color: #424B56;
         border: none;
         color: white;
         font-family: "Roboto", monospace;
         padding: 5px;
         font-family: "Roboto Mono", monospace;
+    }
+
+    #buscador::placeholder {
+        color: #BEBFBF;
+        font-family: "Roboto Mono", monospace;
+    }
+
+    #buscador:focus {
+        outline: none;
     }
 </style>
