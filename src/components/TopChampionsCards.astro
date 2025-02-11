@@ -1,0 +1,147 @@
+---
+// Importar el JSON de campeones
+import championsData from '../data/champions.json';
+
+// Obtener los campeones específicos que queremos mostrar
+const selectedChampions = [
+    championsData.find(c => c.name.toLowerCase() === "jinx"),
+    championsData.find(c => c.name.toLowerCase() === "ezreal"),
+    championsData.find(c => c.name.toLowerCase() === "mel")
+].filter(Boolean);
+---
+
+<div class="top-champions-container">
+    <div class="cards-grid">
+        {selectedChampions.map((champion) => (
+            <a href={`/champion/${champion.name.toLowerCase()}`} class="champion-card">
+                <div class="champion-splash">
+                    <img src={champion.splash} alt={champion.name} />
+                    <div class="champion-info">
+                        <h3 class="champion-name">{champion.name} ></h3>
+                        <p class="champion-description">Descubre la mejor build para {champion.name}</p>
+                    </div>
+                </div>
+            </a>
+        ))}
+    </div>
+</div>
+
+<style>
+    .top-champions-container {
+        width: 100%;
+        padding-top: 20px;
+        border-radius: 8px;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.034);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(25px);
+        border-radius: 0.5rem;
+    }
+
+    .champion-card {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        text-decoration: inherit;
+        color: inherit;
+        letter-spacing: .15px;
+        box-sizing: border-box;
+        font-family: "__Plus_Jakarta_Sans_6b8127", "__Plus_Jakarta_Sans_Fallback_6b8127";
+        font-style: normal;
+        background-color: #1C2025;
+    }
+
+    .champion-splash {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .champion-splash img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.5);
+    }
+
+    /* Jinx */
+    .champion-card:nth-child(1) .champion-splash img {
+        transform: scale(1.5) translateX(15%) translateY(5%);
+    }
+
+    /* Ezreal */
+    .champion-card:nth-child(2) .champion-splash img {
+        transform: scale(1.5) translateX(15%) translateY(5%);
+    }
+
+    /* Mel */
+    .champion-card:nth-child(3) .champion-splash img {
+        transform: scale(1.5) translateX(0%) translateY(5%);
+    }
+
+    .champion-splash::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, 
+            rgba(0,0,0,0.95) 0%,
+            rgba(0, 0, 0, 0.45) 50%,
+            rgba(0, 0, 0, 0) 70%
+        );
+    }
+
+    .champion-card:hover .champion-splash::after {
+        background: linear-gradient(0deg, 
+            rgba(0,0,0,0.98) 0%,
+            rgba(0,0,0,0.8) 50%,
+            rgba(0,0,0,0.3) 100%
+        );
+    }
+
+    .champion-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .champion-name {
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1.2;
+        text-transform: lowercase;
+        font-family: "__Plus_Jakarta_Sans_6b8127", "__Plus_Jakarta_Sans_Fallback_6b8127";
+    }
+
+    .champion-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.875rem;
+        margin: 0;
+        line-height: 1.5;
+        font-family: "__Plus_Jakarta_Sans_6b8127", "__Plus_Jakarta_Sans_Fallback_6b8127";
+    }
+
+    @media (max-width: 1200px) {
+        .champion-card {
+            height: 280px;
+        }
+    }
+</style> 
