@@ -24,7 +24,7 @@ function updateChampionsDisplay() {
 }
 
 // Event listener para el buscador
-barraBusq.addEventListener('input', updateChampionsDisplay);
+//barraBusq.addEventListener('input', updateChampionsDisplay);
 
 // Event listener para los botones de filtro
 document.querySelectorAll('.filter-btn').forEach(btn => {
