@@ -31,30 +31,34 @@ import Randomizer from '../components/Randomizer.astro';
 						<GenerarChampions />
 					</div>
 					<div class="boton-parches">
-						<a class="btn-parche" href="parches"><h1>PARCHE 25.S1.2</h1></a>
+						<a class="btn-parche" href="parches"><h1>PARCHE 25.S1.3</h1></a>
 					</div>
 				</div>
 				<div class="contenedor-vista-tierlist">
-
+					<div class="contenedor-tierlsit">
+						<div class="link-tierlist">
+							<a href="tierlist">15.3 Tierlist & Más</a>
+						</div>
+						<div class="contenedor-lista-tierlist">
+							<div class="contenedor-titulos-tierlist">
+								<ul>
+									<li>
+										<p>Campeon</p>
+										<p>Tier</p>
+										<p>WinRate</p>
+									</li>
+								</ul>
+							</div>
+							<div class="lista-tierlist">
+								¡EN PROCESO!
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<!--
-			<div class="contenedor-button">
-				<a href="tierlist" class="tierlist-button">TIERLIST 15.2</a>
-				<div class="mouse-icon">
-					<svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-						<path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
-						<path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
-					</svg>
-				</div>
-				<a href="parches" class="tierlist-button">PARCHES 25-s1-2</a>
-			</div>
-			-->
 		</div>
 	</main>
 </Layout>
-
-<script src="../js/buscador.js"></script>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -150,26 +154,96 @@ import Randomizer from '../components/Randomizer.astro';
     	border-color: #f54245;
 	}
 	
+	/* TIER LIST */
 	.contenedor-vista-tierlist {
 		width: 40%;
 		height: 100%;
-		background-color: aqua;
+		border-radius: 8px;
+		background-color: #1C2025;
+		padding: 10px;
+		background: rgba(255, 255, 255, 0.034);
+		backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(25px);
+	}
+
+	.contenedor-tierlsit {
+		width: 100%;
+		height: 100%;
+		background-color: #424B56;
 		border-radius: 8px;
 	}
 
+	.link-tierlist {
+		width: 100%;
+		height: 30px;
+
+		a{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 8px 8px 0px 0px;
+			text-decoration: none;
+			font-family: "Roboto mono", monospace;
+			font-size: 15px;
+			color: #BEBFBF;
+		}
+
+		a:hover{
+			background-color: #545a6175;
+		}
+	}
+
+	.contenedor-lista-tierlist {
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+	}
+
+	.contenedor-titulos-tierlist {
+		width: 100%;
+		height: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		li{
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+
+			p{
+				font-size: 13px;
+				color: #BEBFBF;
+			}
+		}
+
+	}
+	/* Luego sacar estos estilos */
+	.lista-tierlist {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #f54245;
+	}
+
+	/* BARRA DE BUSQUEDA */
+	.search-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* LOGO Y TEXTO */
 	.logo {
 		width: 100%;
 		height: 150px;
 		display: flex;
 		justify-content: center;
 		gap: 20px;
-	}
-
-	.search-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
 	}
 
 	#LogoPush {
