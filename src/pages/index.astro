@@ -7,9 +7,7 @@ import GenerarChampions from '../components/generarChampions.astro';
 import BotonesPosiciones from '../components/botonesPosiciones.astro';
 import TopChampionsCards from '../components/TopChampionsCards.astro';
 import Randomizer from '../components/Randomizer.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TierListHome from '../components/TierListHome.astro';
 ---
 
 <Layout title="PUSH | Home">
@@ -51,7 +49,7 @@ import Randomizer from '../components/Randomizer.astro';
 								</ul>
 							</div>
 							<div class="lista-tierlist">
-								¡EN PROCESO!
+								<TierListHome />
 							</div>
 						</div>
 					</div>
@@ -222,15 +220,6 @@ import Randomizer from '../components/Randomizer.astro';
 			}
 		}
 
-	}
-	/* Luego sacar estos estilos */
-	.lista-tierlist {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #f54245;
 	}
 
 	/* BARRA DE BUSQUEDA */

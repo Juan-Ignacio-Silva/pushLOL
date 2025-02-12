@@ -57,3 +57,52 @@
         color: white;
     }
 </style>
+<script>
+    function initializeIndexFilters() {
+        
+        // Event listeners para los filtros de posición del index
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remover la clase active de todos los botones
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Agregar la clase active al botón clickeado
+                button.classList.add('active');
+                
+                // Obtener la posición seleccionada
+                const selectedPosition = button.dataset.position;
+                
+                // Filtrar los campeones
+                filterChampionsByPosition(selectedPosition);
+            });
+        });
+    }
+
+    function filterChampionsByPosition(position) {
+        // Seleccionar todos los contenedores de campeones en el index
+        const champions = document.querySelectorAll('.card-chmpion');
+        
+        champions.forEach(champion => {
+            const championPositions = champion.dataset.positions ? JSON.parse(champion.dataset.positions) : [];
+            if (position === 'all' || championPositions.includes(position)) {
+                champion.style.display = 'flex';
+            } else {
+                champion.style.display = 'none';
+            }
+        });
+    }
+
+    // Inicializar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeIndexFilters);
+    } else {
+        initializeIndexFilters();
+    }
+
+    // Asegurarse de que los event listeners se mantengan después de la navegación
+    document.addEventListener('astro:page-load', initializeIndexFilters);
+</script>

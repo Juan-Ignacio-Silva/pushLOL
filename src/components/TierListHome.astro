@@ -1,0 +1,18 @@
+---
+import champions from '../data/champions.json'
+const championsData = JSON.stringify(champions)
+---
+<div id="champions-data" data-json={championsData}></div>
+<script>
+    function TierlistHomeGenerator() {
+        // Obtener el JSON de campeones
+        const championsElement = document.getElementById("champions-data");
+        const champions = JSON.parse(championsElement.dataset.json || "[]"); 
+        // Buscar el campeón usando .find()
+        const tierChamp = 'S+'
+        const chmapionTier = champions.find(champ => champ.tier === tierChamp);
+        console.log(chmapionTier)
+        
+    }
+    TierlistHomeGenerator();
+</script>

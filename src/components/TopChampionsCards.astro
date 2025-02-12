@@ -123,25 +123,37 @@ const selectedChampions = [
 
     .champion-name {
         color: rgb(255, 255, 255);
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         font-weight: 600;
         margin: 0;
         line-height: 1.2;
         text-transform: lowercase;
-        font-family: "__Plus_Jakarta_Sans_6b8127", "__Plus_Jakarta_Sans_Fallback_6b8127";
+        font-family: "Roboto Mono", monospace;
+    }
+
+    .champion-name::first-letter {
+        text-transform: uppercase;
     }
 
     .champion-description {
         color: rgba(255, 255, 255, 0.7);
-        font-size: 0.875rem;
+        font-size: 0.8rem;
         margin: 0;
         line-height: 1.5;
-        font-family: "__Plus_Jakarta_Sans_6b8127", "__Plus_Jakarta_Sans_Fallback_6b8127";
+        font-family: "Roboto Mono", monospace;
     }
 
     @media (max-width: 1200px) {
         .champion-card {
             height: 280px;
+        }
+
+        .champion-name {
+            font-size: 1.5rem;
+        }
+
+        .champion-description {
+            font-size: 0.875rem;
         }
     }
 </style> 

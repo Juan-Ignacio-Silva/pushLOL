@@ -5,6 +5,11 @@ import wombosData from '../data/Wombos.json';
 import composData from '../data/Compos.json';
 import TierListLogo from '../assets/tierlist_logo.svg?raw';
 
+// Asegurarse de que los datos existan
+const safePersonajesData = Array.isArray(personajesData) ? personajesData : [];
+const safeDuosData = Array.isArray(duosData) ? duosData : [];
+const safeWombosData = Array.isArray(wombosData) ? wombosData : [];
+
 const positions = ['all', 'top', 'jungle', 'mid', 'adc', 'support'];
 
 const DEFAULT_RATES = {
@@ -12,6 +17,12 @@ const DEFAULT_RATES = {
     pickRate: 5.0,
     banRate: 3.0
 };
+
+// Función para obtener la URL de la imagen del campeón
+function getChampionImageUrl(championName) {
+    const champion = safePersonajesData.find(c => c.name.toLowerCase() === championName.toLowerCase());
+    return champion?.image_url || '';
+}
 
 // Función para convertir tier a número para ordenamiento
 function getTierValue(tier) {
@@ -27,12 +38,15 @@ function getTierValue(tier) {
 }
 
 // Ordenar campeones por tier
-const championsWithStatsSorted = [...personajesData]
+const championsWithStatsSorted = [...safePersonajesData]
     .sort((a, b) => {
         const tierDiff = getTierValue(b.tier) - getTierValue(a.tier);
         if (tierDiff !== 0) return tierDiff;
         return a.name.localeCompare(b.name);
     });
+
+// Definir el orden de los tiers
+const tiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
 
 // Agrupar campeones por tier
 const tierGroups = championsWithStatsSorted.reduce((groups, champion) => {
@@ -44,65 +58,93 @@ const tierGroups = championsWithStatsSorted.reduce((groups, champion) => {
     return groups;
 }, {});
 
-// Agregar rango a los campeones
-let currentRank = 1;
-const tiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
 const tierGroupsOrdered = {};
-
 tiersInOrder.forEach(tier => {
     if (tierGroups[tier]) {
-        tierGroups[tier].forEach(champion => {
-            champion.rank = currentRank++;
-        });
         tierGroupsOrdered[tier] = tierGroups[tier];
     }
 });
 
 // Ordenar y agrupar duos
-const duosGrouped = duosData.reduce((groups, duo) => {
-    const tier = duo.tier;
+const duosGrouped = safeDuosData.reduce((groups, duoData) => {
+    const tier = duoData.tier;
     if (!groups[tier]) {
         groups[tier] = [];
     }
-    groups[tier].push(duo);
+    groups[tier].push({
+        ...duoData,
+        champion1: {
+            name: duoData.duo.champion1.name,
+            image_url: duoData.duo.champion1.image_url
+        },
+        champion2: {
+            name: duoData.duo.champion2.name,
+            image_url: duoData.duo.champion2.image_url
+        },
+        positions: duoData.positions || [],
+        winrate: duoData.winrate || DEFAULT_RATES.winRate
+    });
     return groups;
 }, {});
 
-let duoRank = 1;
-const duoTiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
 const duosGroupedOrdered = {};
-
-duoTiersInOrder.forEach(tier => {
+tiersInOrder.forEach(tier => {
     if (duosGrouped[tier]) {
-        duosGrouped[tier].forEach(duo => {
-            duo.rank = duoRank++;
-        });
         duosGroupedOrdered[tier] = duosGrouped[tier];
     }
 });
 
 // Ordenar y agrupar wombos
-const wombosGrouped = wombosData.reduce((groups, wombo) => {
-    const tier = wombo.tier;
+const wombosGrouped = safeWombosData.reduce((groups, womboData) => {
+    const tier = womboData.tier;
     if (!groups[tier]) {
         groups[tier] = [];
     }
-    groups[tier].push(wombo);
+    groups[tier].push({
+        ...womboData,
+        champions: [
+            {
+                name: womboData.wombo.champion1.name,
+                image_url: womboData.wombo.champion1.image_url
+            },
+            {
+                name: womboData.wombo.champion2.name,
+                image_url: womboData.wombo.champion2.image_url
+            }
+        ],
+        positions: womboData.positions || [],
+        winrate: womboData.winrate || DEFAULT_RATES.winRate
+    });
     return groups;
 }, {});
 
-let womboRank = 1;
-const womboTiersInOrder = ['S+', 'S', 'A', 'B', 'C', 'D'];
 const wombosGroupedOrdered = {};
-
-womboTiersInOrder.forEach(tier => {
+tiersInOrder.forEach(tier => {
     if (wombosGrouped[tier]) {
-        wombosGrouped[tier].forEach(wombo => {
-            wombo.rank = womboRank++;
-        });
         wombosGroupedOrdered[tier] = wombosGrouped[tier];
     }
 });
+
+// Ordenar y agrupar composiciones
+const composGrouped = Array.isArray(composData) ? composData.reduce((groups, compoData) => {
+    if (!groups['all']) {
+        groups['all'] = [];
+    }
+
+    groups['all'].push({
+        ...compoData,
+        champions: compoData.champions.map(champion => ({
+            name: champion.name,
+            image_url: champion.image_url,
+            position: champion.position
+        }))
+    });
+    return groups;
+}, {}) : {};
+
+const composGroupedOrdered = {
+    'all': composGrouped['all'] || []
+};
 
 // Variable para el tipo de vista inicial
 const viewType = 'single';
@@ -112,1921 +154,822 @@ const viewType = 'single';
     <div class="logo-container">
         <Fragment set:html={TierListLogo} />
     </div>
-    <div class="glass-panel">
-        <div class="header-section">
-            <div id="position-tabs" class="position-tabs">
-                {positions.map(position => (
-                    <button 
-                        class:list={['tab-btn', { active: position === 'all' }]} 
-                        data-position={position}
-                        title={position.toUpperCase()}
+
+    <div class="content-wrapper">
+        <!-- Navegación superior -->
+        <nav class="tier-nav">
+            <button class="tier-nav-item active" data-view="single">Clasificatoria Solo</button>
+            <button class="tier-nav-item" data-view="duos">Duos</button>
+            <button class="tier-nav-item" data-view="wombos">Wombos</button>
+            <button class="tier-nav-item" data-view="compos">Composiciones</button>
+        </nav>
+
+        <!-- Vista de campeones individuales -->
+        <div id="single-view" class="view-content active">
+            <div class="search-and-filters">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="champion-search" 
+                        placeholder="Buscar campeones"
+                        autocomplete="off"
                     >
-                        {position === 'all' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <g fill="none" fill-rule="evenodd">
-                                    <g fill="currentcolor" fill-rule="nonzero">
-                                        <g>
-                                            <path d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z"/>
-                                        </g>
+                </div>
+                <div id="position-tabs" class="position-tabs">
+                    {positions.map(position => (
+                        <button 
+                            class:list={['tab-btn', { active: position === 'all' }]} 
+                            data-position={position}
+                            title={position.toUpperCase()}
+                        >
+                            {position === 'all' ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z"/>
+                                </svg>
+                            ) : position === 'top' ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="currentColor" fill-rule="nonzero">
+                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
+                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
+                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
                                     </g>
-                                </g>
-                            </svg>
-                        ) : position === 'top' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <g fill="currentColor" fill-rule="nonzero">
-                                    <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                    <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                </g>
-                            </svg>
-                        ) : position === 'jungle' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                            </svg>
-                        ) : position === 'mid' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <g fill="currentColor" fill-rule="nonzero">
-                                    <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                    <path d="M18 3h3v3L6 21H3v-3z"></path>
-                                </g>
-                            </svg>
-                        ) : position === 'adc' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <g fill="currentColor" fill-rule="nonzero">
-                                    <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                    <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                    <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                </g>
-                            </svg>
-                        ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                            </svg>
-                        )}
-                    </button>
+                                </svg>
+                            ) : position === 'jungle' ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
+                                </svg>
+                            ) : position === 'mid' ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="currentColor" fill-rule="nonzero">
+                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
+                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
+                                    </g>
+                                </svg>
+                            ) : position === 'adc' ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="currentColor" fill-rule="nonzero">
+                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
+                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
+                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
+                                    </g>
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
+                                </svg>
+                            )}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            <div class="champions-list">
+                {Object.entries(tierGroupsOrdered).map(([tier, champions]) => (
+                    <div class={`tier-section tier-${tier.toLowerCase().replace('+', '-plus')}`}>
+                        <div class="tier-header">
+                            <div class="tier-label">{tier}</div>
+                        </div>
+                        <div class="champions-grid">
+                            {champions.map((champion) => (
+                                <div class="champion-item" data-positions={JSON.stringify(champion.positions)}>
+                                    <div class="champion-icon">
+                                        <img src={getChampionImageUrl(champion.name)} alt={champion.name} />
+                                    </div>
+                                    <div class="champion-info">
+                                        <div class="champion-name">{champion.name}</div>
+                                        <div class="champion-positions">
+                                            {champion.positions.map((pos) => (
+                                                <span class={`position-icon ${pos}`}></span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div class="champion-stats">
+                                        <div class="stat winrate">{champion.winrate || DEFAULT_RATES.winRate}%</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 ))}
             </div>
+        </div>
 
-            <div id="duo-filters" class="filter-buttons" style="display: none;">
-                <button class="tab-btn" data-positions="all">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <g fill="none" fill-rule="evenodd">
-                            <g fill="currentcolor" fill-rule="nonzero">
-                                <g>
-                                    <path d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z"/>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </button>
-                <button class="tab-btn" data-positions="adc,support">
-                    <div class="duo-icons">
+        <!-- Vista de duos -->
+        <div id="duos-view" class="view-content">
+            <div class="search-and-filters">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="duo-search" 
+                        placeholder="Buscar duos"
+                        autocomplete="off"
+                    >
+                </div>
+                <div id="duo-position-tabs" class="position-tabs">
+                    <button class="tab-btn active" data-duo-position="all" title="Todos">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <g fill="currentColor" fill-rule="nonzero">
-                                <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                            </g>
+                            <path fill="currentColor" d="M16.293 17.03c.362.628.147 1.43-.48 1.793-.629.364-1.431.149-1.794-.479l-2.144-3.717-2.144 3.717c-.363.628-1.165.843-1.793.48-.628-.363-.843-1.166-.48-1.793l2.144-3.718h-4.29c-.724 0-1.312-.587-1.312-1.312 0-.727.588-1.314 1.313-1.314h4.289L7.457 6.969c-.362-.627-.147-1.43.48-1.792.629-.364 1.431-.149 1.794.479l2.144 3.717 2.144-3.717c.363-.628 1.165-.843 1.793-.48.628.363.843 1.166.48 1.793l-2.144 3.718h4.29c.725 0 1.312.587 1.312 1.312 0 .727-.587 1.314-1.312 1.314h-4.29l2.145 3.718z"/>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                        </svg>
-                    </div>
-                </button>
-                <button class="tab-btn" data-positions="mid,jungle">
-                    <div class="duo-icons">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <g fill="currentColor" fill-rule="nonzero">
-                                <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                <path d="M18 3h3v3L6 21H3v-3z"></path>
-                            </g>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                        </svg>
-                    </div>
-                </button>
-                <button class="tab-btn" data-positions="top,jungle">
-                    <div class="duo-icons">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <g fill="currentColor" fill-rule="nonzero">
-                                <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                            </g>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                        </svg>
-                    </div>
-                </button>
+                    </button>
+                    <button class="tab-btn" data-duo-position="adc-support" title="ADC + SUPPORT">
+                        <div class="duo-icons">
+                            <span class="position-icon adc"></span>
+                            <span class="position-icon support"></span>
+                        </div>
+                    </button>
+                    <button class="tab-btn" data-duo-position="mid-jungle" title="MID + JUNGLE">
+                        <div class="duo-icons">
+                            <span class="position-icon mid"></span>
+                            <span class="position-icon jungle"></span>
+                        </div>
+                    </button>
+                    <button class="tab-btn" data-duo-position="top-jungle" title="TOP + JUNGLE">
+                        <div class="duo-icons">
+                            <span class="position-icon top"></span>
+                            <span class="position-icon jungle"></span>
+                        </div>
+                    </button>
+                </div>
             </div>
 
-            <button id="compos-btn" class="compos-button">
-                Compos
-            </button>
-            <div class="search-container">
-                <select id="view-type" class="tier-select">
-                    <option value="single">Campeones</option>
-                    <option value="duos">Duos</option>
-                    <option value="wombos">Wombos</option>
-                </select>
-                <input 
-                    type="text" 
-                    id="champion-search" 
-                    placeholder="Buscar campeón..."
-                    autocomplete="off"
-                >
-                <a href="/" class="home-button" title="Volver al inicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/>
-                    </svg>
-                </a>
+            <div class="champions-list">
+                {Object.entries(duosGroupedOrdered || {}).map(([tier, duos = []]) => (
+                    <div class={`tier-section tier-${tier.toLowerCase().replace('+', '-plus')}`}>
+                        <div class="tier-header">
+                            <div class="tier-label">{tier}</div>
+                        </div>
+                        <div class="champions-grid">
+                            {(duos || []).map((duo) => (
+                                <div class="duo-item">
+                                    <div class="duo-champions">
+                                        <div class="champion-icon">
+                                            <img src={duo.champion1.image_url} alt={duo.champion1.name} />
+                                        </div>
+                                        <div class="champion-icon">
+                                            <img src={duo.champion2.image_url} alt={duo.champion2.name} />
+                                        </div>
+                                    </div>
+                                    <div class="duo-info">
+                                        <div class="duo-names">{duo.champion1.name} + {duo.champion2.name}</div>
+                                        <div class="duo-positions">
+                                            {(duo.positions || []).map((pos) => (
+                                                <span class={`position-icon ${pos}`}></span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div class="duo-stats">
+                                        <div class="stat winrate">{duo.winrate || DEFAULT_RATES.winRate}%</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
 
-        <!-- Título para composiciones -->
-        <h1 id="compos-title" class="compos-title" style="display: none;">
-            COMPOSICIONES DE EQUIPO POPULARES Y COMPETITIVAS
-        </h1>
-
-        <!-- Nueva vista de composiciones -->
-        <div id="compos-view" class="compos-grid" style="display: none;">
-            {composData.map((comp) => (
-                <div class="compo-card">
-                    <div class="compo-name">{comp.name}</div>
-                    <div class="compo-champions">
-                        {comp.champions.map((champion) => (
-                            <div class="compo-champion">
-                                <img 
-                                    src={champion.image_url} 
-                                    alt={champion.name}
-                                    class="champion-img"
-                                />
-                                <span class={`position-icon ${champion.position}`}>
-                                    {champion.position === 'top' && (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <g fill="currentColor" fill-rule="nonzero">
-                                                <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                                <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                            </g>
-                                        </svg>
-                                    )}
-                                    {champion.position === 'jungle' && (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                                        </svg>
-                                    )}
-                                    {champion.position === 'mid' && (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <g fill="currentColor" fill-rule="nonzero">
-                                                <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                                <path d="M18 3h3v3L6 21H3v-3z"></path>
-                                            </g>
-                                        </svg>
-                                    )}
-                                    {champion.position === 'adc' && (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <g fill="currentColor" fill-rule="nonzero">
-                                                <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                                <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                                <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                            </g>
-                                        </svg>
-                                    )}
-                                    {champion.position === 'support' && (
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                            <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                                        </svg>
-                                    )}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                    <div class="compo-description">{comp.description}</div>
+        <!-- Vista de wombos -->
+        <div id="wombos-view" class="view-content">
+            <div class="search-and-filters">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="wombo-search" 
+                        placeholder="Buscar wombos"
+                        autocomplete="off"
+                    >
                 </div>
-            ))}
-        </div>
+            </div>
 
-        <div class="table-header">
-            <div class="col">RANGO</div>
-            <div class="col champions-col">CAMPEÓN</div>
-            <div class="col positions">POSICIÓN</div>
-            <div class="col">WIN RATE %</div>
-            <div class="col">PICK RATE %</div>
-            <div class="col">BAN RATE %</div>
-            {viewType === 'wombos' && (
-                <div class="col">EJEMPLO</div>
-            )}
-        </div>
-
-        <div id="single-view">
-            {Object.entries(tierGroupsOrdered).map(([tier, champions]) => (
-                <div class="tier-section" data-tier={tier}>
-                    <div class="tier-header">
-                        <span class="tier-label">{tier}</span>
-                        <div class="tier-line"></div>
-                    </div>
-                    <div class="tier-champions">
-                        {champions.map(champion => (
-                            <div class="table-row" 
-                                data-positions={JSON.stringify(champion.positions)}
-                            >
-                                <div class="col rank">{champion.rank}</div>
-                                <div class="col champion">
-                                    <img class="imagen-champ" id={champion.name} src={champion.image_url} alt={champion.name} />
-                                    <span class="champion-name">{champion.name.toUpperCase()}</span>
-                                </div>
-                                <div class="col positions">
-                                    {champion.positions.map(pos => (
-                                        <span class={`position-icon ${pos}`}>
-                                            {pos === 'top' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'jungle' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                                                </svg>
-                                            )}
-                                            {pos === 'mid' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'adc' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'support' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                                                </svg>
-                                            )}
-                                        </span>
-                                    ))}
-                                </div>
-                                <div class="col winrate"></div>
-                                <div class="col pickrate"></div>
-                                <div class="col banrate"></div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            ))}
-        </div>
-
-        <div id="duo-view" style="display: none;">
-            {Object.entries(duosGroupedOrdered).map(([tier, duos]) => (
-                <div class="tier-section" data-tier={tier}>
-                    <div class="tier-header">
-                        <span class="tier-label">{tier}</span>
-                        <div class="tier-line"></div>
-                    </div>
-                    <div class="tier-champions">
-                        {duos.map(duo => (
-                            <div class="table-row" data-duo={JSON.stringify({ positionCombo: duo.positions.join(',') })}>
-                                <div class="col rank">#{duo.rank}</div>
-                                <div class="col champion">
-                                    <div class="champion-pair">
-                                        <img 
-                                            class="champion-img"
-                                            src={duo.duo.champion1.image_url} 
-                                            alt={duo.duo.champion1.name}
-                                        />
-                                        <span class="separator">/</span>
-                                        <img 
-                                            class="champion-img"
-                                            src={duo.duo.champion2.image_url} 
-                                            alt={duo.duo.champion2.name}
-                                        />
+            <div class="champions-list">
+                {Object.entries(wombosGroupedOrdered || {}).map(([tier, wombos = []]) => (
+                    <div class={`tier-section tier-${tier.toLowerCase().replace('+', '-plus')}`}>
+                        <div class="tier-header">
+                            <div class="tier-label">{tier}</div>
+                        </div>
+                        <div class="champions-grid">
+                            {(wombos || []).map((wombo) => (
+                                <div class="wombo-item">
+                                    <div class="wombo-champions">
+                                        {(wombo.champions || []).map((champion) => (
+                                            <div class="champion-icon">
+                                                <img src={champion.image_url} alt={champion.name} />
+                                            </div>
+                                        ))}
                                     </div>
-                                    <span class="champion-name">
-                                        {duo.duo.champion1.name.toUpperCase()} + {duo.duo.champion2.name.toUpperCase()}
-                                    </span>
-                                </div>
-                                <div class="col positions">
-                                    {duo.positions.map(pos => (
-                                        <span class={`position-icon ${pos}`}>
-                                            {pos === 'top' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'jungle' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                                                </svg>
-                                            )}
-                                            {pos === 'mid' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'adc' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'support' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                                                </svg>
-                                            )}
-                                        </span>
-                                    ))}
-                                </div>
-                                <div class="col winrate">{duo.winrate}%</div>
-                                <div class="col pickrate">{duo.pickrate}%</div>
-                                <div class="col banrate">{duo.banrate}%</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            ))}
-        </div>
-
-        <div id="wombo-view" style="display: none;">
-            {Object.entries(wombosGroupedOrdered).map(([tier, wombos]) => (
-                <div class="tier-section" data-tier={tier}>
-                    <div class="tier-header">
-                        <span class="tier-label">{tier}</span>
-                        <div class="tier-line"></div>
-                    </div>
-                    <div class="tier-champions">
-                        {wombos.map((wombo) => (
-                            <div class="table-row" 
-                                data-position-combo={wombo.positionCombo}
-                                data-positions={JSON.stringify(wombo.positions)}
-                            >
-                                <div class="col rank">{wombo.rank}</div>
-                                <div class="col champions-wombo">
-                                    <div class="champion-pair">
-                                        <img 
-                                            class="champion-img"
-                                            src={wombo.wombo.champion1.image_url} 
-                                            alt={wombo.wombo.champion1.name}
-                                        />
-                                        <span class="separator">/</span>
-                                        <img 
-                                            class="champion-img"
-                                            src={wombo.wombo.champion2.image_url} 
-                                            alt={wombo.wombo.champion2.name}
-                                        />
+                                    <div class="wombo-info">
+                                        <div class="wombo-names">
+                                            {(wombo.champions || []).map(c => c.name).join(' + ')}
+                                        </div>
+                                        <div class="wombo-description">{wombo.positionCombo}</div>
                                     </div>
-                                    <span class="champion-names">
-                                        {wombo.wombo.champion1.name.toUpperCase()} + {wombo.wombo.champion2.name.toUpperCase()}
-                                    </span>
+                                    <div class="wombo-stats">
+                                        <div class="stat winrate">{wombo.winrate || DEFAULT_RATES.winRate}%</div>
+                                    </div>
                                 </div>
-                                <div class="col positions">
-                                    {wombo.positions.map(pos => (
-                                        <span class={`position-icon ${pos}`}>
-                                            {pos === 'top' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m19 3-4 4H7v8l-4 4V3z"></path>
-                                                        <path d="m5 21 4-4h8V9l4-4v16z" opacity="0.2"></path>
-                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'jungle' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" fill-rule="nonzero" d="M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2m14.976 5.907s-1.243 2.471-1.814 4.604c-.235.878-.285 2.2-.29 3.058v.282c.003.347.01.568.01.568s-1.738 2.397-3.38 3.678a27.5 27.5 0 0 0-.208-5.334c.928-2.023 2.846-5.454 5.682-6.856m-2.124-5.331s-2.325 3.052-2.836 6.029c-.11.636-.201 1.194-.284 1.695-.379.584-.73 1.166-1.05 1.733-.033-.125-.06-.25-.095-.375a21 21 0 0 0-1.16-3.08c.053-.146.103-.29.17-.438 0 0 1.814-3.78 5.255-5.564"></path>
-                                                </svg>
-                                            )}
-                                            {pos === 'mid' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z" opacity="0.2"></path>
-                                                        <path d="M18 3h3v3L6 21H3v-3z"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'adc' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <g fill="currentColor" fill-rule="nonzero">
-                                                        <path d="m19 3-4 4H7v8l-4 4V3z" opacity="0.2"></path>
-                                                        <path d="m5 21 4-4h8V9l4-4v16z"></path>
-                                                        <path d="M10 10h4v4h-4z" opacity="0.2"></path>
-                                                    </g>
-                                                </svg>
-                                            )}
-                                            {pos === 'support' && (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" fill-rule="nonzero" d="M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z"></path>
-                                                </svg>
-                                            )}
-                                        </span>
-                                    ))}
-                                </div>
-                                <div class="col winrate">{wombo.winrate}%</div>
-                                <div class="col pickrate">{wombo.pickrate}%</div>
-                                <div class="col banrate">{wombo.banrate}%</div>
-                                <div class="col gif-preview">
-                                    <img 
-                                        src={wombo.gif_url} 
-                                        alt="Wombo Combo Preview"
-                                        class="wombo-gif"
-                                        data-video-url={wombo.video_url}
-                                    />
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
-    </div>
-</div>
 
-<!-- Video Player Modal -->
-<div id="video-modal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Wombo Combo</h2>
-            <button class="close-modal">&times;</button>
-        </div>
-        <div class="modal-body">
-            <video id="wombo-player" controls style="display: none;">
-                <source src="" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-            <img id="wombo-gif" src="" alt="Wombo Combo" style="display: none;">
+        <!-- Vista de composiciones -->
+        <div id="compos-view" class="view-content">
+            <div class="search-and-filters">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="compo-search" 
+                        placeholder="Buscar composiciones"
+                        autocomplete="off"
+                    >
+                </div>
+            </div>
+
+            <div class="champions-list">
+                <div class="champions-grid">
+                    {composGroupedOrdered['all'].map((compo) => (
+                        <div class="compo-item">
+                            <div class="compo-champions">
+                                {(compo.champions || []).map((champion) => (
+                                    <div class="champion-icon-wrapper">
+                                        <div class="champion-icon">
+                                            <img src={champion.image_url} alt={champion.name} />
+                                        </div>
+                                        <span class={`position-icon ${champion.position}`}></span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div class="compo-info">
+                                <div class="compo-names">
+                                    {(compo.champions || []).map(c => c.name).join(' + ')}
+                                </div>
+                                <div class="compo-description">{compo.description || 'Composición de equipo'}</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-        padding: 0 20px;
-    }
-
-    .logo-container :global(svg) {
-        width: 600px;
-        height: auto;
-        filter: drop-shadow(0 4px 12px rgba(245, 66, 69, 0.2));
-    }
-
     .tierlist-container {
         width: 100%;
-        font-family: 'Roboto', sans-serif;
-        padding: 20px;
-        padding-top: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
     }
 
-    .glass-panel {
-        margin-top: 20px;
-        background: rgba(26, 29, 33, 0.7);
-        backdrop-filter: blur(20px);
-        border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 30px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    .content-wrapper {
+        background: #1C2025;
+        border-radius: 1rem;
+        padding: 1.5rem;
     }
 
-    .header-section {
+    .tier-nav {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1rem;
+    }
+
+    .tier-nav-item {
+        padding: 0.5rem 1rem;
+        color: #9aa4af;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease;
+    }
+
+    .tier-nav-item:hover {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .tier-nav-item.active {
+        color: white;
+        background: #f54245;
+    }
+
+    .search-and-filters {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 20px 0 30px 0;
-        padding: 5px;
-        gap: 15px;
-        position: sticky;
-        top: 20px;
-        z-index: 100;
-        background: rgba(26, 29, 33, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        gap: 1rem;
+    }
+
+    .search-container {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .search-container input {
+        width: 100%;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        padding: 15px;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+        color: white;
+        font-size: 0.9rem;
     }
 
     .position-tabs {
         display: flex;
-        gap: 16px;
-        padding: 10px;
+        gap: 0.5rem;
     }
 
-    .search-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    #champion-search {
-        width: 250px;
+    .tab-btn {
+        width: 40px;
         height: 40px;
-        background: rgba(26, 29, 33, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        padding: 0 15px;
-        color: white;
-        font-size: 14px;
-        transition: all 0.3s ease;
-    }
-
-    #champion-search:focus {
-        outline: none;
-        border-color: rgba(245, 66, 69, 0.5);
-        background: rgba(26, 29, 33, 0.8);
-    }
-
-    #champion-search::placeholder {
-        color: #9aa4af;
-    }
-
-    .table-header {
-        display: grid;
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
-        padding: 15px 20px;
-        background: rgba(26, 29, 33, 0.8);
-        border-radius: 12px;
-        margin-bottom: 15px;
-        font-size: 13px;
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: #9aa4af;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        gap: 30px;
-    }
-
-    .table-header .col {
-        text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .table-row {
-        display: grid;
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
-        padding: 15px 20px;
-        border-radius: 12px;
-        align-items: center;
-        background: rgba(26, 29, 33, 0.4);
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
-        gap: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        border-radius: 0.5rem;
+        color: #9aa4af;
         cursor: pointer;
+        transition: all 0.2s ease;
     }
 
-    /* Alineación de columnas */
-    .rank, 
-    .winrate, 
-    .pickrate, 
-    .banrate {
-        text-align: center;
-        justify-content: center;
+    .tab-btn:hover,
+    .tab-btn.active {
+        background: #f54245;
+        color: white;
+    }
+
+    .champions-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tier-section {
+        background: rgba(28, 32, 37, 0.5);
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .tier-header {
+        padding: 0.75rem 1rem;
         display: flex;
         align-items: center;
     }
 
-    .champion {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding-left: 15px;
+    .tier-label {
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding: 0.25rem 1rem;
+        border-radius: 0.25rem;
     }
 
-    .champion img {
-        width: 45px;
-        height: 45px;
-        border-radius: 10px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
+    .champions-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .champion-item {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0.5rem;
+        gap: 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .champion-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-2px);
+    }
+
+    .champion-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 0.25rem;
+        overflow: hidden;
+    }
+
+    .champion-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .champion-info {
+        flex: 1;
     }
 
     .champion-name {
         font-weight: 500;
         color: white;
-        font-size: 15px;
-        letter-spacing: 0.5px;
     }
 
-    .positions {
+    .champion-positions {
         display: flex;
-        justify-content: center;
+        gap: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    .champion-stats {
+        text-align: right;
+        min-width: 3rem;
+    }
+
+    .winrate {
+        color: #9aa4af;
+        font-size: 0.875rem;
+    }
+
+    /* Colores de tier */
+    .tier-s-plus .tier-label {
+        color: #ffdd75;
+        background: rgba(255, 221, 117, 0.1);
+    }
+
+    .tier-s .tier-label {
+        color: #bd9af2;
+        background: rgba(189, 154, 242, 0.1);
+    }
+
+    .tier-a .tier-label {
+        color: #beecfa;
+        background: rgba(190, 236, 250, 0.1);
+    }
+
+    .tier-b .tier-label {
+        color: #9ad47f;
+        background: rgba(154, 212, 127, 0.1);
+    }
+
+    .tier-c .tier-label {
+        color: #f59551;
+        background: rgba(245, 149, 81, 0.1);
+    }
+
+    .tier-d .tier-label {
+        color: #686b6e;
+        background: rgba(104, 107, 110, 0.1);
+    }
+
+    @media (max-width: 1200px) {
+        .champions-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .champions-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .view-content {
+        display: none;
+    }
+
+    .view-content.active {
+        display: block;
+    }
+
+    /* Estilos para duos */
+    .duo-item {
+        display: flex;
         align-items: center;
-        gap: 4px;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0.5rem;
+        gap: 1rem;
+    }
+
+    .duo-champions {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .duo-names {
+        font-weight: 500;
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    .duo-positions {
+        display: flex;
+        gap: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Estilos para wombos */
+    .wombo-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0.5rem;
+        gap: 1rem;
+    }
+
+    .wombo-champions {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .wombo-names {
+        font-weight: 500;
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    .wombo-description {
+        color: #9aa4af;
+        font-size: 0.8rem;
+        margin-top: 0.25rem;
     }
 
     .position-icon {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(26, 29, 33, 0.6);
-        border-radius: 4px;
-        padding: 4px;
-        transition: all 0.3s ease;
-    }
-
-    .position-icon:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    .position-icon svg {
-        width: 100%;
-        height: 100%;
-        color: #e1e5ea;
-    }
-
-    .col {
-        color: #e1e5ea;
-        font-size: 14px;
-        font-weight: 400;
-    }
-
-    .tier {
-        color: #f54245;
-        font-weight: 700;
-        font-size: 16px;
-    }
-
-    /* Personalización del scrollbar */
-    .table-body::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .table-body::-webkit-scrollbar-track {
-        background: rgba(26, 29, 33, 0.4);
-        border-radius: 4px;
-    }
-
-    .table-body::-webkit-scrollbar-thumb {
-        background: rgba(245, 66, 69, 0.5);
-        border-radius: 4px;
-    }
-
-    .table-body::-webkit-scrollbar-thumb:hover {
-        background: #f54245;
-    }
-
-    .tier-section {
-        margin-bottom: 30px;
-    }
-
-    .tier-header {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 15px;
-    }
-
-    .tier-label {
-        font-size: 24px;
-        font-weight: 700;
-        min-width: 40px;
-    }
-
-    .tier-line {
-        height: 2px;
-        flex-grow: 1;
-        background: linear-gradient(to right, #f54245 0%, rgba(245, 66, 69, 0) 100%);
-        box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
-    }
-
-    .tier-champions {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .rank {
-        color: #9aa4af;
-        font-weight: 700;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    /* Colores específicos por tier */
-    .tier-section[data-tier="S+"] {
-        .tier-label {
-            color: #ffdd75;
-            text-shadow: 0 0 15px rgba(255, 221, 117, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
-            box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
-        }
-        .table-row:hover {
-            border-color: #ffdd75;
-            box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
-        }
-    }
-
-    .tier-section[data-tier="S"] {
-        .tier-label {
-            color: #bd9af2;
-            text-shadow: 0 0 15px rgba(189, 154, 242, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #bd9af2 0%, rgba(189, 154, 242, 0) 100%);
-            box-shadow: 0 0 10px rgba(189, 154, 242, 0.2);
-        }
-        .table-row:hover {
-            border-color: #bd9af2;
-            box-shadow: 0 0 15px rgba(189, 154, 242, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
-        }
-    }
-    .tier-section[data-tier="A"],
-    .tier-section[data-tier="A+"] {
-        .tier-label {
-            color: #beecfa;
-            text-shadow: 0 0 15px rgba(190, 236, 250, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #beecfa 0%, rgba(190, 236, 250, 0) 100%);
-            box-shadow: 0 0 10px rgba(190, 236, 250, 0.2);
-        }
-        .table-row:hover {
-            border-color: #beecfa;
-            box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
-        }
-    }
-
-    .tier-section[data-tier="B"],
-    .tier-section[data-tier="B+"] {
-        .tier-label {
-            color: #9ad47f;
-            text-shadow: 0 0 15px rgba(154, 212, 127, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #9ad47f 0%, rgba(154, 212, 127, 0) 100%);
-            box-shadow: 0 0 10px rgba(154, 212, 127, 0.2);
-        }
-        .table-row:hover {
-            border-color: #9ad47f;
-            box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
-        }
-    }
-
-    .tier-section[data-tier="C"],
-    .tier-section[data-tier="C+"] {
-        .tier-label {
-            color: #f59551;
-            text-shadow: 0 0 15px rgba(245, 149, 81, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #f59551 0%, rgba(245, 149, 81, 0) 100%);
-            box-shadow: 0 0 10px rgba(245, 149, 81, 0.2);
-        }
-        .table-row:hover {
-            border-color: #f59551;
-            box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
-        }
-    }
-
-    .tier-section[data-tier="D"] {
-        .tier-label {
-            color: #686b6e;
-            text-shadow: 0 0 15px rgba(104, 107, 110, 0.4);
-        }
-        .tier-line {
-            background: linear-gradient(to right, #686b6e 0%, rgba(104, 107, 110, 0) 100%);
-            box-shadow: 0 0 10px rgba(104, 107, 110, 0.2);
-        }
-        .table-row:hover {
-            border-color: #686b6e;
-            box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
-            background: rgba(26, 29, 33, 0.6);
-            transform: translateY(-2px);
-        }
-    }
-
-    /* Ajustes específicos para cada columna */
-    .col:nth-child(1) { /* RANGO */
-        justify-content: center;
-    }
-
-    .col:nth-child(2) { /* CAMPEÓN */
-        justify-content: flex-start;
-    }
-
-    .col:nth-child(3) { /* POSICIÓN */
-        justify-content: center;
-    }
-
-    .col:nth-child(4), /* WIN RATE */
-    .col:nth-child(5), /* PICK RATE */
-    .col:nth-child(6) { /* BAN RATE */
-        justify-content: center;
-    }
-
-    .col:nth-child(7) { /* EJEMPLO */
-        justify-content: center;
-        display: flex;
-        align-items: center;
-    }
-
-    /* Ajuste para los valores numéricos */
-    .winrate, 
-    .pickrate, 
-    .banrate {
-        font-family: 'Roboto Mono', monospace;
-        font-size: 14px;
-    }
-
-    .tab-btn {
-        padding: 12px;
-        width: 52px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(26, 29, 33, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        color: #9aa4af;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin: 0 4px;
-    }
-
-    .tab-btn svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    .tab-btn:hover {
-        background: rgba(245, 66, 69, 0.1);
-        color: white;
-    }
-
-    .tab-btn.active {
-        background: #f54245;
-        color: white;
-        border-color: #f54245;
-        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
-    }
-
-    .home-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;
-        height: 44px;
-        background: rgba(26, 29, 33, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        color: #9aa4af;
-        transition: all 0.3s ease;
-    }
-
-    .home-button:hover {
-        background: #f54245;
-        color: white;
-        border-color: #f54245;
-        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
-    }
-
-    .home-button svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .tier-select {
-        width: 150px;
-        height: 44px;
-        background: rgba(26, 29, 33, 0.95);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        padding: 0 15px;
-        color: #e1e5ea;
-        font-size: 14px;
-        font-weight: 500;
-        transition: all 0.2s ease;
-        cursor: pointer;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e1e5ea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        width: 16px;
+        height: 16px;
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: right 10px center;
-        background-size: 16px;
-        padding-right: 35px;
+        display: inline-block;
     }
 
-    .tier-select:hover {
-        border-color: #f54245;
+    .position-icon.top {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239aa4af' fill-rule='nonzero'%3E%3Cpath d='m19 3-4 4H7v8l-4 4V3z'%3E%3C/path%3E%3Cpath d='m5 21 4-4h8V9l4-4v16z' opacity='0.2'%3E%3C/path%3E%3Cpath d='M10 10h4v4h-4z' opacity='0.2'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     }
 
-    .tier-select:focus {
-        outline: none;
-        border-color: #f54245;
+    .position-icon.jungle {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%239aa4af' fill-rule='nonzero' d='M5.14 2c1.58 1.21 5.58 5.023 6.976 9.953s0 10.047 0 10.047c-2.749-3.164-5.893-5.2-6.18-5.382l-.02-.013C5.45 13.814 3 8.79 3 8.79c3.536.867 4.93 4.279 4.93 4.279C7.558 8.698 5.14 2 5.14 2'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    .tier-select option {
-        background: rgba(26, 29, 33, 0.95);
-        color: #e1e5ea;
-        padding: 12px;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
+    .position-icon.mid {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239aa4af' fill-rule='nonzero'%3E%3Cpath d='m15 3-4 4H7v4l-4 4V3zM9 21l4-4h4v-4l4-4v12z' opacity='0.2'%3E%3C/path%3E%3Cpath d='M18 3h3v3L6 21H3v-3z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     }
 
-    .tier-select option:hover,
-    .tier-select option:checked {
-        background: #f54245 !important;
-        color: #ffffff;
+    .position-icon.adc {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239aa4af' fill-rule='nonzero'%3E%3Cpath d='m19 3-4 4H7v8l-4 4V3z' opacity='0.2'%3E%3C/path%3E%3Cpath d='m5 21 4-4h8V9l4-4v16z'%3E%3C/path%3E%3Cpath d='M10 10h4v4h-4z' opacity='0.2'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     }
 
-    /* Estilos específicos para Firefox */
-    @-moz-document url-prefix() {
-        .tier-select {
-            background-color: rgba(26, 29, 33, 0.95);
-        }
-        
-        .tier-select option {
-            background-color: rgba(26, 29, 33, 0.95);
-            color: #e1e5ea;
-        }
-
-        .tier-select option:hover,
-        .tier-select option:checked {
-            background-color: #f54245 !important;
-            color: #ffffff;
-        }
+    .position-icon.support {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%239aa4af' fill-rule='nonzero' d='M12.833 10.833 14.5 17.53v.804L12.833 20h-1.666L9.5 18.333v-.804l1.667-6.696zM7 7.5 9.5 10l-1.667 4.167-2.5-2.5L6.167 10h-2.5L2 7.5zm15 0L20.333 10h-2.5l.834 1.667-2.5 2.5L14.5 10 17 7.5zM13.743 5l.757.833v.834l-1.667 2.5h-1.666L9.5 6.667v-.834L10.257 5z'%3E%3C/path%3E%3C/svg%3E");
     }
 
-    /* Estilos específicos para Webkit (Chrome, Safari) */
-    .tier-select::-webkit-scrollbar {
-        width: 8px;
-        background: rgba(26, 29, 33, 0.95);
-    }
-
-    .tier-select::-webkit-scrollbar-thumb {
-        background: #f54245;
-        border-radius: 4px;
-    }
-
-    .tier-select::-webkit-scrollbar-track {
-        background: rgba(26, 29, 33, 0.95);
-        border-radius: 4px;
-    }
-
-    .search-container {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .champions-duo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding-left: 15px;
-    }
-
-    .champion-pair {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .champion-pair .champion-img {
-        width: 45px;
-        height: 45px;
-        border-radius: 10px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .champion-pair .champion-img:hover {
-        transform: translateY(-2px);
-        border-color: var(--tier-color);
-        box-shadow: 0 0 15px rgba(var(--tier-color-rgb), 0.2);
-    }
-
-    .champion-names {
-        font-weight: 500;
-        color: white;
-        font-size: 15px;
-        letter-spacing: 0.5px;
-    }
-
-    #duo-view .table-row {
-        display: grid;
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
-        padding: 15px 20px;
-        border-radius: 12px;
-        align-items: center;
-        background: rgba(26, 29, 33, 0.4);
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
-        gap: 30px;
-        cursor: pointer;
-    }
-
-    #duo-view .tier-section[data-tier="S+"] .table-row:hover {
-        border-color: #ffdd75;
-        box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    #duo-view .tier-section[data-tier="S"] .table-row:hover {
-        border-color: #bd9af2;
-        box-shadow: 0 0 15px rgba(189, 154, 242, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    #duo-view .tier-section[data-tier="A"] .table-row:hover {
-        border-color: #beecfa;
-        box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    #duo-view .tier-section[data-tier="B"] .table-row:hover {
-        border-color: #9ad47f;
-        box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    #duo-view .tier-section[data-tier="C"] .table-row:hover {
-        border-color: #f59551;
-        box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    #duo-view .tier-section[data-tier="D"] .table-row:hover {
-        border-color: #686b6e;
-        box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-    }
-
-    #duo-view .champion-pair {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        justify-content: center;
-        padding: 5px 0;
-    }
-
-    #duo-view .champion-pair .champion-img {
-        width: 45px;
-        height: 45px;
-        border-radius: 10px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    #duo-view .separator {
-        color: #666;
-        font-size: 20px;
-        margin: 0 10px;
-        display: flex;
-        align-items: center;
-    }
-
-    #duo-view .champion {
+    /* Estilos para composiciones */
+    .compo-item {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    #duo-view .champion-name {
-        font-weight: 500;
-        color: white;
-        font-size: 15px;
-        letter-spacing: 0.5px;
-        text-align: center;
-        margin-top: 5px;
-    }
-
-    .wombo-gif {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .wombo-gif:hover {
-        transform: scale(1.05);
-    }
-
-    /* Modal Styles */
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(8px);
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .modal.active {
-        display: flex;
-        opacity: 1;
-    }
-
-    .modal-content {
-        background: rgba(26, 29, 33, 0.95);
-        border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-        position: relative;
-        padding: 20px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .modal-header h2 {
-        color: white;
-        margin: 0;
-        font-size: 24px;
-    }
-
-    .close-modal {
-        background: none;
-        border: none;
-        color: #9aa4af;
-        font-size: 28px;
-        cursor: pointer;
-        padding: 0;
-        transition: color 0.3s ease;
-    }
-
-    .close-modal:hover {
-        color: #f54245;
-    }
-
-    .modal-body {
-        position: relative;
-        padding-top: 56.25%; /* 16:9 aspect ratio */
-    }
-
-    #wombo-player {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        background: #000;
-    }
-
-    #wombo-gif {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        object-fit: contain;
-        background: #000;
-    }
-
-    .tab-btn.disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        pointer-events: none;
-    }
-
-    #wombo-view .champion-pair .champion-img:hover {
-        transform: translateY(-2px);
-        border-color: var(--tier-color, #f54245);
-        box-shadow: 0 0 15px rgba(var(--tier-color-rgb, 245, 66, 69), 0.2);
-    }
-
-    #wombo-view .tier-section[data-tier="S+"] { 
-        --tier-color: #ffdd75;
-        --tier-color-rgb: 255, 221, 117;
-    }
-
-    #wombo-view .tier-section[data-tier="S"] { 
-        --tier-color: #bd9af2;
-        --tier-color-rgb: 189, 154, 242;
-    }
-
-    #wombo-view .tier-section[data-tier="A"] { 
-        --tier-color: #beecfa;
-        --tier-color-rgb: 190, 236, 250;
-    }
-
-    #wombo-view .tier-section[data-tier="B"] { 
-        --tier-color: #9ad47f;
-        --tier-color-rgb: 154, 212, 127;
-    }
-
-    .search-container input:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        pointer-events: none;
-    }
-
-    .compos-button {
-        padding: 10px 15px;
-        background: #f54245;
-        border: none;
-        border-radius: 8px;
-        color: white;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 14px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 15px; /* Agregar margen a los lados */
-        min-width: 80px; /* Ancho mínimo para mantener consistencia */
-    }
-
-    .compos-button:hover {
-        background: #ff5a5d;
-        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
-    }
-
-    .compos-title {
-        text-align: center;
-        color: white;
-        font-size: 24px;
-        margin-bottom: 30px;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-
-    .compos-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    .compo-card {
-        background: rgba(26, 29, 33, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 30px;
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .compo-card:hover {
-        background: rgba(26, 29, 33, 0.6);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    }
-
-    .compo-name {
-        color: white;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 20px;
+        padding: 1.25rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0.75rem;
+        gap: 1rem;
+        min-height: 200px;
     }
 
     .compo-champions {
         display: flex;
-        gap: 15px;
-        margin-bottom: 20px;
+        gap: 0.75rem;
         justify-content: center;
-        width: 100%;
+        align-items: center;
     }
 
-    .compo-champion {
+    .champion-icon-wrapper {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 0.25rem;
     }
 
-    .compo-champion .champion-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 12px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
+    .compo-item .champion-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 0.5rem;
+        overflow: hidden;
     }
 
-    .compo-champion .champion-img:hover {
-        transform: translateY(-4px);
-        border-color: #f54245;
-        box-shadow: 0 8px 24px rgba(245, 66, 69, 0.3);
-    }
-
-    .compo-champion .position-icon {
-        width: 24px;
-        height: 24px;
-        background: rgba(26, 29, 33, 0.6);
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px;
+    .compo-names {
+        font-weight: 500;
+        color: white;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.2;
     }
 
     .compo-description {
         color: #9aa4af;
-        font-size: 15px;
-        line-height: 1.5;
-        max-width: 90%;
-        margin: 0 auto;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+        text-align: center;
+        line-height: 1.2;
     }
 
-    .filter-buttons {
-        display: flex;
-        gap: 16px;
-        margin: 10px 0;
-        padding: 10px;
-        justify-content: center;
+    #compos-view .champions-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
 
-    .filter-buttons .tab-btn {
-        padding: 8px 16px;
-        min-width: 80px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(26, 29, 33, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        color: #9aa4af;
-        font-size: 13px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
+    @media (max-width: 1200px) {
+        #compos-view .champions-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
-    .filter-buttons .tab-btn:hover {
-        background: rgba(245, 66, 69, 0.1);
-        color: white;
-    }
-
-    .filter-buttons .tab-btn.active {
-        background: #f54245;
-        color: white;
-        border-color: #f54245;
-        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
+    @media (max-width: 768px) {
+        #compos-view .champions-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .duo-icons {
         display: flex;
         gap: 4px;
-    }
-
-    .duo-icons svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    #duo-view .position-icon {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(26, 29, 33, 0.6);
-        border-radius: 4px;
-        padding: 4px;
-        transition: all 0.3s ease;
-        pointer-events: none; /* Eliminar interacción */
-    }
-
-    #duo-view .position-icon svg {
-        width: 100%;
-        height: 100%;
-        color: #e1e5ea;
-    }
-
-    /* Eliminar estilos de hover en los iconos de posición */
-    #duo-view .position-icon:hover {
-        background: rgba(26, 29, 33, 0.6);
-        transform: none;
-    }
-
-    #duo-view .tier-section[data-tier="S+"] .tier-line {
-        background: linear-gradient(to right, #ffdd75 0%, rgba(255, 221, 117, 0) 100%);
-        box-shadow: 0 0 10px rgba(255, 221, 117, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="S"] .tier-line {
-        background: linear-gradient(to right, #bd9af2 0%, rgba(189, 154, 242, 0) 100%);
-        box-shadow: 0 0 10px rgba(189, 154, 242, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="A"] .tier-line {
-        background: linear-gradient(to right, #beecfa 0%, rgba(190, 236, 250, 0) 100%);
-        box-shadow: 0 0 10px rgba(190, 236, 250, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="B"] .tier-line {
-        background: linear-gradient(to right, #9ad47f 0%, rgba(154, 212, 127, 0) 100%);
-        box-shadow: 0 0 10px rgba(154, 212, 127, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="C"] .tier-line {
-        background: linear-gradient(to right, #f59551 0%, rgba(245, 149, 81, 0) 100%);
-        box-shadow: 0 0 10px rgba(245, 149, 81, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="D"] .tier-line {
-        background: linear-gradient(to right, #686b6e 0%, rgba(104, 107, 110, 0) 100%);
-        box-shadow: 0 0 10px rgba(104, 107, 110, 0.2);
-    }
-
-    /* Ajustar el grid para la vista de duos */
-    #duo-view .table-row {
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
-    }
-
-    /* Ajustar el encabezado para la vista de duos */
-    .table-header {
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr;
-    }
-
-    /* Cuando estamos en la vista de wombos, ajustar el grid */
-    #wombo-view .table-row,
-    #wombo-view ~ .table-header {
-        grid-template-columns: 0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    #duo-view .tier-section[data-tier="S+"] .champion-pair .champion-img:hover {
-        border-color: #ffdd75;
-        box-shadow: 0 0 15px rgba(255, 221, 117, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="S"] .champion-pair .champion-img:hover {
-        border-color: #bd9af2;
-        box-shadow: 0 0 15px rgba(189, 154, 242, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="A"] .champion-pair .champion-img:hover {
-        border-color: #beecfa;
-        box-shadow: 0 0 15px rgba(190, 236, 250, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="B"] .champion-pair .champion-img:hover {
-        border-color: #9ad47f;
-        box-shadow: 0 0 15px rgba(154, 212, 127, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="C"] .champion-pair .champion-img:hover {
-        border-color: #f59551;
-        box-shadow: 0 0 15px rgba(245, 149, 81, 0.2);
-    }
-
-    #duo-view .tier-section[data-tier="D"] .champion-pair .champion-img:hover {
-        border-color: #686b6e;
-        box-shadow: 0 0 15px rgba(104, 107, 110, 0.2);
-    }
-
-    #wombo-view .champion-pair {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        justify-content: center;
-        padding: 5px 0;
-    }
-
-    #wombo-view .champion-pair .champion-img {
-        width: 45px;
-        height: 45px;
-        border-radius: 10px;
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    #wombo-view .separator {
-        color: #666;
-        font-size: 20px;
-        margin: 0 10px;
-        display: flex;
         align-items: center;
     }
 
-    #wombo-view .champions-wombo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    #wombo-view .champion-names {
-        font-weight: 500;
-        color: white;
-        font-size: 15px;
-        letter-spacing: 0.5px;
-        text-align: center;
-        margin-top: 5px;
-    }
-
-    #single-view .position-icon {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(26, 29, 33, 0.6);
-        border-radius: 4px;
-        padding: 4px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    #single-view .position-icon:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    #single-view .position-icon svg {
-        width: 100%;
-        height: 100%;
-        color: #e1e5ea;
+    #duo-position-tabs .tab-btn {
+        width: auto;
+        padding: 0.25rem 0.5rem;
     }
 </style>
 
 <script>
-    let tabs;
-    let rows;
-    let searchInput;
-    let tierSections;
-    let viewTypeSelect;
-    let positionTabs;
-    let duoFilters;
-    let composBtn;
-    let composView;
-    let composTitle;
-    let mainViews;
-    let tableHeader;
-    let modal;
-    let videoPlayer;
-    let gifPlayer;
-    let closeModal;
-
     function initializeElements() {
-        tabs = document.querySelectorAll('.tab-btn');
-        rows = document.querySelectorAll('.table-row');
-        searchInput = document.getElementById('champion-search');
-        tierSections = document.querySelectorAll('.tier-section');
-        viewTypeSelect = document.getElementById('view-type');
-        positionTabs = document.getElementById('position-tabs');
-        duoFilters = document.getElementById('duo-filters');
-        composBtn = document.getElementById('compos-btn');
-        composView = document.getElementById('compos-view');
-        composTitle = document.getElementById('compos-title');
-        mainViews = document.querySelectorAll('#single-view, #duo-view, #wombo-view');
-        tableHeader = document.querySelector('.table-header');
-        modal = document.getElementById('video-modal');
-        videoPlayer = document.getElementById('wombo-player');
-        gifPlayer = document.getElementById('wombo-gif');
-        closeModal = document.querySelector('.close-modal');
+        console.log('Inicializando elementos de TierList...');
+        
+        // Solo inicializar los event listeners si estamos en la página de tierlist
+        if (window.location.pathname.includes('tierlist')) {
+            // Event listeners para la navegación
+            document.querySelectorAll('.tier-nav-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const viewType = item.dataset.view;
+                    switchView(viewType);
+                });
+            });
+
+            // Event listeners para los filtros de posición
+            document.querySelectorAll('#position-tabs .tab-btn').forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    filterChampions();
+                });
+            });
+
+            // Event listeners para la búsqueda
+            const championSearch = document.getElementById('champion-search');
+            const duoSearch = document.getElementById('duo-search');
+            const womboSearch = document.getElementById('wombo-search');
+            const compoSearch = document.getElementById('compo-search');
+
+            championSearch?.addEventListener('input', filterChampions);
+            duoSearch?.addEventListener('input', filterDuos);
+            womboSearch?.addEventListener('input', filterWombos);
+            compoSearch?.addEventListener('input', filterCompos);
+
+            // Event listeners para los filtros de posición de dúos
+            document.querySelectorAll('#duo-position-tabs .tab-btn').forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelectorAll('#duo-position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    filterDuos();
+                });
+            });
+
+            // Establecer la vista inicial
+            switchView('single');
+        }
     }
 
     function filterChampions() {
-        if (!searchInput || !tierSections) return;
-
-        const searchTerm = searchInput.value.toLowerCase();
-        const viewType = viewTypeSelect?.value || 'single';
+        const searchTerm = document.getElementById('champion-search')?.value.toLowerCase() || '';
         const activePosition = document.querySelector('#position-tabs .tab-btn.active')?.dataset.position || 'all';
-        const activeDuoFilter = document.querySelector('#duo-filters .tab-btn.active')?.dataset.positions || 'all';
 
-        tierSections.forEach(section => {
-            const rowsInTier = section.querySelectorAll('.table-row');
-            let hasVisibleRows = false;
+        document.querySelectorAll('#single-view .tier-section').forEach(section => {
+            const championsInTier = section.querySelectorAll('.champion-item');
+            let hasVisibleChampions = false;
 
-            rowsInTier.forEach(row => {
-                let shouldShow = false;
-
-                if (viewType === 'single') {
-                    const championName = row.querySelector('.champion-name')?.textContent.toLowerCase() || '';
-                    const positions = JSON.parse(row.dataset.positions || '[]');
-                    shouldShow = championName.includes(searchTerm) && 
-                               (activePosition === 'all' || positions.includes(activePosition));
-                } else if (viewType === 'duos') {
-                    const championNames = row.querySelector('.champion-name')?.textContent.toLowerCase() || '';
-                    const duoPositions = row.dataset.duo ? JSON.parse(row.dataset.duo).positionCombo : '';
-                    shouldShow = championNames.includes(searchTerm) &&
-                               (activeDuoFilter === 'all' || duoPositions === activeDuoFilter);
-                } else if (viewType === 'wombos') {
-                    const championNames = row.querySelector('.champion-names')?.textContent.toLowerCase() || '';
-                    shouldShow = championNames.includes(searchTerm);
-                }
-
-                row.style.display = shouldShow ? 'grid' : 'none';
-                if (shouldShow) hasVisibleRows = true;
-            });
-
-            section.style.display = hasVisibleRows ? 'block' : 'none';
-        });
-    }
-
-    function filterCompositions(searchTerm) {
-        const compoCards = document.querySelectorAll('.compo-card');
-        searchTerm = searchTerm.toLowerCase();
-
-        compoCards.forEach(card => {
-            const compoName = card.querySelector('.compo-name')?.textContent.toLowerCase() || '';
-            const compoDescription = card.querySelector('.compo-description')?.textContent.toLowerCase() || '';
-            const championNames = Array.from(card.querySelectorAll('.champion-img'))
-                .map(img => img.alt.toLowerCase())
-                .join(' ');
-
-            const shouldShow = compoName.includes(searchTerm) || 
-                             compoDescription.includes(searchTerm) ||
-                             championNames.includes(searchTerm);
-
-            card.style.display = shouldShow ? 'flex' : 'none';
-        });
-    }
-
-    function initializeEventListeners() {
-        // Event listener para el buscador
-        searchInput?.addEventListener('input', (e) => {
-            const searchTerm = e.target.value;
-            if (composView?.style.display === 'grid') {
-                filterCompositions(searchTerm);
-            } else {
-                filterChampions();
-            }
-        });
-
-        // Event listeners para los tabs de posición
-        document.querySelectorAll('#position-tabs .tab-btn').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                filterChampions();
-            });
-        });
-
-        // Event listeners para los filtros de duos
-        document.querySelectorAll('#duo-filters .tab-btn')?.forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('#duo-filters .tab-btn').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                filterChampions();
-            });
-        });
-
-        // Event listener para el cambio de vista
-        viewTypeSelect?.addEventListener('change', (e) => {
-            const viewType = e.target.value;
-            updateViewVisibility(viewType);
-            
-            // Resetear los filtros activos según la vista
-            if (viewType === 'single') {
-                const allPositionButton = document.querySelector('#position-tabs [data-position="all"]');
-                if (allPositionButton) {
-                    document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
-                    allPositionButton.classList.add('active');
-                }
-            } else if (viewType === 'duos') {
-                const allDuoButton = document.querySelector('#duo-filters [data-positions="all"]');
-                if (allDuoButton) {
-                    document.querySelectorAll('#duo-filters .tab-btn').forEach(t => t.classList.remove('active'));
-                    allDuoButton.classList.add('active');
-                }
-            }
-            
-            if (searchInput) {
-                searchInput.value = '';
-                filterChampions();
-            }
-        });
-
-        // Event listener para el botón de compos
-        let isComposView = false;
-        composBtn?.addEventListener('click', () => {
-            isComposView = !isComposView;
-            
-            if (isComposView) {
-                mainViews?.forEach(view => view.style.display = 'none');
-                if (tableHeader) tableHeader.style.display = 'none';
-                if (composView) composView.style.display = 'grid';
-                if (composTitle) composTitle.style.display = 'block';
-                if (viewTypeSelect) viewTypeSelect.style.display = 'none';
-                if (positionTabs) positionTabs.style.display = 'none';
-                if (duoFilters) duoFilters.style.display = 'none';
-                if (searchInput) {
-                    searchInput.placeholder = 'Buscar composición...';
-                    searchInput.value = '';
-                }
-                if (composBtn) {
-                    composBtn.textContent = 'Cerrar';
-                    composBtn.style.background = '#686b6e';
-                }
-            } else {
-                if (composView) composView.style.display = 'none';
-                if (composTitle) composTitle.style.display = 'none';
-                if (tableHeader) tableHeader.style.display = 'grid';
-                if (viewTypeSelect) {
-                    viewTypeSelect.style.display = 'block';
-                    const currentView = viewTypeSelect.value || 'single';
-                    updateViewVisibility(currentView);
-                }
-                if (searchInput) {
-                    searchInput.placeholder = 'Buscar campeón...';
-                    searchInput.value = '';
-                }
-                if (composBtn) {
-                    composBtn.textContent = 'Compos';
-                    composBtn.style.background = '#f54245';
-                }
-                filterChampions(); // Aplicar filtros al volver
-            }
-        });
-
-        // Event listeners para el modal de video
-        document.querySelectorAll('.wombo-gif')?.forEach(gif => {
-            gif.addEventListener('click', () => {
-                const videoUrl = gif.dataset.videoUrl;
-                const gifUrl = gif.src;
+            championsInTier.forEach(champion => {
+                const championName = champion.querySelector('.champion-name')?.textContent.toLowerCase() || '';
+                const positions = JSON.parse(champion.dataset.positions || '[]');
                 
-                if (videoUrl && !videoUrl.includes('example.com')) {
-                    if (videoPlayer) {
-                        videoPlayer.style.display = 'block';
-                        videoPlayer.src = videoUrl;
-                    }
-                    if (gifPlayer) gifPlayer.style.display = 'none';
-                } else {
-                    if (videoPlayer) videoPlayer.style.display = 'none';
-                    if (gifPlayer) {
-                        gifPlayer.style.display = 'block';
-                        gifPlayer.src = gifUrl;
+                const shouldShow = championName.includes(searchTerm) && 
+                                 (activePosition === 'all' || positions.includes(activePosition));
+                
+                champion.style.display = shouldShow ? 'flex' : 'none';
+                if (shouldShow) hasVisibleChampions = true;
+            });
+
+            section.style.display = hasVisibleChampions ? 'block' : 'none';
+        });
+    }
+
+    function filterDuos() {
+        const searchTerm = document.getElementById('duo-search')?.value.toLowerCase() || '';
+        const activeDuoPosition = document.querySelector('#duo-position-tabs .tab-btn.active')?.dataset.duoPosition || 'all';
+
+        document.querySelectorAll('#duos-view .tier-section').forEach(section => {
+            const duosInTier = section.querySelectorAll('.duo-item');
+            let hasVisibleDuos = false;
+
+            duosInTier.forEach(duo => {
+                const duoNames = duo.querySelector('.duo-names')?.textContent.toLowerCase() || '';
+                const positions = Array.from(duo.querySelectorAll('.duo-positions .position-icon')).map(icon => {
+                    const classes = Array.from(icon.classList);
+                    return classes.find(c => c !== 'position-icon') || '';
+                });
+                
+                let shouldShow = duoNames.includes(searchTerm);
+
+                if (activeDuoPosition !== 'all') {
+                    if (activeDuoPosition === 'adc-support') {
+                        shouldShow = shouldShow && positions.includes('adc') && positions.includes('support');
+                    } else if (activeDuoPosition === 'mid-jungle') {
+                        shouldShow = shouldShow && positions.includes('mid') && positions.includes('jungle');
+                    } else if (activeDuoPosition === 'top-jungle') {
+                        shouldShow = shouldShow && positions.includes('top') && positions.includes('jungle');
                     }
                 }
-                if (modal) modal.classList.add('active');
+
+                duo.style.display = shouldShow ? 'flex' : 'none';
+                if (shouldShow) hasVisibleDuos = true;
             });
-        });
 
-        closeModal?.addEventListener('click', () => {
-            if (modal) modal.classList.remove('active');
-            if (videoPlayer) {
-                videoPlayer.pause();
-                videoPlayer.src = '';
-            }
-            if (gifPlayer) gifPlayer.src = '';
+            section.style.display = hasVisibleDuos ? 'block' : 'none';
         });
     }
 
-    function initialize() {
-        initializeElements();
-        initializeEventListeners();
+    function filterWombos() {
+        const searchTerm = document.getElementById('wombo-search')?.value.toLowerCase() || '';
+
+        document.querySelectorAll('#wombos-view .tier-section').forEach(section => {
+            const wombosInTier = section.querySelectorAll('.wombo-item');
+            let hasVisibleWombos = false;
+
+            wombosInTier.forEach(wombo => {
+                const womboNames = wombo.querySelector('.wombo-names')?.textContent.toLowerCase() || '';
+                const shouldShow = womboNames.includes(searchTerm);
+                
+                wombo.style.display = shouldShow ? 'flex' : 'none';
+                if (shouldShow) hasVisibleWombos = true;
+            });
+
+            section.style.display = hasVisibleWombos ? 'block' : 'none';
+        });
+    }
+
+    function filterCompos() {
+        const searchTerm = document.getElementById('compo-search')?.value.toLowerCase() || '';
+
+        document.querySelectorAll('#compos-view .compo-item').forEach(compo => {
+            const compoNames = compo.querySelector('.compo-names')?.textContent.toLowerCase() || '';
+            const shouldShow = compoNames.includes(searchTerm);
+            compo.style.display = shouldShow ? 'flex' : 'none';
+        });
+    }
+
+    function switchView(viewType) {
+        // Ocultar todas las vistas
+        document.querySelectorAll('.view-content').forEach(view => {
+            view.classList.remove('active');
+        });
         
-        // Establecer vista inicial
-        const initialView = viewTypeSelect?.value || 'single';
-        updateViewVisibility(initialView);
-
-        // Activar el filtro "all" por defecto según la vista actual
-        if (initialView === 'single') {
-            const allPositionButton = document.querySelector('#position-tabs [data-position="all"]');
-            if (allPositionButton) {
-                document.querySelectorAll('#position-tabs .tab-btn').forEach(t => t.classList.remove('active'));
-                allPositionButton.classList.add('active');
-            }
+        // Mostrar la vista seleccionada
+        const selectedView = document.getElementById(`${viewType}-view`);
+        if (selectedView) {
+            selectedView.classList.add('active');
         }
 
-        // Aplicar filtros iniciales
-        filterChampions();
+        // Actualizar botones de navegación
+        document.querySelectorAll('.tier-nav-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        const activeNavItem = document.querySelector(`[data-view="${viewType}"]`);
+        if (activeNavItem) {
+            activeNavItem.classList.add('active');
+        }
     }
 
-    // Inicializar cuando el DOM está listo
-    document.addEventListener('DOMContentLoaded', initialize);
-
-    // Inicializar después de cualquier navegación
-    document.addEventListener('astro:page-load', initialize);
-    document.addEventListener('astro:after-swap', initialize);
-
-    // Manejar la navegación del historial
-    window.addEventListener('popstate', () => {
-        setTimeout(initialize, 0);
-    });
-
-    // Manejar el botón de home
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('.home-button');
-        if (target) {
-            e.preventDefault();
-            const href = target.getAttribute('href');
-            window.location = href;
-        }
-    });
+    // Inicializar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeElements);
+    } else {
+        initializeElements();
+    }
 
     // Asegurarse de que los event listeners se mantengan después de la navegación
-    const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-            if (mutation.type === 'childList' && 
-                (mutation.target.matches('#position-tabs') || 
-                 mutation.target.matches('#champion-search'))) {
-                initialize();
-                break;
-            }
-        }
-    });
-
-    // Observar cambios en el DOM
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-
-    function updateViewVisibility(viewType) {
-        // Ocultar todas las vistas
-        document.getElementById('single-view').style.display = 'none';
-        document.getElementById('duo-view').style.display = 'none';
-        document.getElementById('wombo-view').style.display = 'none';
-        
-        // Ocultar los filtros
-        if (positionTabs) positionTabs.style.display = 'none';
-        if (duoFilters) duoFilters.style.display = 'none';
-
-        // Mostrar la vista correspondiente
-        if (viewType === 'single') {
-            document.getElementById('single-view').style.display = 'block';
-            if (positionTabs) positionTabs.style.display = 'flex';
-        } else if (viewType === 'duos') {
-            document.getElementById('duo-view').style.display = 'block';
-            if (duoFilters) duoFilters.style.display = 'flex';
-        } else if (viewType === 'wombos') {
-            document.getElementById('wombo-view').style.display = 'block';
-        }
-
-        // Ajustar el grid del encabezado
-        if (tableHeader) {
-            if (viewType === 'wombos') {
-                tableHeader.style.gridTemplateColumns = '0.7fr 2.5fr 1fr 1fr 1fr 1fr 1fr';
-            } else {
-                tableHeader.style.gridTemplateColumns = '0.7fr 2.5fr 1fr 1fr 1fr 1fr';
-            }
-        }
-    }
-
-    document.querySelector('.imagen-champ').addEventListener('click', function(e) {
-        const championName = e.target.id.toLowerCase();
-        sessionStorage.setItem("championSelected", championName);
-        window.location.href = 'vistaChampion';
-    });
-
+    document.addEventListener('astro:page-load', initializeElements);
 </script> 
