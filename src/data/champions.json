@@ -541,7 +541,7 @@
     "name": "diana",
     "image_url": "https://cdn.communitydragon.org/15.3.1/champion/diana/square",
     "splash": "https://cdn.communitydragon.org/15.3.1/champion/Diana/splash-art/centered/skin/0",
-    "tier": "S",
+    "tier": "S+",
     "positions": [
       "jungle",
       "mid"
@@ -3034,7 +3034,7 @@
     "name": "wukong",
     "image_url": "https://cdn.communitydragon.org/15.3.1/champion/monkeyking/square",
     "splash": "https://cdn.communitydragon.org/15.3.1/champion/Monkeyking/splash-art/centered/skin/0",
-    "tier": "S+",
+    "tier": "S",
     "positions": [
       "jungle"
     ],
