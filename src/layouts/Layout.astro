@@ -18,12 +18,9 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
 	</head>
 	<body>
-		<DotBackground>
-			<slot />
-		</DotBackground>
+		<slot />
 	</body>
 </html>
 
@@ -48,7 +45,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #051B1E;
 		background-size: 224px;
 		color-scheme: dark;
 	}

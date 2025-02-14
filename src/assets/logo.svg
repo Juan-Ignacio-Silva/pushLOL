@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.66 106.07">
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.66 339.58">
   <defs>
     <style>
       .cls-1 {
@@ -7,21 +7,17 @@
       }
 
       .cls-2 {
-        fill: #eaebdb;
-      }
-
-      .cls-3 {
-        fill: #f54245;
+        fill: #e6ff2a;
       }
     </style>
   </defs>
-  <g id="Capa_1-2" data-name="Capa_1">
-    <polygon class="cls-1" points="76.42 6.27 76.42 82.68 49.51 82.68 26.12 106.07 26.12 82.68 0 82.68 0 6.27 76.42 6.27"/>
-    <polygon class="cls-3" points="82.66 0 82.66 76.41 55.75 76.41 32.36 99.8 32.36 76.41 6.24 76.41 6.24 0 82.66 0"/>
-    <polygon class="cls-2" points="67.6 25.24 67.6 59.45 21.31 59.45 21.31 38.18 58.3 38.18 58.3 34.62 45.85 34.62 45.85 25.24 67.6 25.24"/>
-    <rect class="cls-2" x="58.11" y="12.87" width="9.49" height="9.49"/>
-    <rect class="cls-2" x="45.85" y="12.87" width="9.49" height="9.49"/>
-    <rect class="cls-2" x="33.47" y="12.87" width="9.49" height="21.93"/>
-    <rect class="cls-2" x="21.31" y="12.87" width="9.49" height="21.93"/>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <polygon class="cls-1" points="244.67 20.07 244.67 264.72 158.5 264.72 83.63 339.58 83.63 264.72 0 264.72 0 20.07 244.67 20.07"/>
+    <polygon class="cls-2" points="264.66 0 264.66 244.65 178.49 244.65 103.62 319.52 103.62 244.65 19.99 244.65 19.99 0 264.66 0"/>
+    <polygon class="cls-1" points="216.43 80.8 216.43 190.33 68.22 190.33 68.22 122.24 186.67 122.24 186.67 110.84 146.8 110.84 146.8 80.8 216.43 80.8"/>
+    <rect class="cls-1" x="186.06" y="41.22" width="30.37" height="30.37"/>
+    <rect class="cls-1" x="146.81" y="41.22" width="30.37" height="30.37"/>
+    <rect class="cls-1" x="107.15" y="41.22" width="30.37" height="70.22"/>
+    <rect class="cls-1" x="68.22" y="41.22" width="30.37" height="70.22"/>
   </g>
 </svg>

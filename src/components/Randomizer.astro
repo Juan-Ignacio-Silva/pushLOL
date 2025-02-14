@@ -2,7 +2,6 @@
 import champions from '../data/champions.json';
 const championsData = champions;
 ---
-
 <div class="randomizer-container">
     <h1>¡Obten un champ <span class="random-text">Random</span><br>para cada posición!</h1>
     <div class="randomizer-grid">
@@ -110,9 +109,9 @@ const championsData = champions;
         color: white;
         display: flex;
         flex-direction: column;
-        align-items: center;
         height: 100vh;
         justify-content: center;
+        align-items: center;
     }
 
     h1 {
@@ -129,8 +128,8 @@ const championsData = champions;
     }
 
     .random-text {
-        color: #f54245;
-        text-shadow: 0 0 10px rgba(245, 66, 69, 0.5);
+        color: #E6FF2A;
+        text-shadow: 0 0 10px #adc01e;
     }
 
     .randomizer-grid {
@@ -159,7 +158,7 @@ const championsData = champions;
 
     .position-icon {
         height: 28px;
-        color: white;
+        color: #0C4652;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -177,8 +176,8 @@ const championsData = champions;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        background: #15171a;
-        border: 1px solid #8c8c8c;
+        background: #051B1E;
+        border: 5px solid #092e33;
         border-radius: 8px;
         position: relative;
         transition: all 0.2s ease;
@@ -200,8 +199,7 @@ const championsData = champions;
 
     .champion-image[style*="background-image"] + .champion-slot:hover,
     .champion-slot:has(.champion-image[style*="background-image"]):hover {
-        background: #f54245;
-        box-shadow: 0 0 10px rgba(245, 66, 69, 0.5);
+        background: #051B1E;;
     }
 
     .champion-image {
@@ -227,8 +225,8 @@ const championsData = champions;
     .reroll-btn {
         width: 100%;
         padding: 0.6rem;
-        background-color: #1C2025;
-        background: rgba(255, 255, 255, 0.034);
+        background-color: #082b30;
+        background: #082b30;
 		backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(25px);
         border: none;
@@ -253,8 +251,8 @@ const championsData = champions;
     }
 
     .reroll-btn.active {
-        background: #f54245;
-        box-shadow: 0 0 10px rgba(245, 66, 69, 0.5);
+        background: #082b30;
+        box-shadow: 0 0 10px #083941;
     }
 
     .reroll-btn.active svg {
@@ -280,19 +278,16 @@ const championsData = champions;
         margin-top: 20px;
         padding: 5px;
         border-radius: 8px;
-        background-color: #1C2025;
-        background: rgba(255, 255, 255, 0.034);
-		backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(25px);
+        background-color: #0E4A50;
     }
     
     .random-all-btn {
         width: 100%;
         height: 100%;
-        background: #f54245;
+        background: #141414;
         border: none;
         border-radius: 8px;
-        color: white;
+        color: #0F353D;
         font-weight: bold;
         font-size: 1.0rem;
         cursor: pointer;
@@ -301,11 +296,10 @@ const championsData = champions;
 
     .random-all-btn:hover {
         transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(245, 66, 69, 0.3);
     }
 </style>
 
-<script define:vars={{ championsData }}>
+<script define:vars={{ championsData }}>    
     const champions = championsData;
     
     function getChampionsByPosition(position) {
