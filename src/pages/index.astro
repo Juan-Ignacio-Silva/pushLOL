@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Logo from '../assets/logo.svg'
-import TextoPush from '../assets/textoPush.svg'
 import Barra from '../components/SearchBar.astro'
 import GenerarChampions from '../components/generarChampions.astro';
 import BotonesPosiciones from '../components/botonesPosiciones.astro';
@@ -11,56 +9,7 @@ import TierListHome from '../components/TierListHome.astro';
 ---
 
 <Layout title="PUSH | Home">
-	<main>
-		<div class="contenedor-principal">
-			<div class="logo">
-				<img  id="LogoPush" src={ Logo.src }  alt="logo">
-				<img id="TextoPush" src={ TextoPush.src } alt="Push">
-			</div>
-			<div class="search-container">
-				<Barra />
-			</div>
-			<div class="contenedor-de-contenedores-champion">
-				<div class="layout-contenedor-champions">
-					<div class="contenedor-vista-champions">
-						<div class="contenedor-lista-champions">
-							<h2>LISTA DE CAMPEONES 2025</h2>
-							<BotonesPosiciones />
-						</div>
-						<GenerarChampions />
-					</div>
-					<div class="boton-parches">
-						<a class="btn-parche" href="parches"><h1>PARCHE 25.S1.3</h1></a>
-					</div>
-				</div>
-				<div class="contenedor-vista-tierlist">
-					<div class="contenedor-tierlsit">
-						<div class="link-tierlist">
-							<a href="tierlist">15.3 Tierlist & Más</a>
-						</div>
-						<div class="contenedor-lista-tierlist">
-							<div class="contenedor-titulos-tierlist">
-								<ul>
-									<li>
-										<p>Campeon</p>
-										<p>Tier</p>
-										<p>WinRate</p>
-									</li>
-								</ul>
-							</div>
-							<div class="lista-tierlist">
-								<TierListHome />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<Randomizer />
-			<TopChampionsCards/>
-		</div>
-	</main>
 </Layout>
-<script src="../js/buscador.js"></script>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
