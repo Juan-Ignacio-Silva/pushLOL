@@ -1,0 +1,125 @@
+---
+const images = await Astro.glob('../assets/peda/*');
+---
+
+<div class="carousel-section">
+    <div class="carousel">
+        {images.map((image, index) => (
+            <img 
+                src={image.default.src} 
+                alt="Banner" 
+                class="carousel-image" 
+                style={`opacity: ${index === 0 ? '1' : '0'}`}
+            />
+        ))}
+    </div>
+    <div class="carousel-controls">
+        <button class="control-button" id="prevBtn">&#60;</button>
+        <button class="control-button" id="nextBtn">&#62;</button>
+    </div>
+</div>
+
+<style>
+    .carousel-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 85%;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .carousel-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        height: 15%;
+    }
+
+    .control-button {
+        width: 45%;
+        height: 100%;
+        background-color: #343434;
+        border: none;
+        border-radius: 5px;
+        color: #EAEBDB;
+        font-family: 'Akira Expanded', sans-serif;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .control-button:hover {
+        background-color: #E6FF2A;
+        color: #1D1D1D;
+    }
+</style>
+
+<script>
+    const images = document.querySelectorAll('.carousel-image');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    let intervalId;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    // Iniciar rotación automática
+    function startAutoRotation() {
+        intervalId = setInterval(nextImage, 2500);
+    }
+
+    // Detener rotación automática
+    function stopAutoRotation() {
+        clearInterval(intervalId);
+    }
+
+    // Event listeners para los botones
+    prevBtn.addEventListener('click', () => {
+        stopAutoRotation();
+        prevImage();
+        startAutoRotation();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        stopAutoRotation();
+        nextImage();
+        startAutoRotation();
+    });
+
+    // Iniciar la rotación automática
+    startAutoRotation();
+</script>

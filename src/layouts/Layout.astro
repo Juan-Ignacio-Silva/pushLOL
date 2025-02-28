@@ -3,6 +3,7 @@ import Logo from '../assets/logo.svg'
 import TextoPush from '../assets/textoPush.svg'
 import BotonesPosiciones from '../components/botonesPosiciones.astro';
 import SearchBar from '../components/SearchBar.astro';
+import Carousel from '../components/Carousel.astro';
 
 interface Props {
 	title: string;
@@ -31,6 +32,9 @@ const { title, showChampsButtons } = Astro.props;
 			<div class="sidebar-navegation">
 				<a class="botones-sidebar" href="/">HOME</a>
 				<a class="botones-sidebar" href="parches">PARCHES</a>
+				<div class="carousel-wrapper">
+                    <Carousel />
+                </div>
 			</div>
 		</div>
 		<main>
@@ -85,6 +89,13 @@ const { title, showChampsButtons } = Astro.props;
 		border-radius: 10px;
 		padding: 15px;
 	}
+
+	.carousel-wrapper {
+        margin-top: auto;
+        width: 100%;
+        height: 300px; /* Aumentamos la altura /
+        padding-top: 20px; / Agregamos espacio superior */
+    }
 
 	.botones-sidebar {
 		width: 100%;
