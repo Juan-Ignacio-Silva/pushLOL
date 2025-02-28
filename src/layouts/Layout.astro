@@ -1,12 +1,15 @@
 ---
 import Logo from '../assets/logo.svg'
 import TextoPush from '../assets/textoPush.svg'
+import BotonesPosiciones from '../components/botonesPosiciones.astro';
+import SearchBar from '../components/SearchBar.astro';
 
 interface Props {
 	title: string;
+	showChampsButtons: boolean;
 }
 
-const { title } = Astro.props;
+const { title, showChampsButtons } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,16 +25,29 @@ const { title } = Astro.props;
 	<body>
 		<div class="sidebar">
 			<div class="contenedor-logo">
-				<img src={ Logo.src } alt="LogoPush" style=" width: 80px;">
-				<img src={ TextoPush.src } alt="Push">
+				<img src={ Logo.src } alt="LogoPush" style=" width: 3rem;">
+				<img src={ TextoPush.src } alt="Push" style=" width: 11rem; margin-bottom: 1rem;">
+			</div>
+			<div class="sidebar-navegation">
+				<a class="botones-sidebar" href="/">HOME</a>
+				<a class="botones-sidebar" href="parches">PARCHES</a>
 			</div>
 		</div>
-		<slot />
+		<main>
+			<header>
+				<SearchBar />
+				{ showChampsButtons &&  <BotonesPosiciones />}
+			</header>
+			<section class="contenedor-principal">
+				<slot />
+			</section>
+		</main>
 	</body>
 </html>
 
 <style is:global>
-	
+	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 	* {
 		margin: 0px;
 		padding: 0px;
@@ -43,11 +59,68 @@ const { title } = Astro.props;
 		height: 100vh;
 		padding: 20px;
 		background: #0A0A0A;
+		display: flex;
 	}
 
 	.sidebar {
 		width: 300px;
 		height: 100%;
 		font-family: sans-serif;
+	}
+
+	.contenedor-logo {
+		width: 100%;
+		height: 10%;
+		display: flex;
+		gap: 5px;
+	}
+
+	.sidebar-navegation {
+		width: 100%;
+		height: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+		background-color: #1D1D1D;
+		border-radius: 10px;
+		padding: 15px;
+	}
+
+	.botones-sidebar {
+		width: 100%;
+		height: 50px;
+		background-color: #343434;
+		border-radius: 5px;
+		text-decoration: none;
+		color: #EAEBDB;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.botones-sidebar:hover {
+		background-color: #E6FF2A;
+		color: #1D1D1D;
+	}
+
+	main {
+		width: 100%;
+		height: 100%;
+		padding-left: 20px;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 10%;
+		padding-bottom: 1rem;
+	}
+
+	.contenedor-principal {
+		width: 100%;
+		height: 90%;
+		display: flex;
 	}
 </style>

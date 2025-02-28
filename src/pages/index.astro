@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Barra from '../components/SearchBar.astro'
 import GenerarChampions from '../components/generarChampions.astro';
 import BotonesPosiciones from '../components/botonesPosiciones.astro';
 import TopChampionsCards from '../components/TopChampionsCards.astro';
@@ -8,195 +7,32 @@ import Randomizer from '../components/Randomizer.astro';
 import TierListHome from '../components/TierListHome.astro';
 ---
 
-<Layout title="PUSH | Home">
+<Layout title="PUSH | Home" showChampsButtons={ true }>
+	<div class="contenedor-vertical-1">
+		<div class="cuadro-champions-cargados">
+			<GenerarChampions />
+		</div>
+	</div>
+	<div class="contenedor-vertical-2">
+
+	</div>
 </Layout>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-	main {
-		width: 100%;
-		min-height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		padding: 2rem 0;
-		overflow-y: auto;
-	}
-
-	.contenedor-principal {
-		width: 1000px;
-		padding: 2rem;
-		border-radius: 1rem;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.contenedor-de-contenedores-champion {
-		width: 100%;
-		height: 500px;
-		padding-top: 40px;
-		display: flex;
-		gap: 30px;
-	}
-
-	.layout-contenedor-champions {
+	.contenedor-vertical-1 {
 		width: 60%;
 		height: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 5%;
 	}
 
-	.contenedor-vista-champions {
-		width: 100%;
-		height: 75%;
-		background-color: #0C4652;
-		border-radius: 8px;
-		padding: 5px;
-		padding-top: 10px;
-	}
-
-	.contenedor-lista-champions {
-		width: 100%;
-		height: 30px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		h2 {
-			font-size: 17px;
-			padding-left: 5px;
-			color: #BEBFBF;
-		}
-	}
-
-	.boton-parches {
-		width: 100%;
-		height: 20%;
-		border-radius: 8px;
-		background-color: #0C4652;
-		padding: 10px;
-	}
-
-	.btn-parche {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-		font-family: "Roboto mono", monospace;
-		background-color: #051B1E;
-		color: #0C4652	;
-		border-radius: 8px;
-		font-size: 15px;
-		transition: all 0.3s ease;
-	}
-
-	.btn-parche:hover {
-		background-color: #B8D22A;
-    	transform: translateY(-2px);
-    	border-color: #B8D22A;
-	}
-	
-	/* TIER LIST */
-	.contenedor-vista-tierlist {
+	.contenedor-vertical-2 {
 		width: 40%;
 		height: 100%;
-		border-radius: 8px;
-		background-color: #0C4652;
-		padding: 10px;
 	}
 
-	.contenedor-tierlsit {
+	.cuadro-champions-cargados {
 		width: 100%;
-		height: 100%;
-		background-color: #051B1E;
-		border-radius: 8px;
-	}
-
-	.link-tierlist {
-		width: 100%;
-		height: 5%;
-
-		a{
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 8px 8px 0px 0px;
-			text-decoration: none;
-			font-family: "Roboto mono", monospace;
-			font-size: 15px;
-			color: #BEBFBF;
-		}
-
-		a:hover{
-			background-color: #545a6175;
-		}
-	}
-
-	.contenedor-lista-tierlist {
-		width: 100%;
-		height: 95%;
-		padding: 10px;
-	}
-
-	.contenedor-titulos-tierlist {
-		width: 100%;
-		height: 5%;
-		padding-left: 3px;
-		padding-right: 3px;
-		li{
-			list-style: none;
-			display: flex;
-			justify-content: space-between;
-
-			p{
-				font-size: 13px;
-				color: #BEBFBF;
-				width: 60px;
-				text-align: center;
-			}
-		}
-
-	}
-
-	.lista-tierlist {
-		width: 100%;
-		height: 95%;
-		display: grid;
-		gap: 5px;
-		padding-top: 5px;
-	}
-
-	.champion-card-tier:hover{
-		background-color: #545a6175 !important;
-    }
-
-	/* BARRA DE BUSQUEDA */
-	.search-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-	}
-
-	/* LOGO Y TEXTO */
-	.logo {
-		width: 100%;
-		height: 150px;
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-	}
-
-	#LogoPush {
-		width: 4rem;
-	}
-
-	#TextoPush {
-		width: 17rem;
+		background-color: #1D1D1D;
+		height: 70%;
+		border-radius: 10px;
 	}
 </style>
