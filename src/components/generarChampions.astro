@@ -66,4 +66,21 @@ import personajesData from '../data/champions.json'
         transform: translateY(-2px);
         border-color: #B8D22A;
     }
+
+    @media only screen and (min-width: 1920px) {
+        .contenido-pjs {
+            grid-template-columns: repeat(6, 145px);
+            max-height: 650px;
+        }
+        
+        .card-chmpion {
+            width: 150px;
+            height: 150px;
+        }
+
+        .card-chmpion img {
+            width: 145px;
+            border-radius: 10px;
+        }
+    }
 </style>
