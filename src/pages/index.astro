@@ -12,6 +12,10 @@ import TierListHome from '../components/TierListHome.astro';
 		<div class="cuadro-champions-cargados">
 			<GenerarChampions />
 		</div>
+		<div class="texto-champs-random-button">
+			<h1>CAMPIONS RANDOMS</h1>
+			<button id="btn-random">RANDOM</button>
+		</div>
 	</div>
 	<div class="contenedor-vertical-2">
 
@@ -36,5 +40,34 @@ import TierListHome from '../components/TierListHome.astro';
 		background-color: #1D1D1D;
 		height: 70%;
 		border-radius: 10px;
+	}
+
+	.texto-champs-random-button {
+		width: 100%;
+		height: 5%;
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.texto-champs-random-button h1 {
+		color: #D6D6D6;
+		font-family: 'Akira Expanded', sans-serif;
+	}
+
+	#btn-random {
+		width: 150px;
+		height: 100%;
+		border-radius: 10px;
+		border: none;
+		background-color: #D6D6D6;
+		color: #0A0A0A;
+		font-family: 'Akira Expanded', sans-serif;
+	}
+
+	#btn-random:hover {
+		transform: translateY(-1px);
+		background-color: #E6FF2A;
 	}
 </style>

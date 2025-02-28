@@ -36,7 +36,7 @@ const { title, showChampsButtons } = Astro.props;
 		<main>
 			<header>
 				<SearchBar />
-				{ showChampsButtons &&  <BotonesPosiciones />}
+				{ showChampsButtons && <BotonesPosiciones />}
 			</header>
 			<section class="contenedor-principal">
 				<slot />
@@ -65,7 +65,6 @@ const { title, showChampsButtons } = Astro.props;
 	.sidebar {
 		width: 300px;
 		height: 100%;
-		font-family: sans-serif;
 	}
 
 	.contenedor-logo {
@@ -115,9 +114,10 @@ const { title, showChampsButtons } = Astro.props;
 	header {
 		display: flex;
 		align-items: center;
-		width: 100%;
+		width: 60%;
 		height: 10%;
 		padding-bottom: 1rem;
+		justify-content: space-between;
 	}
 
 	.contenedor-principal {
