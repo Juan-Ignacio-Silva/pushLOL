@@ -49,16 +49,3 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         updateChampionsDisplay();
     });
 });
-
-
-// Funcion vista Champions
-
-document.querySelector('.contenido-pjs').addEventListener('click', function(e) {
-    if (e.target.tagName === 'IMG') {
-        const championName = e.target.id.toLowerCase();
-        sessionStorage.setItem("championSelected", championName);
-        window.location.href = 'vistaChampion'
-    } else {
-        alert("Intente de nuevo")
-    }
-});

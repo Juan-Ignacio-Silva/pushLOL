@@ -3,7 +3,6 @@ import champions from '../data/champions.json';
 const championsData = champions;
 ---
 <div class="randomizer-container">
-    <h1>¡Obten un champ <span class="random-text">Random</span><br>para cada posición!</h1>
     <div class="randomizer-grid">
         <div class="positions-container">
             <div class="position-box" data-position="top">
@@ -19,11 +18,6 @@ const championsData = champions;
                 <div class="champion-slot">
                     <div class="champion-image"></div>
                 </div>
-                <button class="reroll-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M341.3 28.3v85.3H128c-70.7 0-128 57.3-128 128c0 21.5 5.8 41.4 15.2 59.2L68 263.2c-2.4-6.8-4-13.9-4-21.5c0-35.4 28.7-64 64-64h213.3V263L512 156.3V135zM444 262.8c2.4 6.8 4 13.9 4 21.5c0 35.4-28.6 64-64 64H170.7V263L0 369.7V391l170.7 106.7v-85.3H384c70.7 0 128-57.3 128-128c0-21.5-5.8-41.4-15.2-59.2z"/>
-                    </svg>
-                </button>
             </div>
 
             <div class="position-box" data-position="jungle">
@@ -35,11 +29,6 @@ const championsData = champions;
                 <div class="champion-slot">
                     <div class="champion-image"></div>
                 </div>
-                <button class="reroll-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M341.3 28.3v85.3H128c-70.7 0-128 57.3-128 128c0 21.5 5.8 41.4 15.2 59.2L68 263.2c-2.4-6.8-4-13.9-4-21.5c0-35.4 28.7-64 64-64h213.3V263L512 156.3V135zM444 262.8c2.4 6.8 4 13.9 4 21.5c0 35.4-28.6 64-64 64H170.7V263L0 369.7V391l170.7 106.7v-85.3H384c70.7 0 128-57.3 128-128c0-21.5-5.8-41.4-15.2-59.2z"/>
-                    </svg>
-                </button>
             </div>
 
             <div class="position-box" data-position="mid">
@@ -54,11 +43,6 @@ const championsData = champions;
                 <div class="champion-slot">
                     <div class="champion-image"></div>
                 </div>
-                <button class="reroll-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M341.3 28.3v85.3H128c-70.7 0-128 57.3-128 128c0 21.5 5.8 41.4 15.2 59.2L68 263.2c-2.4-6.8-4-13.9-4-21.5c0-35.4 28.7-64 64-64h213.3V263L512 156.3V135zM444 262.8c2.4 6.8 4 13.9 4 21.5c0 35.4-28.6 64-64 64H170.7V263L0 369.7V391l170.7 106.7v-85.3H384c70.7 0 128-57.3 128-128c0-21.5-5.8-41.4-15.2-59.2z"/>
-                    </svg>
-                </button>
             </div>
 
             <div class="position-box" data-position="adc">
@@ -74,11 +58,6 @@ const championsData = champions;
                 <div class="champion-slot">
                     <div class="champion-image"></div>
                 </div>
-                <button class="reroll-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M341.3 28.3v85.3H128c-70.7 0-128 57.3-128 128c0 21.5 5.8 41.4 15.2 59.2L68 263.2c-2.4-6.8-4-13.9-4-21.5c0-35.4 28.7-64 64-64h213.3V263L512 156.3V135zM444 262.8c2.4 6.8 4 13.9 4 21.5c0 35.4-28.6 64-64 64H170.7V263L0 369.7V391l170.7 106.7v-85.3H384c70.7 0 128-57.3 128-128c0-21.5-5.8-41.4-15.2-59.2z"/>
-                    </svg>
-                </button>
             </div>
 
             <div class="position-box" data-position="support">
@@ -90,16 +69,8 @@ const championsData = champions;
                 <div class="champion-slot">
                     <div class="champion-image"></div>
                 </div>
-                <button class="reroll-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M341.3 28.3v85.3H128c-70.7 0-128 57.3-128 128c0 21.5 5.8 41.4 15.2 59.2L68 263.2c-2.4-6.8-4-13.9-4-21.5c0-35.4 28.7-64 64-64h213.3V263L512 156.3V135zM444 262.8c2.4 6.8 4 13.9 4 21.5c0 35.4-28.6 64-64 64H170.7V263L0 369.7V391l170.7 106.7v-85.3H384c70.7 0 128-57.3 128-128c0-21.5-5.8-41.4-15.2-59.2z"/>
-                    </svg>
-                </button>
             </div>
         </div>
-    </div>
-    <div class="container-rerol-all">
-        <button class="random-all-btn">RANDOM</button>
     </div>
 </div>
 
@@ -108,57 +79,38 @@ const championsData = champions;
         width: 100%;
         color: white;
         display: flex;
+        height: 25%;
         flex-direction: column;
-        height: 100vh;
         justify-content: center;
         align-items: center;
     }
 
-    h1 {
-        text-align: center;
-        margin-bottom: 1.5rem;
-        font-family: "Roboto Mono", monospace;
-        font-size: 50px;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: 1.2;
-        font-weight: 900;
-        width: 100%;
-    }
-
-    .random-text {
-        color: #E6FF2A;
-        text-shadow: 0 0 10px #adc01e;
-    }
-
     .randomizer-grid {
         width: 100%;
-        max-width: 1000px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .positions-container {
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 1rem;
         padding: 0;
     }
 
     .position-box {
-        width: 140px;
+        width: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.8rem;
+        gap: 0.5rem;
     }
 
     .position-icon {
         height: 28px;
-        color: #0C4652;
+        color: #EAEBDB;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -170,15 +122,15 @@ const championsData = champions;
     }
 
     .champion-slot {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        background: #051B1E;
-        border: 5px solid #092e33;
-        border-radius: 8px;
+        background: #343434;
+        border: 5px solid #1D1D1D;
+        border-radius: 10px;
         position: relative;
         transition: all 0.2s ease;
     }
@@ -221,44 +173,6 @@ const championsData = champions;
         border-color: transparent;
         box-shadow: none;
     }
-
-    .reroll-btn {
-        width: 100%;
-        padding: 0.6rem;
-        background-color: #082b30;
-        background: #082b30;
-		backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(25px);
-        border: none;
-        border-radius: 8px;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .reroll-btn svg {
-        width: 20px;
-        height: 20px;
-        transition: transform 0.3s ease;
-    }
-
-    .reroll-btn:hover svg {
-        transform: rotate(180deg);
-    }
-
-    .reroll-btn.active {
-        background: #082b30;
-        box-shadow: 0 0 10px #083941;
-    }
-
-    .reroll-btn.active svg {
-        animation: spin 1s linear infinite;
-    }
-
     @keyframes spin {
         from {
             transform: rotate(0deg);
@@ -266,36 +180,6 @@ const championsData = champions;
         to {
             transform: rotate(360deg);
         }
-    }
-
-    .container-rerol-all {
-        width: 200px;
-        height: 60px;
-        background-color: ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        padding: 5px;
-        border-radius: 8px;
-        background-color: #0E4A50;
-    }
-    
-    .random-all-btn {
-        width: 100%;
-        height: 100%;
-        background: #141414;
-        border: none;
-        border-radius: 8px;
-        color: #0F353D;
-        font-weight: bold;
-        font-size: 1.0rem;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .random-all-btn:hover {
-        transform: translateY(-1px);
     }
 </style>
 

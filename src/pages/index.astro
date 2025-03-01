@@ -11,12 +11,15 @@ import Randomizer from '../components/Randomizer.astro';
 			<GenerarChampions />
 		</div>
 		<div class="texto-champs-random-button">
-			<h1>CAMPIONS RANDOMS</h1>
-			<button id="btn-random">RANDOM</button>
+			<h1>CHAMPIONS RANDOMS</h1>
+			<button id="btn-random" class="random-all-btn">RANDOM</button>
 		</div>
+		<Randomizer />
 	</div>
 	<div class="contenedor-vertical-2">
+		<div class="cuadro-lista-players">
 
+		</div>
 	</div>
 </Layout>
 
@@ -71,4 +74,12 @@ import Randomizer from '../components/Randomizer.astro';
 		background-color: #E6FF2A;
 	}
 	
+	.cuadro-lista-players{
+		width: 95%;
+		float: right;
+		background-color: rgba(29, 29, 29, 0.95); /* Añadida transparencia */
+		height: 70%;
+		border-radius: 10px;
+		backdrop-filter: blur(5px);
+	}
 </style>
