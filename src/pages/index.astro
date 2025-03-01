@@ -26,6 +26,8 @@ import Randomizer from '../components/Randomizer.astro';
 	.contenedor-vertical-1 {
 		width: 60%;
 		height: 100%;
+		position: relative;
+		z-index: 2;
 	}
 
 	.contenedor-vertical-2 {
@@ -35,9 +37,10 @@ import Randomizer from '../components/Randomizer.astro';
 
 	.cuadro-champions-cargados {
 		width: 100%;
-		background-color: #1D1D1D;
+		background-color: rgba(29, 29, 29, 0.95); /* Añadida transparencia */
 		height: 70%;
 		border-radius: 10px;
+		backdrop-filter: blur(5px);
 	}
 
 	.texto-champs-random-button {
@@ -57,7 +60,7 @@ import Randomizer from '../components/Randomizer.astro';
 	#btn-random {
 		width: 150px;
 		height: 100%;
-		border-radius: 10px;
+		border-radius: 8px;
 		border: none;
 		background-color: #D6D6D6;
 		color: #0A0A0A;
@@ -65,7 +68,7 @@ import Randomizer from '../components/Randomizer.astro';
 	}
 
 	#btn-random:hover {
-		transform: translateY(-1px);
 		background-color: #E6FF2A;
 	}
+	
 </style>

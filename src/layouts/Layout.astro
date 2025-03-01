@@ -30,8 +30,8 @@ const { title, showChampsButtons } = Astro.props;
 				<img src={ TextoPush.src } alt="Push" style=" width: 11rem; margin-bottom: 1rem;">
 			</div>
 			<div class="sidebar-navegation">
-				<a class="botones-sidebar" href="/">HOME</a>
-				<a class="botones-sidebar" href="parches">PARCHES</a>
+				<a class="botones-sidebar" href="/"><span>HOME</span></a>
+				<a class="botones-sidebar" href="parches"><span>PARCHES</span></a>
 				<div class="carousel-wrapper">
                     <Carousel />
                 </div>
@@ -52,6 +52,13 @@ const { title, showChampsButtons } = Astro.props;
 <style is:global>
 	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 	@import url('https://fonts.cdnfonts.com/css/akira-expanded');
+
+	
+::selection {
+background-color: #e6ff29; /* Amarillo neón */
+color: #0a0a0a; /* Negro */
+}
+
 	* {
 		margin: 0px;
 		padding: 0px;
@@ -76,6 +83,7 @@ const { title, showChampsButtons } = Astro.props;
 		height: 10%;
 		display: flex;
 		gap: 5px;
+		padding-left: px;
 	}
 
 	.sidebar-navegation {
@@ -98,23 +106,47 @@ const { title, showChampsButtons } = Astro.props;
     }
 
 	.botones-sidebar {
-		width: 100%;
-		height: 50px;
-		background-color: #343434;
-		border-radius: 5px;
-		text-decoration: none;
-		color: #EAEBDB;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-family: 'Akira Expanded', sans-serif;
-		letter-spacing: 1.5px;
-	}
+    width: 100%;
+    height: 50px;
+    background-color: #343434;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #EAEBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Akira Expanded', sans-serif;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease-in-out;
+}
 
-	.botones-sidebar:hover {
-		background-color: #E6FF2A;
-		color: #1D1D1D;
-	}
+.botones-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #E6FF2A;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.botones-sidebar:hover {
+    color: #1D1D1D;
+}
+
+.botones-sidebar:hover::before {
+    transform: translateX(100%);
+}
+
+.botones-sidebar span {
+    position: relative;
+    z-index: 1;
+}
+
 
 	main {
 		width: 100%;
