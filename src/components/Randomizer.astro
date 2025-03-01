@@ -95,7 +95,8 @@ const championsData = champions;
     .positions-container {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 70px;
         align-items: center;
         padding: 0;
     }
@@ -179,6 +180,12 @@ const championsData = champions;
         }
         to {
             transform: rotate(360deg);
+        }
+    }
+    @media only screen and (min-width: 1920px) {
+        .champion-slot {
+            width: 150px;
+            height: 150px;
         }
     }
 </style>
